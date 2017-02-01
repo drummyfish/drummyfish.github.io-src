@@ -1,3 +1,5 @@
+# use make ... GIT_MSG to set the git message for all commits
+
 PY?=python
 PELICAN?=pelican
 PELICANOPTS=
@@ -35,13 +37,13 @@ publish:
 
 upload_src:
 	git add * || :
-	git commit -m "source update"
+	git commit -m "source update: $$GIT_MSG"
 	git push
 
 upload_web:
 	cd $(OUTPUTDIR); \
 	git add * || : ; \
-	git commit -m "web update"; \
+	git commit -m "web update: $$GIT_MSG"; \
 	git push
 
 upload_all: publish upload_src upload_web
