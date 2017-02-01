@@ -51,23 +51,6 @@
                         </ul>
                 </div><!-- /.blogroll -->
         {% endif %}
-        {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
-                <div class="social">
-                        <h2>{{ SOCIAL_WIDGET_NAME | default('social') }}</h2>
-                        <ul>
-                            {% if FEED_ALL_ATOM %}
-                            <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            {% endif %}
-                            {% if FEED_ALL_RSS %}
-                            <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></li>
-                            {% endif %}
-
-                        {% for name, link in SOCIAL %}
-                            <li><a href="{{ link }}">{{ name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                </div><!-- /.social -->
-        {% endif %}
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
@@ -75,7 +58,7 @@
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. <br />
                 Original theme made by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, modified by Tastyfish. <br />
                 Emoji provided free by <a href="http://emojione.com/">EmojiOne</a>. <br />
-                {{ PUBLISH_INFO_TEXT }}
+                <span class="publish-info">{{ PUBLISH_INFO_TEXT }}</span>
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 

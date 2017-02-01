@@ -6,3 +6,46 @@
   {% endif %}
 </div>
 {%- endmacro %}
+
+{% macro e(symbol=':)') -%}
+  <span class="emoji emoji-{#
+    #}{%if symbol is equalto ':)'%}{#
+      #}smile{#
+    #}{%elif symbol is equalto ':-)'%}{#
+      #}smile{#
+    #}{%elif symbol is equalto '=)'%}{#
+      #}smile{#
+    #}{%elif symbol is equalto ':]'%}{#
+      #}smile{#
+    #}{%elif symbol is equalto ':('%}{#
+      #}sad{#
+    #}{%elif symbol is equalto ':-('%}{#
+      #}sad{#
+    #}{%elif symbol is equalto ':D'%}{#
+      #}grin{#
+    #}{%elif symbol is equalto ":'("%}{#
+      #}cry{#
+    #}{%elif symbol is equalto ':O'%}{#
+      #}openmouth{#
+    #}{%elif symbol is equalto ':o'%}{#
+      #}openmouth{#
+    #}{%elif symbol is equalto ':p'%}{#
+      #}tongue{#
+    #}{%elif symbol is equalto ':P'%}{#
+      #}tongue{#
+    #}{%elif symbol is equalto '^^'%}{#
+      #}eyebrows{#
+    #}{%elif symbol is equalto '<3'%}{#
+      #}heart{#
+    #}{%elif symbol is equalto 'thumbsup'%}{#
+      #}thumbsup{#
+    #}{%elif symbol is equalto ':|'%}{#
+      #}neutral{#
+    #}{%elif symbol is equalto ':/'%}{#
+      #}sideways{#
+    #}{%elif symbol is equalto 'x'%}{#
+      #}no{#
+    #}{%elif symbol is equalto '/'%}{#
+      #}check{#
+    #}{%endif%}"></span>
+{%- endmacro %}

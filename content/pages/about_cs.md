@@ -3,7 +3,7 @@ Date: 2010-12-03 10:24
 Slug: about
 Lang: cs
 
-{% import 'macros.html' as macros %}
+{% import 'macros.html' as m %}
 
 Zdravím NSA, stalkery, personalisty a potenciální zaměstnavatele. Děkuji, že se o mě zajímáte 
 
@@ -39,4 +39,4 @@ makeup, PewDiePie, Smosh, tetování, módy do her, piercing, politická korektn
 zbytečné práce (jako např. odhrnování listí), komunismus, hořká (nikoliv horká) čokoláda, zima,
 alkohol, kouření, Zeman, Česká republika, Steam, Hra o trůny, marketing
 
-{{ macros.img_desc('http://i.imgur.com/sQNYr3g.png','já','baví mě potápění :)') }}
+{{ m.img_desc('http://i.imgur.com/sQNYr3g.png','já','baví mě potápění :)') }}
