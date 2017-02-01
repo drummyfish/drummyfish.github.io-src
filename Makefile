@@ -35,13 +35,13 @@ publish:
 
 upload_src:
 	git add * || :
-	git commit -m "update"
+	git commit -m "source update"
 	git push
 
 upload_web:
 	cd $(OUTPUTDIR); \
 	git add * || : ; \
-	git commit -m "update"; \
+	git commit -m "web update"; \
 	git push
 
 upload_all: publish upload_src upload_web

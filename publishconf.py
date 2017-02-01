@@ -10,3 +10,4 @@ commonconf.set_common_variables(sys.modules[__name__])
 
 SITENAME = u'under construction'
 SITEURL = 'drummyfish.github.io'
+PUBLISH_INFO_TEXT = u'publish version'
