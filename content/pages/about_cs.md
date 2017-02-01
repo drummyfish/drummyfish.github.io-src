@@ -1,5 +1,5 @@
 Title: O mně
-Date: 2010-12-03 10:24
+Date: 2010-12-03 10:25
 Slug: about
 Lang: cs
 
@@ -11,7 +11,7 @@ Jmenuji se Miloslav Číž a studuji informatiku na FIT VUT. Zaměřuji se na po
 ale baví mě více či méně exaktní vědy v celé šíři. Mám rád spoustu dalších věcí, jako např. hudbu,
 sport atd.
 
-## Fun facts:
+## Fun facts
 
 - Nepiju alkohol, nechutná mi.
 - Podle testů jsem 100% introvert (INTJ).
@@ -20,7 +20,7 @@ sport atd.
 - Neumím hvízdat.
 - Mám variantu 1A genu CYP1A2, tzn. můžu si dát kafe před spaním.
 
-## Pár věcí, které mám rád:
+### Pár věcí, které mám rád
 
 informatika, matematika, fyzika, psychologie, zvířata, klid, PC hry, The Elder Scrolls, Half Life,
 Trackmania, Pokémoni, Warcraft 3, Quake 3, Doom 3, GTA, Legend of Grimrock, Mafia, Crash Bandicoot,
@@ -31,7 +31,7 @@ platformní nezávislost, VSauce, YouTube, reddit, 4chan/b/, hello internet, Pyt
 svoboda projevu, Grammar Nazi, ezoterické programovací jazyky, Esperanto, univerzalita,
 friendship bracelets, malé střelné zbraně, Sci-Hub
 
-## Pár věcí, které nemám rád:
+### Pár věcí, které nemám rád
 
 nedochvilnost, arogance, blbci, párty, většina lidí, komplexní IDE a frameworky, C#, Objective-C,
 neznalost rodného jazyka, neznalost definice slova “definice”, práce, TV Nova, M*A*S*H, feministky,
@@ -40,3 +40,10 @@ zbytečné práce (jako např. odhrnování listí), komunismus, hořká (nikoli
 alkohol, kouření, Zeman, Česká republika, Steam, Hra o trůny, marketing
 
 {{ macros.img_desc('http://i.imgur.com/sQNYr3g.png','já','baví mě potápění :)') }}
+
+## Kontakty
+
+<a href="mailto:tastyfish@seznam.cz"> tastyfish@seznam.cz </a>
+
+<a href="#social">sociální sítě</a>
+
