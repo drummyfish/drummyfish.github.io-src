@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}
+<section id="content" class="body">
+    <h1 class="entry-title">{{ page.title }}</h1>
+    {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
+    {{ page.content }}
+
+        {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+                <div class="social">
+                        <ul>
+                            {% if FEED_ALL_ATOM %}
+                            <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            {% endif %}
+                            {% if FEED_ALL_RSS %}
+                            <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></li>
+                            {% endif %}
+
+                        {% for name, link in SOCIAL %}
+                            <li><a href="{{ link }}">{{ name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                </div><!-- /.social -->
+        {% endif %}
+
+</section>
+{% endblock %}
