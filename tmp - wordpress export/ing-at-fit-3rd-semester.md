@@ -1,15 +1,12 @@
-Title: Ing. na FIT – 3. semestr
+Title: Ing. at FIT – 3rd semester
 Date: 2016-02-13 18:46
 Author: tastyfish
 Category: Articles
 Tags: study
-Slug: ing3
-Lang: cs
+Slug: ing-at-fit-3rd-semester
 Status: published
 
-{% import 'macros.html' as m %}
-
-Jelikož se [opakuje situace z konce mého bakalářského
+\[:cs\]Jelikož se [opakuje situace z konce mého bakalářského
 studia](http://tastyfish.cz/?p=522), opět jsem studium rozvolnil a
 zapsal si na rok jenom pět předmětů. Pozor - pokud byste se ocitli v
 podobné situaci, pamatujte, že musíte za rok získat alespoň 30 kreditů,
@@ -33,8 +30,13 @@ znalostmi z ostatních předmětů. Zajímavostí bylo, že druhou půlku
 semestru si studenti přednášky "tvořili sami" prezentacemi svých
 projektů.
 
-{{ m.fit_but_cheatsheet('GZN','1','7qwTaLS') }}
-{{ m.fit_but_cheatsheet('GZN','2','eJ2DIDI') }}
+\[caption id="" align="alignright" width="139"\][![GZN tahák
+1](http://i.imgur.com/7qwTaLS.jpg){width="139"
+height="184"}](http://i.imgur.com/7qwTaLS.jpg) GZN tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![GZN tahák
+2](http://i.imgur.com/eJ2DIDI.jpg){width="139"
+height="184"}](http://i.imgur.com/eJ2DIDI.jpg) GZN tahák 2\[/caption\]
 
 Těžištěm předmětu byly netradičně pojaté projekty. Student, popř.
 dvojice studentů, si zvolil téma (nějakou technologii, formát, knihovnu,
@@ -88,7 +90,9 @@ rozporuplný, ale v mnoha věcech mi během semestru vyšel vstříc a proto
 si myslím, že je to dobrý a bezproblémový učitel. Na první přednášce
 jsem zjistil jenom to, že má rád letadla.
 
-{{ m.fit_but_cheatsheet('KRG','','CQQNFB6') }}
+\[caption id="" align="alignright" width="139"\][![KRG
+tahák](http://i.imgur.com/CQQNFB6.jpg){width="139"
+height="184"}](http://i.imgur.com/CQQNFB6.jpg) KRG tahák\[/caption\]
 
 Projektem do KRG bylo udělat nějaký pěkný grafický výstup v nástroji
 vlastní volby - nejčastěji Inkscape, Photoshop, GIMP nebo Blender - a
@@ -116,13 +120,12 @@ width="640" height="400"}
 Celkové výsledky
 ----------------
 
-  předmět                                    |získaných bodů  |známka
-  -------------------------------------------|----------------|--------
-  Grafická a zvuková rozhraní a normy (GZN)  |85/100          |B
-  Kreativní grafika (KRG)                    |90/100          |A
+  předmět                                     získaných bodů   známka
+  ------------------------------------------- ---------------- --------
+  Grafická a zvuková rozhraní a normy (GZN)   85/100           B
+  Kreativní grafika (KRG)                     90/100           A
 
 průměr: 1,277  
 pořadí v ročníku: 10. z 211  
 pořadí v ročníku oboru: 4. z 47  
-prospěchové stipendium: coming soon
-
+prospěchové stipendium: coming soon\[:\]

@@ -1,15 +1,12 @@
-Title: Ing. na FIT – 2. semestr
+Title: Ing. at FIT - 2nd semester
 Date: 2015-06-06 11:14
 Author: tastyfish
 Category: Articles
 Tags: study
-Slug: ing2
-Lang: cs
+Slug: ing-at-fit-2nd-semester
 Status: published
 
-{% import 'macros.html' as m %}
-
-Druhý magisterský semestr na FITu byl na grafice hlavně o
+\[:cs\]Druhý magisterský semestr na FITu byl na grafice hlavně o
 signálech. Postaraly se o to předměty MUL, ZPO a ZRE. Celkem drsné bylo
 zkouškové období, které začínalo hned dva dny po přednáškovém, a všechny
 zkoušky byly vtěsnané do dvou týdnů, což se neblaze projevilo dvěma
@@ -19,7 +16,7 @@ Ještě bych se rád alespoň dvěma větami zmínil o vývojářském maratonu
 který tradičně pořádal ÚPGM a jehož jsem se zúčastnil. Tentokrát byl
 herní a všichni jsme si jej velmi užili, proto neváhejte a přijďte si
 příště taky zaprogramovat - mrkněte se na
-[timelapse](https://www.youtube.com/watch?v=hbMwbd4FPPQ) {{m.e(':)')}}
+[timelapse](https://www.youtube.com/watch?v=hbMwbd4FPPQ) :)
 
 Fyzikální optika (FYO)
 ----------------------
@@ -44,8 +41,13 @@ zmiňovat témata jako polarizace světla, paprsková optika nebo
 interference, doopravdy mě ale zaujala přednáška o maticové optice -
 takové OpenGL transformace v reálném životě.
 
-{{ m.fit_but_cheatsheet('FYO','2','b5fYOPb') }}
-{{ m.fit_but_cheatsheet('FYO','1','1PxuVFL') }}
+\[caption id="" align="alignright" width="139"\][![FYO tahák
+2](http://i.imgur.com/b5fYOPb.jpg){width="139"
+height="184"}](http://i.imgur.com/b5fYOPb.jpg) FYO tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![FYO tahák
+1](http://i.imgur.com/1PxuVFL.jpg){width="139"
+height="184"}](http://i.imgur.com/1PxuVFL.jpg) FYO tahák 1\[/caption\]
 
 Projekt byl následující: jeden až dva studenti si vybrali téma z
 nabídky, vypracovali zprávu, naprogramovali vizualizaci a přednesli
@@ -98,8 +100,13 @@ PHP, CSS apod. Raději bych se naučil něco o konkrétních frameworcích pro
 tvorbu webových aplikací než o nízkoúrovňových nástrojích, které už
 znám.
 
-{{ m.fit_but_cheatsheet('WAP','2','diqcACm') }}
-{{ m.fit_but_cheatsheet('WAP','1','7AIKcXP') }}
+\[caption id="" align="alignright" width="139"\][![WAP tahák
+2](http://i.imgur.com/diqcACm.jpg){width="139"
+height="184"}](http://i.imgur.com/diqcACm.jpg) WAP tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![WAP tahák
+1](http://i.imgur.com/7AIKcXP.jpg){width="139"
+height="184"}](http://i.imgur.com/7AIKcXP.jpg) WAP tahák 1\[/caption\]
 
 Co se týká půlsemestrálky, není dohromady moc co vyprávět. Dostali jsme
 za úkol vyřešit XSLT a pár dalších věcí, které si už ani nepamatuju.
@@ -137,8 +144,13 @@ bezpečnostní kódy, směrovače, různé síťové architektury a další věc
 které mi přišly zcela zbytečné. Za druhé, proč se sakra na grafice musím
 učit sítě? Za třetí projekt.
 
-{{ m.fit_but_cheatsheet('PDS','2','HZD1bKM') }}
-{{ m.fit_but_cheatsheet('PDS','1','ZbKD7d6') }}
+\[caption id="" align="alignright" width="139"\][![PDS tahák
+2](http://i.imgur.com/HZD1bKM.jpg){width="139"
+height="184"}](http://i.imgur.com/HZD1bKM.jpg) PDS tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![PDS tahák
+1](http://i.imgur.com/ZbKD7d6.jpg){width="139"
+height="184"}](http://i.imgur.com/ZbKD7d6.jpg) PDS tahák 1\[/caption\]
 
 Projektem byl firewall pro Linux a jak bývá u nejhorších projektů
 zvykem, dostali jsme ISO pro VirtualBox. Navíc nám byl předhozen
@@ -160,8 +172,13 @@ reklamacím. Na těch jsem naštěstí byl schopen se s ing. Grégrem domluvit
 na 9 bodech a tak jsem si řekl, že na hádání se o pár bodů navíc nemám
 nervy.
 
-{{ m.fit_but_cheatsheet('PDS','4','dQxMR14') }}
-{{ m.fit_but_cheatsheet('PDS','3','rkyOzrA') }}
+\[caption id="" align="alignright" width="139"\][![PDS tahák
+4](http://i.imgur.com/dQxMR14.jpg){width="139"
+height="184"}](http://i.imgur.com/dQxMR14.jpg) PDS tahák 4\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![PDS tahák
+3](http://i.imgur.com/rkyOzrA.jpg){width="139"
+height="184"}](http://i.imgur.com/rkyOzrA.jpg) PDS tahák 3\[/caption\]
 
 Zkoušku jsem psal ještě před opravením projektu, takže jsem nebyl
 příliš vystresovaný a říkal jsem si, že těch 25 bodů na minimum snad
@@ -199,8 +216,13 @@ praktického kontextu, má ideální tempo výkladu a jde tak akorát do
 hloubky. Občas jej střídal ing. Bařina, kterého jsem poslouchal taky
 celkem rád, na nic si nehraje a vysvětluje srozumitelně.
 
-{{ m.fit_but_cheatsheet('MUL','2','F2ZJFXJ') }}
-{{ m.fit_but_cheatsheet('MUL','1','7xGjFZZ') }}
+\[caption id="" align="alignright" width="139"\][![MUL tahák
+2](http://i.imgur.com/F2ZJFXJ.jpg){width="139"
+height="184"}](http://i.imgur.com/F2ZJFXJ.jpg) MUL tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![MUL tahák
+1](http://i.imgur.com/7xGjFZZ.jpg){width="139"
+height="184"}](http://i.imgur.com/7xGjFZZ.jpg) MUL tahák 1\[/caption\]
 
 Cvičení byla v pohodě, většinou jsem měl úkol hotový tak za půl hoďky.
 Dalo se celkem sesbírat 15 bodů, což nebyl vůbec problém. Jsem rád, že
@@ -272,8 +294,13 @@ museli natrénovat HMM síť. Přiznám se, že jsem nerozuměl všemu na 100 %,
 ale stačilo se držet podrobného návodu k projektu a získali jsme plných
 15 bodů i s malou pochvalou datasetu.
 
-{{ m.fit_but_cheatsheet('ZRE','2','8ssYIe2') }}
-{{ m.fit_but_cheatsheet('ZRE','1','6ng40FU') }}
+\[caption id="" align="alignright" width="139"\][![ZRE tahák
+2](http://i.imgur.com/8ssYIe2.jpg){width="139"
+height="184"}](http://i.imgur.com/8ssYIe2.jpg) ZRE tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![ZRE tahák
+1](http://i.imgur.com/6ng40FU.jpg){width="139"
+height="184"}](http://i.imgur.com/6ng40FU.jpg) ZRE tahák 1\[/caption\]
 
 Dále zde byla cvičení. Tady hodně záleželo na tom, jakého cvičícího jste
 si vybrali. Já jsem naštěstí zvolil cvičení v angličtině s
@@ -336,8 +363,13 @@ bývalo dopomohlo k Áčku a ke stipendiu, ale ke konci semestru na tohle
 nemá nikdo čas ani chuť a hecovat studenty strháváním bodů není vůbec
 dobrá strategie, proto jsme tuto možnost už z principu zavrhli.
 
-{{ m.fit_but_cheatsheet('ZPO','2','SPdMPNx') }}
-{{ m.fit_but_cheatsheet('ZPO','1','Cwvs5c4') }}
+\[caption id="" align="alignright" width="139"\][![ZPO tahák
+2](http://i.imgur.com/SPdMPNx.jpg){width="139"
+height="184"}](http://i.imgur.com/SPdMPNx.jpg) ZPO tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![ZPO tahák
+1](http://i.imgur.com/Cwvs5c4.jpg){width="139"
+height="184"}](http://i.imgur.com/Cwvs5c4.jpg) ZPO tahák 1\[/caption\]
 
 Celkem 10 bodů se taky dalo získat na domácích úkolech po 2 bodech. Šlo
 hlavně o to, abychom si procvičili práci s OpenCV - knihovnou pro velmi
@@ -355,7 +387,7 @@ plných 10 bodů mi stačilo si krátce projít přednášky.
 
 Zkoušku už si nejsem ani schopný vybavit, což nejspíš znamená, že byla
 taky jednoduchá. Získal jsem 42 bodů (z 51), lepší číslo jsem si snad
-ani nemohl přát {{m.e(':)')}} Takže slušné B.
+ani nemohl přát :) Takže slušné B.
 
 ZPO mě naučilo hlavně práci s OpenCV a zároveň tomu, abych se této
 knihovně radši vyhýbal. Jako jeden ze stěžejních předmětů grafiky taky
@@ -408,18 +440,17 @@ height="400"}
 Celkové výsledky
 ----------------
 
-  předmět                                        |získaných bodů  |známka
-  -----------------------------------------------|----------------|--------
-  Fyzikální optika (FYO)                         |58/100          |E
-  Multimédia (MUL)                               |92/100          |A
-  Přenos dat, počítačové sítě a protokoly (PDS)  |54/100          |E
-  Zpracování obrazu (ZPO)                        |86/100          |B
-  Zpracování řečových signálů (ZRE)              |85/100          |B
-  Internetové aplikace (WAP)                     |94/100          |A
-  Výtvarná informatika (VIN)                     |100/100         |A
+  předmět                                         získaných bodů   známka
+  ----------------------------------------------- ---------------- --------
+  Fyzikální optika (FYO)                          58/100           E
+  Multimédia (MUL)                                92/100           A
+  Přenos dat, počítačové sítě a protokoly (PDS)   54/100           E
+  Zpracování obrazu (ZPO)                         86/100           B
+  Zpracování řečových signálů (ZRE)               85/100           B
+  Internetové aplikace (WAP)                      94/100           A
+  Výtvarná informatika (VIN)                      100/100          A
 
 průměr: 1,714  
 pořadí v ročníku: 19.-21.  
 pořadí v ročníku oboru: 3.  
-prospěchové stipendium: 0 Kč
-
+prospěchové stipendium: 0 Kč\[:\]

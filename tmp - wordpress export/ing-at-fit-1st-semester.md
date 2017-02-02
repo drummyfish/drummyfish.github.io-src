@@ -1,15 +1,11 @@
-Title: Ing. na FIT – 1. semestr
+Title: Ing. at FIT - 1st semester
 Date: 2015-03-06 16:40
 Author: tastyfish
 Category: Articles
-Tags: study
-Slug: ing1
-Lang: cs
+Slug: ing-at-fit-1st-semester
 Status: published
 
-{% import 'macros.html' as m %}
-
-První semestr magisterského studia grafiky je úspěšně za mnou a
+\[:cs\]První semestr magisterského studia grafiky je úspěšně za mnou a
 už se těším, co pěkného o něm napíšu. To ovšem neznamená, že o něm
 napíšu jenom samé pěkné věci - tak třeba za prvé: byl hodně náročný.
 Jeden z nejnáročnějších vůbec. Dobrá zpráva však je, že jakmile jej máte
@@ -45,9 +41,17 @@ předměty.
 Teoretická informatika (TIN)
 ----------------------------
 
-{{ m.fit_but_cheatsheet('TIN','1','Wxykk3g') }}
-{{ m.fit_but_cheatsheet('TIN','3','P3aOnlw') }}
-{{ m.fit_but_cheatsheet('TIN','2','Ie0xdbk') }}
+\[caption id="" align="alignright" width="139"\][![TIN tahák
+1](http://i.imgur.com/Wxykk3g.jpg){width="139"
+height="184"}](http://i.imgur.com/Wxykk3g.jpg) TIN tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![TIN tahák
+3](http://i.imgur.com/P3aOnlw.jpg){width="139"
+height="184"}](http://i.imgur.com/P3aOnlw.jpg) TIN tahák 3\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![TIN tahák
+2](http://i.imgur.com/Ie0xdbk.jpg){width="139"
+height="184"}](http://i.imgur.com/Ie0xdbk.jpg) TIN tahák 2\[/caption\]
 
 Na TIN jsem se samozřejmě těšil už od prázdnin, protože mělo jít údajně
 o nejtěžší předmět studia. Dle mého názoru tomu tak není, i když je
@@ -76,7 +80,7 @@ dobře připravily na zkoušku - proto úkoly neopisujte a snažte se je
 nejdřív vyřešit sami, opravdu vám to hodně pomůže. Těžší mi přišly až
 některé příklady třetího a čtvrtého úkolu, a to hlavně proto, že nám
 občas omylem zadali mnohem těžší příklad, než měli v úmyslu (jednou šlo
-dokonce o dosud nevyřešený problém teoretické informatiky {{m.e('^^')}}). Chyby
+dokonce o dosud nevyřešený problém teoretické informatiky \^\^). Chyby
 byly sice opraveny, ale vždy až na poslední chvíli. Celkově vzato úkoly
 mohl člověk zvládnout sám, ale jelikož v TINu je potřeba sbírat co
 nejvíc bodů a nehrát si na hrdinu, je mnohem lepší dát dohromady skupinu
@@ -125,8 +129,13 @@ přesně tímhle projít. Hodně štěstí budoucím generacím a ať žije TIN.
 Pokročilé databázové systémy (PDB)
 ----------------------------------
 
-{{ m.fit_but_cheatsheet('PDB','1','XdxiRxD') }}
-{{ m.fit_but_cheatsheet('PDB','2','ch6fEwz') }}
+\[caption id="" align="alignright" width="139"\][![PDB tahák
+1](http://i.imgur.com/XdxiRxD.jpg){width="139"
+height="184"}](http://i.imgur.com/XdxiRxD.jpg) PDB tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![PDB tahák
+2](http://i.imgur.com/ch6fEwz.jpg){width="139"
+height="184"}](http://i.imgur.com/ch6fEwz.jpg) PDB tahák 2\[/caption\]
 
 PDB bylo bohužel asi největším zklamáním semestru. Na grafice je tenhle
 předmět povinný asi jenom kvůli probíraným prostorovým indexům, které
@@ -278,9 +287,17 @@ dozvěděl něco zajímavého.
 Hardware/Software Codesign (HSC)
 --------------------------------
 
-{{ m.fit_but_cheatsheet('HSC','1','eO1QXuj') }}
-{{ m.fit_but_cheatsheet('HSC','2','j7EWulA') }}
-{{ m.fit_but_cheatsheet('HSC','3','CnkhpbZ') }}
+\[caption id="" align="alignright" width="139"\][![HSC tahák
+1](http://i.imgur.com/eO1QXuj.jpg){width="139"
+height="184"}](http://i.imgur.com/eO1QXuj.jpg) HSC tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![HSC tahák
+2](http://i.imgur.com/j7EWulA.jpg){width="139"
+height="184"}](http://i.imgur.com/j7EWulA.jpg) HSC tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![HSC tahák
+3](http://i.imgur.com/CnkhpbZ.jpg){width="139"
+height="184"}](http://i.imgur.com/CnkhpbZ.jpg) HSC tahák 3\[/caption\]
 
 HSC mě potěšilo a nepotěšilo. Byl to takový normální hardwarový předmět,
 ale bohužel jsem nenáviděl projekt a po jeho absolvování jsem si
@@ -349,8 +366,13 @@ rozumné a jde vidět, že se dané algoritmy dají uplatnit v praxi.
 Počítačová grafika (PGR)
 ------------------------
 
-{{ m.fit_but_cheatsheet('PGR','1','zpjHt95') }}
-{{ m.fit_but_cheatsheet('PGR','2','QJQhbGI') }}
+\[caption id="" align="alignright" width="139"\][![PGR tahák
+1](http://i.imgur.com/zpjHt95.jpg){width="139"
+height="184"}](http://i.imgur.com/zpjHt95.jpg) PGR tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![PGR tahák
+2](http://i.imgur.com/QJQhbGI.jpg){width="139"
+height="184"}](http://i.imgur.com/QJQhbGI.jpg) PGR tahák 2\[/caption\]
 
 Na tenhle předmět jsem se docela těšil, jednak kvůli jeho náplni a
 jednak proto, že jej garantuje a přednáší doc. Herout - známá osobnost
@@ -429,8 +451,13 @@ nebyl problém a s ničím nebyly nervy. Myslím, že to potvrzuje to, co
 Pokročilá počítačová grafika (PGP)
 ----------------------------------
 
-{{ m.fit_but_cheatsheet('PGP','1','EJfGbnp') }}
-{{ m.fit_but_cheatsheet('PGP','2','WMaJfIW') }}
+\[caption id="" align="alignright" width="139"\][![PGP tahák
+1](http://i.imgur.com/EJfGbnp.jpg){width="139"
+height="184"}](http://i.imgur.com/EJfGbnp.jpg) PGP tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![PGP tahák
+2](http://i.imgur.com/WMaJfIW.jpg){width="139"
+height="184"}](http://i.imgur.com/WMaJfIW.jpg) PGP tahák 2\[/caption\]
 
 Tento předmět mě zaujal svou anotací - generování terénů, realistické
 stíny, velké scény apod. Až na první přednášce jsem zjistil, že jsem se
@@ -489,7 +516,7 @@ které se mi za pár dní objevilo ve wisu - byla to moje první známka na
 magisterském a měl jsem z ní velkou radost, navíc když nikdo jiný A
 neměl. Myslím, že nebylo úplně náhodou, že mi písemka vyšla přesně na 90
 bodů, ale jak už jsem psal, lidi z grafiky jsou hrozně přátelští a pokud
-se dá někde najít bodík na lepší známku, určitě vám ho dají {{m.e(':)')}}
+se dá někde najít bodík na lepší známku, určitě vám ho dají :)
 
 Celkově je PGP parádní předmět. Nemá možná stoprocentně zvládnutou
 organizaci, ale přednášející jsou přímo nadšení pro své téma, jsou
@@ -503,8 +530,13 @@ negrafických oborů, pokud je grafika trochu zajímá a prošli si PGR.
 Matematické struktury v informatice (MAT)
 -----------------------------------------
 
-{{ m.fit_but_cheatsheet('MAT','1','VQQ2M7c') }}
-{{ m.fit_but_cheatsheet('MAT','2','xQSEt97') }}
+\[caption id="" align="alignright" width="139"\][![MAT tahák
+1](http://i.imgur.com/VQQ2M7c.jpg){width="139"
+height="184"}](http://i.imgur.com/VQQ2M7c.jpg) MAT tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![MAT tahák
+2](http://i.imgur.com/xQSEt97.jpg){width="139"
+height="184"}](http://i.imgur.com/xQSEt97.jpg) MAT tahák 2\[/caption\]
 
 Při hodnocení studia vždycky přemýšlím, jak bych každý předmět co
 nejvýstižněji shrnul pár krátkými větami. K MATu bych řekl asi toto: jde
@@ -562,7 +594,8 @@ samozřejmě nikdo nic neměl, studenti opravdu nestíhali a doprošovali se
 zázrakem se mi podařilo "nějak" dodělat všechny příklady a odevzdat pár
 minut před koncem prodloužení, ale většina lidí to prostě nestihla.
 Písemka byla naštěstí opravena asi za čtyři dny, což je jedno z mála
-pozitiv MATu. Dostal jsem nakonec 66 bodů z 80 a tedy mi známka vyšla na B.
+pozitiv MATu. Dostal jsem nakonec 66 bodů z 80 a tedy mi známka vyšla na
+B.
 
 MAT má bohužel seriózní problémy po pedagogické stránce, a to už dlouhé
 roky. Především jde o špatné přednášky, málo času na písemky a výsměch
@@ -577,19 +610,37 @@ předmět trochu zlepší.
 Celkové výsledky
 ----------------
 
-  předmět                                   |získaných bodů          |známka
-  ------------------------------------------|------------------------|------------------------
-  Teoretická informatika (TIN)              |86/100                  |B
-  Pokročilé databázové systémy (PDB)        |70/100                  |C
-  Seminář teoretické informatiky (STI)      |                        |zápočet
-  Dějiny a filozofie techniky (FIT)         |                        |zápočet
-  Hardware/Software Codesign (HSC)          |66/100                  |D
-  Počítačová grafika (PGR)                  |90/100                  |A
-  Pokročilá počítačová grafika (PGP)        |90/100                  |A
-  Matematické struktury v informatice (MAT) |80/100                  |B
+  --------------------------------------------------------------------------
+  předmět                  získaných bodů           známka
+  ------------------------ ------------------------ ------------------------
+  Teoretická informatika   86/100                   B
+  (TIN)                                             
+
+  Pokročilé databázové     70/100                   C
+  systémy (PDB)                                     
+
+  Seminář teoretické                                zápočet
+  informatiky (STI)                                 
+
+  Dějiny a filozofie                                zápočet
+  techniky (FIT)                                    
+
+  Hardware/Software        66/100                   D
+  Codesign (HSC)                                    
+
+  Počítačová grafika (PGR) 90/100                   A
+
+  Pokročilá počítačová     90/100                   A
+  grafika (PGP)                                     
+
+  Matematické struktury v  80/100                   B
+  informatice (MAT)                                 
+  --------------------------------------------------------------------------
 
 průměr: 1,583
-pořadí v ročníku: 10. z 106 (studenti bez F s alespoň 25 kredity)
-pořadí v ročníku oboru: 3. z 55
-prospěchové stipendium: 9913 Kč
 
+pořadí v ročníku: 10. z 106 (studenti bez F s alespoň 25 kredity)
+
+pořadí v ročníku oboru: 3. z 55
+
+prospěchové stipendium: 9913 Kč\[:\]

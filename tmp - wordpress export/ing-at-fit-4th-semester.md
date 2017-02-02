@@ -1,15 +1,11 @@
-Title: Ing. na FIT – 4. semestr
+Title: Ing. at FIT – 4th semester
 Date: 2016-05-23 12:28
 Author: tastyfish
 Category: Articles
-Tags: study
-Slug: ing4
-Lang: cs
+Slug: ing-at-fit-4th-semester
 Status: published
 
-{% import 'macros.html' as m %}
-
-V semestru číslo čtyři jsem měl zapsány tři předměty - VIZ, VNV a
+\[:cs\]V semestru číslo čtyři jsem měl zapsány tři předměty - VIZ, VNV a
 ARC. Mým cílem bylo především odbýt si PVC (ARC) a PVM (VNV) předměty a
 neměl jsem tak při zápisu příliš na výběr. Myslím, že s PV předměty se
 to přehání a studenti se kvůli nim nemohou naplno věnovat svému oboru.
@@ -22,7 +18,9 @@ předmětům. Věnuje se ale mému oblíbenému Blenderu, takže jsem při
 registraci neváhal. Čistokrevné CADy jsem po střední škole nesnášel a
 díky VIZu jsem se s nimi trochu usmířil.
 
-{{ m.fit_but_cheatsheet('VIZ','','GNRVhMD') }}
+\[caption id="" align="alignright" width="139"\][![VIZ
+tahák](http://i.imgur.com/GNRVhMD.jpg){width="139"
+height="184"}](http://i.imgur.com/GNRVhMD.jpg) VIZ tahák\[/caption\]
 
 Celý kurz byl hodně podobný předmětu KRG, který snad proto už zrušili.
 Co se vedení týče, přednášel nám dr. Chudý a prezentoval velmi dobře a
@@ -85,8 +83,13 @@ nepotřebnou vatu. Nikoho naštěstí nevyvolával k tabuli, jak to dělal v
 ITO. Jednu přednášku nám předvedli kolegové z Vídně a pár dalších dr.
 Šátek, když byl pan Kunovský na lyžích či kde.
 
-{{ m.fit_but_cheatsheet('VNV','1','j68O08X') }}
-{{ m.fit_but_cheatsheet('VNV','2','KuSNHXR') }}
+\[caption id="" align="alignright" width="139"\][![VNV tahák
+1](http://i.imgur.com/j68O08X.jpg){width="139"
+height="184"}](http://i.imgur.com/j68O08X.jpg) VNV tahák 1\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![VNV tahák
+2](http://i.imgur.com/KuSNHXR.jpg){width="139"
+height="184"}](http://i.imgur.com/KuSNHXR.jpg) VNV tahák 2\[/caption\]
 
 Půlsemestrálka byla rovněž přátelská. Vyskytly se opravdu jenom
 příklady, které jsme probrali (a dokonce před písemkou zopakovali), a ne
@@ -141,8 +144,13 @@ témat jsme probírali především programování v OpenMP a MPI, architektury
 paralelních systémů, řešení koherence cache, propojovací topologie,
 směrování, paralelní vstup a výstup apod.
 
-{{ m.fit_but_cheatsheet('ARC','2','sDoxFx6') }}
-{{ m.fit_but_cheatsheet('ARC','1','z7UXs2z') }}
+\[caption id="" align="alignleft" width="139"\][![ARC tahák
+2](http://i.imgur.com/sDoxFx6.jpg){width="139"
+height="184"}](http://i.imgur.com/sDoxFx6.jpg) ARC tahák 2\[/caption\]
+
+\[caption id="" align="alignleft" width="139"\][![ARC tahák
+1](http://i.imgur.com/z7UXs2z.jpg){width="139"
+height="184"}](http://i.imgur.com/z7UXs2z.jpg) ARC tahák 1\[/caption\]
 
 Předmět měl zápočet za 20 bodů ze 40 - 10 za půlsemestrálku a 30 za dva
 projekty po 15 bodech. Půlsemestrálka byla formou fulltextu, nějaké
@@ -169,8 +177,13 @@ přesně to, co měl, ale nějaký základ tam byl. Nakonec jsem dostal přesně
 ty 3 body, i když jsem čekal možná 4 nebo 5. Ale dobře mi tak, většina
 lidí dávala projekty na 12 - 15 bodů.
 
-{{ m.fit_but_cheatsheet('ARC','4','6yfjTSA') }}
-{{ m.fit_but_cheatsheet('ARC','3','zv3vfAI') }}
+\[caption id="" align="alignright" width="139"\][![ARC tahák
+4](http://i.imgur.com/6yfjTSA.jpg){width="139"
+height="184"}](http://i.imgur.com/6yfjTSA.jpg) ARC tahák 4\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![ARC tahák
+3](http://i.imgur.com/zv3vfAI.jpg){width="139"
+height="184"}](http://i.imgur.com/zv3vfAI.jpg) ARC tahák 3\[/caption\]
 
 Tudíž zbývala zkouška, která neměla minimum, ale já jsem stejně
 potřeboval alespoň polovinu bodů. Učení jsem hodně protrpěl, možná kvůli
@@ -192,14 +205,13 @@ předmětu.
 Celkové výsledky
 ----------------
 
-  předmět                                                |získaných bodů  |známka
-  -------------------------------------------------------|----------------|--------
-  Vizualizace a CAD (VIZ)                                |88/100          |B
-  Vysoce náročné výpočty (VNV)                           |73/100          |C
-  Architektura a programování paralelních systémů (ARC)  |58/100          |E
+  předmět                                                 získaných bodů   známka
+  ------------------------------------------------------- ---------------- --------
+  Vizualizace a CAD (VIZ)                                 88/100           B
+  Vysoce náročné výpočty (VNV)                            73/100           C
+  Architektura a programování paralelních systémů (ARC)   58/100           E
 
 průměr: 2,166  
 pořadí v ročníku: 107.-112. z 203  
 pořadí v ročníku oboru: 4. z 46  
-prospěchové stipendium: 0 Kč
-
+prospěchové stipendium: 0 Kč\[:\]

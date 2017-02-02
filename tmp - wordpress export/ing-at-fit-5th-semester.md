@@ -1,15 +1,12 @@
-Title: Ing. na FIT – 5. semestr
+Title: Ing. at FIT – 5th semester
 Date: 2017-01-30 00:44
 Author: tastyfish
 Category: Articles
 Tags: study
-Slug: ing5
-Lang: cs
+Slug: ing-at-fit-5th-semester
 Status: published
 
-{% import 'macros.html' as m %}
-
-Tak a mám za sebou všechny předměty na FITu. Na doktorském další
+\[:cs\]Tak a mám za sebou všechny předměty na FITu. Na doktorském další
 předměty jsou, to ano, ale rozhodl jsem se, možná trochu zbaběle leč
 racionálně, že kvůli svým (nyní už dlouhodobým) psychickým problémům své
 působení na VŠ ukončím inženýrem. Tedy snad. Zde je zhodnocení
@@ -19,8 +16,13 @@ postřehy ze studia.
 Počítačové vidění (POV)
 -----------------------
 
-{{ m.fit_but_cheatsheet('POV','2','Kwz87uu') }}
-{{ m.fit_but_cheatsheet('POV','1','BbFhksA') }}
+\[caption id="" align="alignright" width="139"\][![POV tahák
+2](http://i.imgur.com/Kwz87uu.jpg){width="139"
+height="184"}](http://i.imgur.com/Kwz87uu.jpg) POV tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![POV tahák
+1](http://i.imgur.com/BbFhksA.jpg){width="139"
+height="184"}](http://i.imgur.com/BbFhksA.jpg) POV tahák 1\[/caption\]
 
 POV pokládám za výjimečně užitečný a zajímavý předmět. Rozhodně mě bavil
 a klidně bych se přikláněl k jeho zařazení mezi povinné předměty.
@@ -34,7 +36,9 @@ pozornost pokládáním otázek, jejichž formulace si rozmýšlel hrozně
 dlouho apod. Probraly se užitečné věci, jako např. neuronové sítě (ty
 jsem bohužel ve škole zatím nepotkal, jaká to škoda!).
 
-{{ m.fit_but_cheatsheet('POV','3','t6SjVuo') }}
+\[caption id="" align="alignright" width="139"\][![POV tahák
+3](http://i.imgur.com/t6SjVuo.jpg){width="139"
+height="184"}](http://i.imgur.com/t6SjVuo.jpg) POV tahák 3\[/caption\]
 
 Poctivých 10 bodů šlo získat z pěti domácích úloh, které však byly
 trochu slabinou předmětu. Měl se doplňovat kód, kterému jako celku nikdo
@@ -90,8 +94,13 @@ přestali na přednášky chodit. Předmět by se měl rozhodně updatovat,
 možná přestat probírat Motif, a učit třeba o Waylandu,  
 různých window managerech a desktop prostředích.
 
-{{ m.fit_but_cheatsheet('GUX','2','aBF7OWv') }}
-{{ m.fit_but_cheatsheet('GUX','1','dTsnYWy') }}
+\[caption id="" align="alignright" width="139"\][![GUX tahák
+2](http://i.imgur.com/aBF7OWv.jpg){width="139"
+height="184"}](http://i.imgur.com/aBF7OWv.jpg) GUX tahák 2\[/caption\]
+
+\[caption id="" align="alignright" width="139"\][![GUX tahák
+1](http://i.imgur.com/dTsnYWy.jpg){width="139"
+height="184"}](http://i.imgur.com/dTsnYWy.jpg) GUX tahák 1\[/caption\]
 
 V předmětu existují dva projekty - grafický editor za 8 bodů a druhý
 projekt vybíraný z několika témat za 12 bodů. Každý šlo implementovat
@@ -149,14 +158,13 @@ téma, průběžně pracovat a konzultovat.
 Celkové výsledky
 ----------------
 
-  předmět                                         |získaných bodů  |známka
-  ------------------------------------------------|----------------|--------
-  Počítačové vidění (POV)                         |90/100          |A
-  Grafická uživatelská rozhraní v X Window (GUX)  |65/100          |D
-  Semestrální projekt (SEP)                       |90/100          |A
+  předmět                                          získaných bodů   známka
+  ------------------------------------------------ ---------------- --------
+  Počítačové vidění (POV)                          90/100           A
+  Grafická uživatelská rozhraní v X Window (GUX)   65/100           D
+  Semestrální projekt (SEP)                        90/100           A
 
 průměr: 1,5  
 pořadí v ročníku: 15.-21. z 90  
 pořadí v ročníku oboru: 3.-4. z 22  
-prospěchové stipendium: 0 Kč
-
+prospěchové stipendium: 0 Kč\[:\]
