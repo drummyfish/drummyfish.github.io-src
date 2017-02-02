@@ -49,3 +49,18 @@
       #}check{#
     #}{%endif%}"></span>
 {%- endmacro %}
+
+{% macro fit_but_cheatsheet(course,page,imgur_id) -%}
+<div class="fit-but-cheatsheet">
+<a href="http://i.imgur.com/{{ imgur_id }}.jpg" target="blank">
+<img src="http://i.imgur.com/{{ imgur_id }}m.jpg" alt="{{ course }} tahák"/></img>
+</a>
+
+<p>
+{{ course }} tahák
+{% if page %}
+, str. {{ page }}
+{% endif %}
+</p>
+</div>
+{%- endmacro %}
