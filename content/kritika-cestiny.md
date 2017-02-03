@@ -6,7 +6,7 @@ Lang: cs
 Slug: kritika-cestiny
 Status: published
 
-![jsem na ní hrdý](http://i.imgur.com/GjELHTV.png){.right .alignright width="128"}
+![jsem na ní hrdý](http://i.imgur.com/GjELHTV.png)
 
 Samozřejmě že všichni děláme chyby a dost dobře je pár ironických mršek
 i v tomto článku. To mi však nezabrání, abych si nepostěžoval na dnešní
@@ -34,7 +34,7 @@ Zaměřím se raději na tři podle mě nejzávažnější věci:
     na něco hrdý? Sloučí se snad šestý a čtvrtý pád v jeden, protože je
     nejsme schopni rozlišit?
     <p>
-    ![ji](http://i.imgur.com/LWk4UZC.jpg){width="500"}
+    ![ji](http://i.imgur.com/LWk4UZC.jpg)
 -   Místo výrazů "sledovat", "pozorovat", "dívat se na" se používá
     hnusné slovo "koukat". Je mi jedno, že si tak doma mluvíte, nemluvte
     mi tak v televizi a ve veřejných projevech, já taky např. při
@@ -52,7 +52,7 @@ Zaměřím se raději na tři podle mě nejzávažnější věci:
 Nejideálnější/nejdokonalejší/nejoptimálnější
 --------------------------------------------
 
-![koukám na televizi](http://i.imgur.com/8FmiXYz.png){.right .alignright width="128"}
+![koukám na televizi](http://i.imgur.com/8FmiXYz.png)
 
 Ještě bych zde rád zmínil problematiku týkající se stupňování přídavných
 jmen dokonalý, optimální, ideální apod. Zde je situace o něco lepší,
@@ -119,7 +119,7 @@ EDIT 2016:
 
 -   Dosáhnout koho/co místo dosáhnout koho/čeho, např.: "Dosáhl jsem
     vysoký výkon." místo "Dosáhl jsem vysokého výkonu." Podle
-     [SSJČ](http://ssjc.ujc.cas.cz/search.php?heslo=dos%C3%A1hnouti&sti=11697&where=hesla)
+    [SSJČ](http://ssjc.ujc.cas.cz/search.php?heslo=dos%C3%A1hnouti&sti=11697&where=hesla)
     (který má kodifikační statut) lze dosáhnout koho/co použít pouze ve
     významu skutečně fyzicky dosáhnout na nějaký objekt, a hlavně jinde
     než v poezii to zní nesmírně blbě.

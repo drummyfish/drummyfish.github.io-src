@@ -1,20 +1,17 @@
-<footer class="post-info">
-
-        {{ article.locale_date }}
+<div class="post-info">
+  {{ article.locale_date }} <br />
+  
+  {% if article.modified %}
+    {{ article.locale_modified }} <br />
+  {% endif %}
         
-        {% if article.modified %}
-          (modified: {{ article.locale_modified }})
-        {% endif %}
+  {% if article.authors %}
+    {% for author in article.authors %}
+      {{ author }} <br />
+    {% endfor %}
+  {% endif %}
         
-        {% if article.authors %}
-          <br />
-          {% for author in article.authors %}
-            <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-          {% endfor %}
-        {% endif %}
-        
-        {% include 'taglist.html' %}
-        {% import 'translations.html' as translations with context %}
-        {{ translations.translations_for(article) }}
-        
-</footer><!-- /.post-info -->
+  {% include 'taglist.html' %} <br />
+  {% import 'translations.html' as translations with context %} <br />
+  {{ translations.translations_for(article) }}
+</div>

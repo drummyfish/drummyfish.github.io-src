@@ -8,6 +8,5 @@ import commonconf
 
 commonconf.set_common_variables(sys.modules[__name__])
 
-SITENAME = u'tastyfish'
 SITEURL = ''
 PUBLISH_INFO_TEXT = u'local version (for testing, you shouldn\'t see this online)'
