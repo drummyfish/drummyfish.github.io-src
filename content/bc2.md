@@ -396,6 +396,8 @@ Celkové výsledky
   Tworba webových stránek (ITW)             |86/100          |B
 
 průměr: 1,581
+
 pořadí v ročníku: 25. místo z 184 (studenti bez F s alespoň 25 kredity)
+
 prospěchové stipendium: 7174 Kč
 

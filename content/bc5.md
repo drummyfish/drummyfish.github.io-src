@@ -20,7 +20,7 @@ značně zkomplikuje...
 Komplikace
 ----------
 
-![sad face](/uploaded/sadface.png){.right .alignright}
+![sad face](http://i.imgur.com/6IwyoNo.png){.right .alignright}
 
 Ano, bohužel jsem to se školou trochu přehnal a těsně před zkouškami se
 mi značně zhoršil zdravotní stav - ne, bohužel nešlo o pouhou chřipku.
@@ -546,8 +546,7 @@ Celkové výsledky
 
 průměr: 2,053
 
-pořadí v ročníku: 95.-97. místo z 240 (studenti bez F s alespoň 25
-kredity)
+pořadí v ročníku: 95.-97. místo z 240 (studenti bez F s alespoň 25 kredity)
 
 prospěchové stipendium: 0 Kč
 

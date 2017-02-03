@@ -110,8 +110,7 @@ nástroje v oblasti počítačové grafiky. Pokud vás zhodnocení zaujalo a
 chtěli byste se naučit třeba Blender (doporučuji), zapište si v letním
 semestru předmět VIZ, který je velmi podobný.
 
-![](http://img01.deviantart.net/9388/i/2015/299/c/8/sci_fi_chess_by_drummyfish-d9effp7.png){.aligncenter
-width="640" height="400"}
+![](http://img01.deviantart.net/9388/i/2015/299/c/8/sci_fi_chess_by_drummyfish-d9effp7.png)
 
 Celkové výsledky
 ----------------
@@ -122,7 +121,10 @@ Celkové výsledky
   Kreativní grafika (KRG)                    |90/100          |A
 
 průměr: 1,277  
+
 pořadí v ročníku: 10. z 211  
+
 pořadí v ročníku oboru: 4. z 47  
-prospěchové stipendium: coming soon
+
+prospěchové stipendium: 0 Kč
 

@@ -28,8 +28,4 @@ def set_common_variables(module_ref):
   module_ref.AUTHOR_FEED_RSS = None
   module_ref.RELATIVE_URLS = True
   module_ref.START_PAGE = "pages/intro.html"
-  module_ref.MD_EXTENSIONS = ["markdown.extensions.tables"]
-
-  #module_ref.LINKS = (('Pelican', 'http://getpelican.com/'),
-  #       ('Python', 'http://python.org/'),
-  #       ('Jinja2', 'http://jinja.pocoo.org/'),)
+  module_ref.MARKDOWN = {"markdown.extensions.tables" : {}}

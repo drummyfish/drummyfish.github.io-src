@@ -156,7 +156,10 @@ Celkové výsledky
   Semestrální projekt (SEP)                       |90/100          |A
 
 průměr: 1,5  
+
 pořadí v ročníku: 15.-21. z 90  
+
 pořadí v ročníku oboru: 3.-4. z 22  
+
 prospěchové stipendium: 0 Kč
 

@@ -20,7 +20,6 @@ Algoritmy (IAL)
 ---------------
 
 {{ m.fit_but_cheatsheet('IAL','1','qfdnH') }}
-
 {{ m.fit_but_cheatsheet('IAL','2','RupGM') }}
 
 Tak tady mám pocit, že šlo o docela důležitý předmět a to proto, že
@@ -71,7 +70,6 @@ Formální jazyky a překladače (IFJ)
 ----------------------------------
 
 {{ m.fit_but_cheatsheet('IFJ','1','fG70R') }}
-
 {{ m.fit_but_cheatsheet('IFJ','2','xsrER') }}
 
 IFJ by mohl kandidovat na zatím nejpřínosnější předmět mého studia a
@@ -112,11 +110,9 @@ postihl strach, že projekt nestihneme, i když náš tým pracoval dnem i
 nocí, naštěstí se všechno podařilo a i když jsme nestihli implementovat
 žádná rozšíření, fungující překladač nám byl ještě větší odměnou než 19
 bodů z 20. To si opravdu musí zažít každý sám, když si napíše nějakou
-jednoduchou aplikaci pro vlastní překladač a ona potom krásně funguje :)
+jednoduchou aplikaci pro vlastní překladač a ona potom krásně funguje {{m.e(':)')}}
 S projektem souvisela taky obhajoba a dokumentace, které se počítaly do
 předmětu IAL, u něhož se dočtete o těchto věcech více.
-
-![projekt](http://tastyfish.cz/uploaded/interpret.png){.center}
 
 Jak říkám, v IFJ šlo především o projekt, zkouška bez minima byla už
 jenom takové formální završení. Učení jsem ale nepodcenil, i když by mi
@@ -133,7 +129,6 @@ Numerická matematika a pravděpodobnost (INM)
 --------------------------------------------
 
 {{ m.fit_but_cheatsheet('INM','1','B5eAp') }}
-
 {{ m.fit_but_cheatsheet('INM','2','tkIVK') }}
 
 Tímto předmětem končí matematické a zároveň FEKTové povinné předměty v
@@ -173,9 +168,7 @@ Návrh počítačových systémů (INP)
 --------------------------------
 
 {{ m.fit_but_cheatsheet('INP','1','9Rgm8') }}
-
 {{ m.fit_but_cheatsheet('INP','2','MBVj7') }}
-
 {{ m.fit_but_cheatsheet('INP','3','pnYsA') }}
 
 Další z rodiny hardwarových předmětů, které mi teď s odstupem času,
@@ -217,14 +210,13 @@ Signály a systémy (ISS)
 -----------------------
 
 {{ m.fit_but_cheatsheet('ISS','1','0sVe3') }}
-
 {{ m.fit_but_cheatsheet('ISS','2','2xwmu') }}
 
 Nenápadný název předmětu skrývá ve skutečnosti jeden z nejobtížnějších
 předmětů na pochopení, s jakými jsem měl čest se setkat. Ve výsledku ale
 tenhle předmět není tak těžký, jak by mohl být, a je rozhodně
 snesitelnější než třeba IOS, neboť se počítá s tím, že průměrný student
-úplně všechno nepobere (na rozdíl od IOSu \^\^). Celý předmět je
+úplně všechno nepobere (na rozdíl od IOSu {{m.e('^^')}}). Celý předmět je
 orientovaný o něco víc matematicky, než by někdo mohl být zvyklý, a
 vyžaduje alespoň malou dávku abstraktního myšlení, schopnosti
 představovat si operace nad vícerozměrnými signály apod.
@@ -236,7 +228,7 @@ pomáhá a dobře to udržuje pozornost. Doc. Černocký má humoru prostě na
 rozdávání, což je vždycky dobře. Ale i tak se studentům točila hlava z
 analýzy signálů a ze zkratek všech těch transformací nad nimi.
 
-Předmět zahrnoval i cvičení sympaticky bodovaná pouze za docházku :p
+Předmět zahrnoval i cvičení sympaticky bodovaná pouze za docházku {{m.e(':p')}}
 Znalosti z nich ale mohly napomoct při projektu, kdy nám byly přiděleny
 obrázky a naším úkolem bylo odevzdat program nejlépe v Matlabu (ale
 fantazii se při výběru jazyka meze nekladly) pro různé operace nad tímto
@@ -266,9 +258,7 @@ Pedagogická psychologie (IPSO)
 ------------------------------
 
 {{ m.fit_but_cheatsheet('IPSO','1','JaKYC') }}
-
 {{ m.fit_but_cheatsheet('IPSO','2','mu1pZ') }}
-
 {{ m.fit_but_cheatsheet('IPSO','3','iv8T0') }}
 
 Pedagogická psychologie vyhrála moje rozhodování mezi volitelnými
@@ -312,14 +302,14 @@ zajímá psychologie a/nebo pedagogika.
 Celkové výsledky
 ----------------
 
-  předmět                                        získaných bodů   známka
-  ---------------------------------------------- ---------------- --------
-  Algoritmy (IAL)                                75/100           C
-  Formální jazyky a překladače (IFJ)             78/100           C
-  Numerická matematika a pravděpodobnost (INM)   79/100           C
-  Návrh počítačových systémů (INP)               70/100           C
-  Signály a systémy (ISS)                        84/100           B
-  Pedagogická psychologie (IPSO)                 65/100           D
+  předmět                                       |získaných bodů  |známka
+  ----------------------------------------------|----------------|--------
+  Algoritmy (IAL)                               |75/100          |C
+  Formální jazyky a překladače (IFJ)            |78/100          |C
+  Numerická matematika a pravděpodobnost (INM)  |79/100          |C
+  Návrh počítačových systémů (INP)              |70/100          |C
+  Signály a systémy (ISS)                       |84/100          |B
+  Pedagogická psychologie (IPSO)                |65/100          |D
 
 průměr: 1,983
 

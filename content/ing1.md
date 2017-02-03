@@ -589,7 +589,10 @@ Celkové výsledky
   Matematické struktury v informatice (MAT) |80/100                  |B
 
 průměr: 1,583
+
 pořadí v ročníku: 10. z 106 (studenti bez F s alespoň 25 kredity)
+
 pořadí v ročníku oboru: 3. z 55
+
 prospěchové stipendium: 9913 Kč
 

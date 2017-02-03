@@ -344,7 +344,7 @@ odprezentovat program na vlastním notebooku a to šlo už všechno krásně.
 Stálo nás to ale 20% hodnocení, což je sice škoda ale jinak jsem s
 aplikací spokojený a kašlu na body {{m.e(':)')}}
 
-![projekt](/uploaded/simulator_screen.png){.center width="640"}
+![projekt](http://i.imgur.com/Pv5nsL5.png)
 
 Jednoznačně skvělý předmět pro všechny Javové nadšence ale nejen pro ně.
 Týmových projektů rozhodně taky není nikdy dost. Určitě nelituju, že
@@ -399,6 +399,8 @@ Celkové výsledky
   Právní minimum (PRM)                       |                        |zápočet
 
 průměr: 2,08
+
 pořadí v ročníku: 58.-59. místo z 138 (studenti bez F s alespoň 25 kredity)  
+
 prospěchové stipendium: 0 Kč
 

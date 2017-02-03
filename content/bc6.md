@@ -106,8 +106,7 @@ Celkové výsledky
 
 průměr: 1,5  
   
-pořadí v ročníku: 47.-65. místo z 377 (studenti bez F s alespoň 25
-kredity)  
+pořadí v ročníku: 47.-65. místo z 377 (studenti bez F s alespoň 25 kredity)  
   
 prospěchové stipendium: 0 Kč
 

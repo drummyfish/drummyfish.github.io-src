@@ -238,9 +238,7 @@ něco odnést, protože témata zde probíraná patří k naprostým základům
 grafika. Přednášky jsou navíc krásně stravitelné a troufám si říct, že i
 zajímavé.
 
-[![duck](http://tastyfish.cz/wp-content/uploads/2015/04/duck-1024x668.png){.wp-image-111
-.aligncenter width="618"
-height="403"}](http://tastyfish.cz/wp-content/uploads/2015/04/duck.png)
+![duck](http://i.imgur.com/gfxNFcz.png)
 
 Zpracování řečových signálů (ZRE)
 ---------------------------------
@@ -402,8 +400,7 @@ na nic ani stěžovat nelze, předmět je zajímavý, nenáročný, pro leckoho
 přínosný a pan Staudek mu dává mnohem víc, než by musel. Tady lze jenom
 chválit.
 
-![](http://i.imgur.com/Z7KEPEM.png){.aligncenter width="640"
-height="400"}
+![](http://i.imgur.com/Z7KEPEM.png)
 
 Celkové výsledky
 ----------------
@@ -418,8 +415,11 @@ Celkové výsledky
   Internetové aplikace (WAP)                     |94/100          |A
   Výtvarná informatika (VIN)                     |100/100         |A
 
-průměr: 1,714  
-pořadí v ročníku: 19.-21.  
+průměr: 1,714
+
+pořadí v ročníku: 19.-21. 
+
 pořadí v ročníku oboru: 3.  
+
 prospěchové stipendium: 0 Kč
 

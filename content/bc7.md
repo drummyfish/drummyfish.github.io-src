@@ -125,11 +125,9 @@ práce na ní mi dala velmi mnoho zkušeností v konkrétně zaměřeném oboru
 grafiky a velmi jsem si ji užil. Velkou zásluhu na tom měl i vedoucí
 mojí práce, který mi nechával hodně volnosti a hodně mě podporoval.
 
-[BP
-text](https://www.dropbox.com/s/2uslhok32tg7p7c/BP%20elektronicka%20verze.pdf?dl=0)
+[BPtext](https://www.dropbox.com/s/2uslhok32tg7p7c/BP%20elektronicka%20verze.pdf?dl=0)
 
-![projekt](http://tastyfish.cz/uploaded/texturemaker.png){.center
-width="640"}
+![projekt](http://i.imgur.com/SsHGDo4.png)
 
 Státní závěrečná zkouška (ISZ)
 ------------------------------

@@ -64,8 +64,7 @@ pana Chudého. Teď nejenom vidím rozdíl mezi 3D modelováním pro
 vizualizace a 3D modelováním pro výrobu a simulaci, ale taky se mi CAD
 systémy celkem líbí samy o sobě.
 
-![](http://img12.deviantart.net/927d/i/2016/097/6/c/1_pp_by_drummyfish-d9y15mu.png){.aligncenter
-width="640" height="400"}
+![](http://img12.deviantart.net/927d/i/2016/097/6/c/1_pp_by_drummyfish-d9y15mu.png)
 
 Vysoce náročné výpočty (VNV)
 ----------------------------
@@ -198,8 +197,11 @@ Celkové výsledky
   Vysoce náročné výpočty (VNV)                           |73/100          |C
   Architektura a programování paralelních systémů (ARC)  |58/100          |E
 
-průměr: 2,166  
+průměr: 2,166
+
 pořadí v ročníku: 107.-112. z 203  
+
 pořadí v ročníku oboru: 4. z 46  
+
 prospěchové stipendium: 0 Kč
 

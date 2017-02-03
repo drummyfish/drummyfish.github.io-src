@@ -1,11 +1,11 @@
-Title: Switching to Linux
+Title: Přechod na Linux
 Date: 2015-05-22 22:58
 Author: tastyfish
 Category: Posts
-Slug: switching-to-linux
+Slug: prechod-na-linux
 Status: published
 
-\[:cs\]Na svém notebooku mám od teď už jenom Linux. Je to [Ubuntu
+Na svém notebooku mám od teď už jenom Linux. Je to [Ubuntu
 MATE](https://ubuntu-mate.org/). A proč jsem se vlastně k přechodu
 rozhodl? Lepší otázkou je, proč mi to tak dlouho trvalo.
 
@@ -34,4 +34,4 @@ zdá, vyřešil program Bumblebee, který napsali dobří lidé z komunity.
 Pokud vás štve, že se vám při instalaci programů instaluje software,
 který jste vůbec nechtěli, nebo že se musíte rozhodovat, zda si koupit
 nový Office nebo ho ukradnout, zvažte přechod na Linux. Není jenom
-zdarma, je svobodný.\[:\]
+zdarma, je svobodný.
