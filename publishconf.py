@@ -8,5 +8,5 @@ import commonconf
 
 commonconf.set_common_variables(sys.modules[__name__])
 
-SITEURL = "http://drummyfish.github.io"
+SITEURL = "https://drummyfish.github.io"
 PUBLISH_INFO_TEXT = u'publish version'
