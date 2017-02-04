@@ -3,7 +3,6 @@ Date: 2016-04-18 14:08
 Author: tastyfish
 Category: Articles
 Lang: cs
-Slug: diskuse-nazory
 Status: published
 
 Poslední dobou jsem měl dost často motivační krizi. Proč bych měl

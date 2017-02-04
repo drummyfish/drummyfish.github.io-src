@@ -2,7 +2,6 @@ Title: Základy objektově orientovaného programování
 Date: 2012-12-11 17:10
 Author: tastyfish
 Category: Articles
-Slug: zaklady-oop
 Lang: cs
 Status: published
 

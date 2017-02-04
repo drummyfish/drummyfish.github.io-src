@@ -4,7 +4,6 @@ Author: tastyfish
 Category: Articles
 Tags: physics
 Lang: cs
-Slug: specialni-teorie-relativity
 Status: published
 
 {% import 'macros.html' as m %}

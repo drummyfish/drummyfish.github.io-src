@@ -4,7 +4,6 @@ Author: tastyfish
 Category: Articles
 Tags: source
 Lang: cs
-Slug: pokrocile-oop
 Status: published
 
 V článku o základech OOP jsem se věnoval tomu nejdůležitějšímu, co je

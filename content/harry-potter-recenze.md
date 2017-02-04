@@ -3,7 +3,6 @@ Date: 2016-10-01 13:36
 Author: tastyfish
 Category: Articles
 Lang: cs
-Slug: harry-potter-a-proklete-dite-recenze
 Status: published
 
 viď, viď, viď, viď, viď, viď, viď, viď, viď, koukej, viď, viď,

@@ -23,7 +23,7 @@ def set_common_variables(module_ref):
   module_ref.DISPLAY_CATEGORIES_ON_MENU = False
   module_ref.DISPLAY_PAGES_ON_MENU = False
   module_ref.MENUITEMS = [
-    (u"Úvod","pages/intro.html"),
+    (u"Úvod","index.html"),
     (u"Příspěvky","category/posts.html"),
     (u"Clánky","category/articles.html"),
     (u"Projekty","pages/projekty.html"),
@@ -44,6 +44,13 @@ def set_common_variables(module_ref):
   module_ref.SUMMARY_MAX_LENGTH = 10
   
   module_ref.I18N_SUBSITES = {
-    "en": {}
+    "en": { "MENUITEMS" : [
+         (u"Intro","index.html"),
+         (u"Posts","category/posts.html"),
+         (u"Articles","category/articles.html"),
+         (u"Projects","pages/projekty.html"),
+         (u"Tags","tags.html"),
+         (u"About me","pages/about.html")]
+        }
     }
   module_ref.I18N_UNTRANSLATED_ARTICLES = "keep"

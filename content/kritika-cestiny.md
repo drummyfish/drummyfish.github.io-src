@@ -3,7 +3,6 @@ Date: 2014-08-08 12:31
 Author: tastyfish
 Category: Articles
 Lang: cs
-Slug: kritika-cestiny
 Status: published
 
 ![jsem na ní hrdý](http://i.imgur.com/GjELHTV.png)

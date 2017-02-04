@@ -4,7 +4,6 @@ Author: tastyfish
 Category: Posts
 Lang: cs
 Tags: linux
-Slug: linux-dosavadni-zkusenosti
 Status: published
 
 Podle data předchozího článku používám Linux jako primární

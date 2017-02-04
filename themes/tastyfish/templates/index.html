@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=pages/intro.html" />
-  </head>
-  
-  <body>
-    You should be redirected. If not, please kindly click <a href="pages/intro.html">here</a>.
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}
+
+<section id="content" class="body">
+  {% import 'macros.html' as m %}
+
+  Vítejte na mých stránkách {{m.e(':)')}} Jejich účelem je shromažďovat různé věci, které mě zajímají a o které se chci podělit.
+</section>
+{% endblock content %}

@@ -2,7 +2,6 @@ Title: Nerozhodnutelnost versus lidský mozek
 Date: 2014-08-02 12:46
 Author: tastyfish
 Category: Articles
-Slug: nerozhodnutelnost
 Lang: cs
 Status: published
 

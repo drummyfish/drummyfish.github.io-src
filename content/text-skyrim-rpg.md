@@ -3,7 +3,6 @@ Date: 2015-08-16 22:02
 Author: tastyfish
 Category: Posts
 Tags: c, commandline, game, multiplatform, recruit, rpg
-Slug: text-skyrim-rpg
 Lang: cs
 Status: published
 

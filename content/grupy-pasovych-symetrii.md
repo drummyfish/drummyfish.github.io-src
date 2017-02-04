@@ -4,7 +4,6 @@ Author: tastyfish
 Category: Articles
 Tags: graphics, math
 Lang: cs
-Slug: grupy-pasovych-symetrii
 Status: published
 
 Ve [výtvarné informatice](http://tastyfish.cz/?p=307&lang=cs)

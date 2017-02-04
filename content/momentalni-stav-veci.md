@@ -2,7 +2,6 @@ Title: Momentální stav věcí
 Date: 2015-05-02 13:59
 Author: tastyfish
 Category: Posts
-Slug: momentalni-stav-veci
 Status: published
 
 {% import 'macros.html' as m %}

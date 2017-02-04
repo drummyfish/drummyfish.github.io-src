@@ -3,7 +3,6 @@ Date: 2015-10-06 21:00
 Author: tastyfish
 Category: Posts
 Lang: cs
-Slug: rozvolnovani-komplikace-zase
 Status: published
 
 {% import 'macros.html' as m %}

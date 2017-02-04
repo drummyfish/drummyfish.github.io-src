@@ -2,7 +2,6 @@ Title: Přechod na Linux
 Date: 2015-05-22 22:58
 Author: tastyfish
 Category: Posts
-Slug: prechod-na-linux
 Status: published
 
 Na svém notebooku mám od teď už jenom Linux. Je to [Ubuntu

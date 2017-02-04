@@ -3,7 +3,6 @@ Date: 2012-05-20 17:32
 Author: tastyfish
 Category: Articles
 Tags: math
-Slug: fraktaly
 Lang: cs
 Status: published
 

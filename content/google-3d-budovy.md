@@ -4,7 +4,6 @@ Author: tastyfish
 Category: Articles
 Tags: 3d, graphics
 Lang: cs
-Slug: google-3d-budovy
 Status: published
 
 {% import 'macros.html' as m %}
