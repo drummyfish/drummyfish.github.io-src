@@ -17,7 +17,7 @@ def set_common_variables(module_ref):
 
   module_ref.DEFAULT_PAGINATION = 4
   module_ref.PLUGIN_PATHS = ['plugins']
-  module_ref.PLUGINS = ['jinja2content']
+  module_ref.PLUGINS = ['jinja2content','i18n_subsites']
   module_ref.PATH = 'content'
   module_ref.TIMEZONE = 'Europe/Prague'
   module_ref.DISPLAY_CATEGORIES_ON_MENU = False
@@ -42,3 +42,8 @@ def set_common_variables(module_ref):
   module_ref.START_PAGE = "pages/intro.html"  # added this, index.html redirects here
   module_ref.MARKDOWN = {"markdown.extensions.tables" : {}}
   module_ref.SUMMARY_MAX_LENGTH = 10
+  
+  module_ref.I18N_SUBSITES = {
+    "en": {}
+    }
+  module_ref.I18N_UNTRANSLATED_ARTICLES = "keep"

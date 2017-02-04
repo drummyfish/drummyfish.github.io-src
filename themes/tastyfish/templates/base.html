@@ -18,6 +18,13 @@
 
 <body id="index" class="home">
 {% include 'github.html' %}
+
+       <div class="language-select">
+                  {% for lng, surl in lang_siteurls.items() %}
+                    <a href="{{ SITEURL }}{% if not surl == '' %}/{{ surl }}{% endif %}/index.html"> <div class="lang-icon lang-{{ lng }}" ></div> </a>
+                  {% endfor %}
+       </div>
+
         <header id="banner" class="body">
                 <div class="fish"></div>
                 <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
