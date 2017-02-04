@@ -38,7 +38,7 @@ def set_common_variables(module_ref):
   module_ref.TRANSLATION_FEED_ATOM = None
   module_ref.AUTHOR_FEED_ATOM = None
   module_ref.AUTHOR_FEED_RSS = None
-  module_ref.RELATIVE_URLS = True
+  module_ref.RELATIVE_URLS = False
   module_ref.START_PAGE = "pages/intro.html"  # added this, index.html redirects here
   module_ref.MARKDOWN = {"markdown.extensions.tables" : {}}
   module_ref.SUMMARY_MAX_LENGTH = 10
