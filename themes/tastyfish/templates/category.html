@@ -3,38 +3,42 @@
 {% block content %}
 
 {% if articles %}
-    {% for article in articles_page.object_list %}
-
-        {% if loop.first %}
-            <section id="content" class="body">
-                <ol id="posts-list" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
-        {% endif %}
+  {% for article in articles_page.object_list %}
+  
+    {% if loop.first %}
+      <section id="content" class="body">
+            
+      {% include "pagination.html" %}
+      
+      <ol id="posts-list" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
+    {% endif %}
         
-        <li><article class="hentry">
-            <header>
-                <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+      <li>
+        <article class="hentry">
+          <header>
+          <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-            </header>
+          </header>
 
-            <div class="entry-content">
+          <div class="entry-content">
             {% include 'article_infos.html' %}
             {{ article.summary }}
             <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
             {% include 'comments.html' %}
-            </div><!-- /.entry-content -->
-        </article></li>
+          </div><!-- /.entry-content -->
+        </article>
+      </li>
 
-        {% if loop.last %}
-          </ol><!-- /#posts-list -->
-          {% if articles_page.has_other_pages() %}
-            {% include 'pagination.html' %}
-          {% endif %}
-          </section><!-- /#content -->
+    {% if loop.last %}
+      </ol><!-- /#posts-list -->
+        {% if articles_page.has_other_pages() %}
+          {% include "pagination.html" %}
         {% endif %}
-    {% endfor %}
+      </section><!-- /#content -->
+    {% endif %}
+  {% endfor %}
     
 {% else %} {# if no articles exist #}
-
 <section id="content" class="body">
 <h2>Pages</h2>
     {% for page in PAGES %}
