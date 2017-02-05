@@ -13,7 +13,7 @@
     {% endif %}
   </p>
  
-  <ul>
+  <ul class="tag-list">
   {% for tag, articles in tags|sort %}
     <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
   {% endfor %}

@@ -19,6 +19,7 @@ sport atd.
 - Jsem členem Mensy.
 - Neumím hvízdat.
 - Mám variantu 1A genu CYP1A2, tzn. můžu si dát kafe před spaním.
+- Trpím úzkostmi a depresemi {{m.e(':(')}}
 
 ## Pár věcí, které mám rád:
 

@@ -6,7 +6,9 @@ Tags: graphics, math
 Lang: cs
 Status: published
 
-Ve [výtvarné informatice](http://tastyfish.cz/?p=307&lang=cs)
+{% import 'macros.html' as m %}
+
+Ve výtvarné informatice
 jsme kdysi letmo probírali [grupy symetrií v
 rovině](https://en.wikipedia.org/wiki/List_of_planar_symmetry_groups) -
 zajímavé učivo, ale v té rychlosti jsem pobral jenom to, že se dají
@@ -32,7 +34,7 @@ Budeme se zaobírat tzv. pásovým dlážděním (line groups, frieze groups).
 U tohoto dláždění máme 2D vzor, který se ale opakuje jen v horizontálním
 směru, např. takto:
 
-![real life](http://tastyfish.cz/wp-content/uploads/2016/08/real-life.jpg){.alignnone .size-full .wp-image-779 width="640" height="208"}
+![real life](http://tastyfish.cz/wp-content/uploads/2016/08/real-life.jpg)
 
 Intuitivně vidíme, že tento vzor v sobě má něco symetrického. Naším
 úkolem je nyní toto intuitivní tušení vyjádřit matematicky. Abychom to
@@ -72,15 +74,15 @@ motivem, s jinými barvami apod. Nezapomeňme ale, že nás nezajímají přímo
 vzory, ale symetrie, tedy jakési typy vzorů. A těch je, jak bylo
 dokázáno, pro pásové vzory pouze 7. Jsou následující:
 
-  číslo  |symetrie        |příklad                                                                                                              |odborná označení
-  -------|----------------|---------------------------------------------------------------------------------------------------------------------|------------------
-  1      |P               |![](http://upload.wikimedia.org/wikipedia/commons/1/10/Frieze_example_p1.png)                                        |p1
-  2      |P, P+V          |![](http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Frieze_example_p11g.png/150px-Frieze_example_p11g.png)  |p11g
-  3      |P, H            |![](http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Frieze_example_p1m1.png/150px-Frieze_example_p1m1.png)  |p1m1
-  4      |P, V+H          |![](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Frieze_example_p2.png/150px-Frieze_example_p2.png)      |p2
-  5      |P, H, V+H, P+V  |![](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Frieze_example_p2mg.png/150px-Frieze_example_p2mg.png)  |p2mg
-  6      |P, V            |![](http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Frieze_example_p11m.png/150px-Frieze_example_p11m.png)  |p11m
-  7      |P, V, H         |![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Frieze_example_p2mm.png/150px-Frieze_example_p2mm.png)  |p2mm
+  číslo  |symetrie        |příklad                                                                                                                      |odborná označení
+  -------|----------------|-----------------------------------------------------------------------------------------------------------------------------|------------------
+  1      |P               |![example1](http://upload.wikimedia.org/wikipedia/commons/1/10/Frieze_example_p1.png)                                        |p1
+  2      |P, P+V          |![example2](http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Frieze_example_p11g.png/150px-Frieze_example_p11g.png)  |p11g
+  3      |P, H            |![example3](http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Frieze_example_p1m1.png/150px-Frieze_example_p1m1.png)  |p1m1
+  4      |P, V+H          |![example4](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Frieze_example_p2.png/150px-Frieze_example_p2.png)      |p2
+  5      |P, H, V+H, P+V  |![example5](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Frieze_example_p2mg.png/150px-Frieze_example_p2mg.png)  |p2mg
+  6      |P, V            |![example6](http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Frieze_example_p11m.png/150px-Frieze_example_p11m.png)  |p11m
+  7      |P, V, H         |![example7](http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Frieze_example_p2mm.png/150px-Frieze_example_p2mm.png)  |p2mm
 
 Takže např. symetrie č. 2 má dvě symetrie (vůči posunu a vůči posunu
 plus vertikálnímu překlopení, což se také nazývá gliding reflection):
@@ -88,7 +90,7 @@ plus vertikálnímu překlopení, což se také nazývá gliding reflection):
 ![animaion](http://tastyfish.cz/wp-content/uploads/2016/08/animaion.gif)
 
 Zkuste si ověřit, že všechny zbývající vzorové příklady vykazují uvedené
-symetrie (a popřípadě napište, že jsem udělal chybu :D).
+symetrie (a popřípadě napište, že jsem udělal chybu {{m.e(':D')}}).
 
 Co mají ale s tímhle vším společného grupy? Vezmeme-li totiž naše
 základní transformace (P,V,H) jako množinu a skládání transformací (tj.

@@ -400,7 +400,7 @@ na nic ani stěžovat nelze, předmět je zajímavý, nenáročný, pro leckoho
 přínosný a pan Staudek mu dává mnohem víc, než by musel. Tady lze jenom
 chválit.
 
-![](http://i.imgur.com/Z7KEPEM.png)
+![projekt](http://i.imgur.com/Z7KEPEM.png)
 
 Celkové výsledky
 ----------------

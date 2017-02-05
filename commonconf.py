@@ -40,9 +40,16 @@ def set_common_variables(module_ref):
   module_ref.AUTHOR_FEED_RSS = None
   module_ref.RELATIVE_URLS = False
   module_ref.START_PAGE = "pages/intro.html"  # added this, index.html redirects here
-  module_ref.MARKDOWN = {"markdown.extensions.tables" : {}}
+  module_ref.MARKDOWN = {
+      "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+        "markdown.extensions.tables" : {}
+    },
+    "output_format": "html5",
+    }
   module_ref.SUMMARY_MAX_LENGTH = 10
-  
   module_ref.I18N_SUBSITES = {
     "en": { "MENUITEMS" : [
          (u"Intro","index.html"),
@@ -54,3 +61,8 @@ def set_common_variables(module_ref):
         }
     }
   module_ref.I18N_UNTRANSLATED_ARTICLES = "keep"
+
+  module_ref.STATIC_PATHS = ["images","extra/favicon.ico"]
+  module_ref.EXTRA_PATH_METADATA = {
+    "extra/favicon.ico": {"path": "favicon.ico"}
+    }

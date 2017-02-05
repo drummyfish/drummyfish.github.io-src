@@ -110,7 +110,7 @@ nástroje v oblasti počítačové grafiky. Pokud vás zhodnocení zaujalo a
 chtěli byste se naučit třeba Blender (doporučuji), zapište si v letním
 semestru předmět VIZ, který je velmi podobný.
 
-![](http://img01.deviantart.net/9388/i/2015/299/c/8/sci_fi_chess_by_drummyfish-d9effp7.png)
+![projekt](http://img01.deviantart.net/9388/i/2015/299/c/8/sci_fi_chess_by_drummyfish-d9effp7.png)
 
 Celkové výsledky
 ----------------

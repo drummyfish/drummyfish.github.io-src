@@ -64,7 +64,7 @@ pana Chudého. Teď nejenom vidím rozdíl mezi 3D modelováním pro
 vizualizace a 3D modelováním pro výrobu a simulaci, ale taky se mi CAD
 systémy celkem líbí samy o sobě.
 
-![](http://img12.deviantart.net/927d/i/2016/097/6/c/1_pp_by_drummyfish-d9y15mu.png)
+![projekt](http://img12.deviantart.net/927d/i/2016/097/6/c/1_pp_by_drummyfish-d9y15mu.png)
 
 Vysoce náročné výpočty (VNV)
 ----------------------------

@@ -118,7 +118,7 @@ o celkem komplikovaném systému GUI na Unixech. Jelikož v předmětu není
 zápočet ani minimum ze zkoušky, stojí za zvážení v případě neodbytné
 potřeby kreditů.
 
-![](http://i.imgur.com/TxkrkiX.png)
+![projekt](http://i.imgur.com/TxkrkiX.png)
 
 Semestrální projekt (SEP)
 -------------------------
