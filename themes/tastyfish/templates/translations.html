@@ -1,9 +1,16 @@
 {% macro translations_for(article) %}
-{% if article.translations %}
-translations/překlady:
-    {% for translation in article.translations %}
-      <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
-    {% endfor %}
+
+{% if DEFAULT_LANG == "cs" %}
+  překlady:
+{% else %}
+  translations:
 {% endif %}
-  překlady: <a href="https://translate.google.com/translate?sl=auto&tl=en&ie=UTF-8&u={{ (SITEURL + '/' + output_file) | urlencode }}"> en (google) </a>
+
+{% if article.translations %}
+  {% for translation in article.translations %}
+    <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+  {% endfor %}
+{% endif %}
+
+<a href="https://translate.google.com/translate?sl=auto&tl=en&ie=UTF-8&u={{ (SITEURL + '/' + output_file) | urlencode }}"> en (google) </a>
 {% endmacro %}

@@ -4,6 +4,7 @@ Author: tastyfish
 Category: Posts
 Tags: c, commandline, game, multiplatform, recruit, rpg
 Lang: en
+Slug: skyrim-rpg
 Status: published
 
 {% import 'macros.html' as m %}

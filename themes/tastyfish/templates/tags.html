@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Tags{% endblock %}
+{% block title %}{{ SITENAME }} - {% if DEFAULT_LANG == "cs" %} Tagy {% else %} Tags {% endif %} {% endblock %}
 
 {% block content %}
 
 <section id="content" class="body">
-    <h1>Tags for {{ SITENAME }}</h1>
-    <ul>
-    {% for tag, articles in tags|sort %}
-        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-    {% endfor %}
-    </ul>
+  <p>
+    {% if DEFAULT_LANG == "cs" %}
+      Zde se nachází seznam tagů, podle nichž snadno dohledáte konkrétní články.  
+    {% else %}
+      This page lists tags by which you can easily find articles.
+    {% endif %}
+  </p>
+ 
+  <ul>
+  {% for tag, articles in tags|sort %}
+    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+  {% endfor %}
+  </ul>
 </section>
 
 {% endblock %}
