@@ -17,7 +17,7 @@
 </head>
 
 <body id="index" class="home">
-{% include 'github.html' %}
+{% include "github.html" %}
        <div class="language-select">
          {% for lng, surl in lang_siteurls.items() %}
            <a href="{{ surl }}/index.html"> <div class="lang-icon lang-{{ lng }}{% if lng == DEFAULT_LANG %} selected-lang{% endif %}" ></div> </a>
@@ -52,18 +52,8 @@
         </header><!-- /#banner -->
         {% block content %}
         {% endblock %}
-        <section id="extras" class="body">
-        {% if LINKS %}
-                <div class="blogroll">
-                        <h2>{{ LINKS_WIDGET_NAME | default('links') }}</h2>
-                        <ul>
-                        {% for name, link in LINKS %}
-                            <li><a href="{{ link }}">{{ name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                </div><!-- /.blogroll -->
-        {% endif %}
-        </section><!-- /#extras -->
+        
+        {% include "links.html" %}
 
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">

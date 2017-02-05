@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}
+
+<section id="content" class="body">
+
+{% if DEFAULT_LANG == "cs" %}
+  <h1> Projekty </h1>
+    
+  <p> Tato stránka je věnovaná mým programovacím projektům. Všechny jsou k dipozici open-source na mém <a href="https://github.com/{{GITHUB_USER}}">GitHubovém profilu</a>. </p>
+
+{% else %}
+  <h1> Projects </h1>
+    
+  <p> This page is dedicated to my programming projects. They can all be found as open-source at my <a href="https://github.com/{{GITHUB_USER}}">GitHub profile</a>. </p>
+{% endif %}
+
+{% if GITHUB_USER %}
+  <table class="github-projects">
+    {% for project in github_projects %}
+      <tr>
+        <td> <a href="{{ project.github_url }}">  {{ project.name }} </a> </td>
+        <td> {{ project.language }} </td>
+        <td> {{ project.description }} </td>
+      </tr>  
+    {% endfor %}
+  </table>
+{% endif %}
+
+{% include "social.html" %}
+
+</section>
+{% endblock content %}
