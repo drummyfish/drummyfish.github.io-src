@@ -62,7 +62,8 @@ def set_common_variables(module_ref):
     }
   module_ref.I18N_UNTRANSLATED_ARTICLES = "keep"
 
-  module_ref.STATIC_PATHS = ["images","extra/favicon.ico"]
+  module_ref.STATIC_PATHS = ["images","extra/favicon.ico","../README.md"]
   module_ref.EXTRA_PATH_METADATA = {
-    "extra/favicon.ico": {"path": "favicon.ico"}
+    "extra/favicon.ico": {"path": "favicon.ico"},
+    "../README.md": {"path": "README.md"}
     }
