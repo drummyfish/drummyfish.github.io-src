@@ -4,4 +4,14 @@ Category: Review
 Slug: about
 Lang: en
 
-Following is a review of my favorite mechanical keyboard.
+{% import 'macros.html' as m %}
+
+## A few things I like:
+
+{{ m.things_i_like_text("en") }}
+
+## A few things I don't like:
+
+{{ m.things_i_dont_like_text("en") }}
+
+{{ m.img_desc('http://i.imgur.com/sQNYr3g.png','já','I like snorkeling :)') }}

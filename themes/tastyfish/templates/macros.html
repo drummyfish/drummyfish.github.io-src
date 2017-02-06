@@ -1,3 +1,118 @@
+{% 
+set things_i_like =
+  [
+    ("informatika"                   ,"computer science"),
+    ("matematika"                    ,"math"),
+    ("fyzika"                        ,"physics"),
+    ("psychologie"                   ,"psychology"),
+    ("zvířata"                       ,"animals"),
+    ("klid"                          ,"peace"),
+    ("PC hry"                        ,"PC games"),
+    ("PCMR"                          ,"PCMR"),
+    ("The Elder Scrolls"             ,"The Elder Scrolls"),
+    ("Half Life"                     ,"Half Life"),
+    ("Trackmania"                    ,"Trackmania"),
+    ("Pokémon"                       ,"Pokémon"),
+    ("Warcraft III"                  ,"Warcraft III"),
+    ("Quake III"                     ,"Quake III"),
+    ("Doom"                          ,"Doom"),
+    ("GTA"                           ,"GTA"),
+    ("Legend of Grimrock"            ,"Legend of Grimrock"),
+    ("Mafia"                         ,"Mafia"),
+    ("Crash Bandicoot"               ,"Crash Bandicoot"),
+    ("šachy"                         ,"chess"),
+    ("hudba"                         ,"music"),
+    ("Pink Floyd"                    ,"Pink Floyd"),
+    ("Lana Del Rey"                  ,"Lana Del Rey"),
+    ("Linkin Park"                   ,"Linkin Park"),
+    ("Led Zeppelin"                  ,"Led Zeppelin"),
+    ("Deep Purple"                   ,"Deep Purple"),
+    ("Queen"                         ,"Queen"),
+    ("romantika"                     ,"romance"),
+    ("Futurama"                      ,"Futurama"),
+    ("Simpsonovi"                    ,"The Simpsons"),
+    ("South Park"                    ,"South Park"),
+    ("Kočkopes"                      ,"Catdog"),
+    ("Bořiči mýtů"                   ,"Mythbusters"),
+    ("Pulp Fiction"                  ,"Pulp Fiction"),
+    ("Poslední Mohykán"              ,"The Last of the Mohicans"),
+    ("Stařec a moře"                 ,"The Old Man and the Sea"),
+    ("Čistá duše"                    ,"Beautiful Mind"),
+    ("fotbal"                        ,"football"),
+    ("KISS"                          ,"KISS"),
+    ("orchestrální hudba"            ,"orchestral music"),
+    ("command line"                  ,"command line"),
+    ("open-source"                   ,"open-source"),
+    ("platformní nezávislost"        ,"platform independence"),
+    ("VSauce"                        ,"VSauce"),
+    ("reddit"                        ,"reddit"),
+    ("4chan/b"                       ,"4chan/b"),
+    ("Hello Internet"                ,"Hello Internet"),
+    ("Python"                        ,"Python"),
+    ("Haskell"                       ,"Haskell"),
+    ("svoboda projevu"               ,"freedom of speech"),
+    ("Grammar Nazi"                  ,"Grammar Nazi"),
+    ("ezoterické programovacé jazyky","esoteric programming languages"),
+    ("Esperanto"                     ,"Esperanto"),
+    ("univerzalita"                  ,"universality"),
+    ("náramky přátelství"            ,"friendship bracelets"),
+    ("malé střelné zbraně"           ,"small guns"),
+    ("Sci-Hub"                       ,"Sci-Hub"),
+    ("GitHub"                        ,"GitHub"),
+    ("Linux/Unix"                    ,"Linux/Unix")
+  ]
+%}
+
+{% 
+set things_i_dont_like =
+  [
+    ("nedochvilnost"                                   ,"bad timekeeping"),
+    ("arogance"                                        ,"arrogance"),
+    ("blbci"                                           ,"idiots"),
+    ("párty"                                           ,"party"),
+    ("většina lidí"                                    ,"most people"),
+    ("komplexní IDE a frameworky"                      ,"complex IDEs and frameworks"),
+    ("C#"                                              ,"C#"),
+    ("Objective-C"                                     ,"Objective-C"),
+    ("neznalost rodného jazyka"                        ,"native language ignorance"),
+    ("neznalost definice slova \"definice\""           ,"wrong use of the word \"definition\""),
+    ("TV Nova"                                         ,"TV Nova"),
+    ("M*A*S*H"                                         ,"M*A*S*H"),
+    ("feministky"                                      ,"feminism"),
+    ("makeup"                                          ,"makeup"),
+    ("PewDiePie"                                       ,"PewDiePie"),
+    ("Smosh"                                           ,"Smosh"),
+    ("tetování/piercing"                               ,"tatoo/piercing"),
+    ("módy do her"                                     ,"game mods"),
+    ("politická korektnost"                            ,"political correctness"),
+    ("svatby gayů"                                     ,"gay marriage"),
+    ("zbytečné práce (jako např. odhrnování listí)"    ,"useless work"),
+    ("komunismus"                                      ,"communism"),
+    ("hořká (nikoliv horká) čokoláda"                  ,"unsweetened chocolate"),
+    ("zima"                                            ,"cold"),
+    ("alkohol"                                         ,"alcohol"),
+    ("kouření"                                         ,"smoking"),
+    ("Zeman"                                           ,"Zeman"),
+    ("Česká republika"                                 ,"Czech Republic"),
+    ("Steam"                                           ,"Steam"),
+    ("Hra o trůny"                                     ,"Game of Thrones"),
+    ("marketing"                                       ,"marketing")
+  ]
+%}
+
+{#-------------------------------------------------------------------#}
+{% macro things_i_like_text(language='cs') %}
+{% for thing_cs, thing_en in things_i_like %}
+{% if language == "cs" %}{{ thing_cs }}{% else %}{{ thing_en }}{% endif %}{% if not loop.last %}, {% endif %}
+{% endfor %}
+{% endmacro %}
+{#-------------------------------------------------------------------#}
+{% macro things_i_dont_like_text(language='cs') %}
+{% for thing_cs, thing_en in things_i_dont_like %}
+{% if language == "cs" %}{{ thing_cs }}{% else %}{{ thing_en }}{% endif %}{% if not loop.last %}, {% endif %}
+{% endfor %}
+{% endmacro %}
+{#-------------------------------------------------------------------#}
 {% macro img_desc(src, title='', desc='') -%}
 <div class="img-desc">
   <p><img src="{{ src }}" title="{{ title }}" alt="{{ title }}"></p>
@@ -49,7 +164,7 @@
       #}check{#
     #}{%endif%}"></span>
 {%- endmacro %}
-
+{#-------------------------------------------------------------------#}
 {% macro fit_but_cheatsheet(course,page,imgur_id) -%}
 <div class="fit-but-cheatsheet">
 <a href="http://i.imgur.com/{{ imgur_id }}.jpg" target="blank">
@@ -64,3 +179,4 @@
 </p>
 </div>
 {%- endmacro %}
+{#-------------------------------------------------------------------#}
