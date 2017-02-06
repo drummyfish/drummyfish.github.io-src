@@ -8,6 +8,9 @@ def set_common_variables(module_ref):
   module_ref.SITENAME = u"tastyfish"
   module_ref.AUTHOR = u"Miloslav Číž"
 
+  module_ref.OUTPUT_RETENTION = [".hg", ".git", ".bzr"]
+  module_ref.DELETE_OUTPUT_DIRECTORY = True
+
   module_ref.SOCIAL = (
     ("GitHub","https://github.com/drummyfish"),
     ("Facebook","https://www.facebook.com/miloslav.ciz"),
