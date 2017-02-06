@@ -30,25 +30,34 @@
                 
 <span style="font-weight: bold; color: red; float: right; position: relative;">UNDER CONSTRUCTION!!!</span>
                 
-                <nav><ul>
+                <nav>
+                  <ul>
+                    {% if tagpage == True %}
+                      {% set helper_index = "tag" %}
+                    {% else %}
+                      {% set helper_index = "%s"|format(category) %}
+                    {% endif %}
+                  
+                    {% set active_index = MENUITEM_ACTIVE_MAPPING[helper_index] %}
+                    
+                    {% for title, link in MENUITEMS %}
+                      <li {% if output_file == link or loop.index == active_index %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
                 
-                {% for title, link in MENUITEMS %}
-                  <li    {% if output_file == link %} class="active"{% endif %}           ><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
-                {% endfor %}
+                    {% if DISPLAY_PAGES_ON_MENU -%}
+                      {% for pg in pages %}
+                        <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+                      {% endfor %}
+                    {% endif %}
                 
+                    {% if DISPLAY_CATEGORIES_ON_MENU -%}
+                      {% for cat, null in categories %}
+                        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                      {% endfor %}
+                    {% endif %}
+                  </ul>
+                </nav>
                 
-                {% if DISPLAY_PAGES_ON_MENU -%}
-                {% for pg in pages %}
-                    <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
-                {% endfor %}
-                {% endif %}
-                {% if DISPLAY_CATEGORIES_ON_MENU -%}
-                {% for cat, null in categories %}
-                    <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}
-                {% endif %}
-                </ul></nav>
-
         </header><!-- /#banner -->
         {% block content %}
         {% endblock %}

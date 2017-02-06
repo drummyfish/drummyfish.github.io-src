@@ -5,15 +5,15 @@
 import __builtin__
 
 def set_common_variables(module_ref):
-  module_ref.SITENAME = u'tastyfish'
-  module_ref.AUTHOR = u'Miloslav \u010c\xed\u017e'
+  module_ref.SITENAME = u"tastyfish"
+  module_ref.AUTHOR = u"Miloslav Číž"
 
   module_ref.SOCIAL = (
-    ('GitHub','https://github.com/drummyfish'),
-    ('Facebook','https://www.facebook.com/miloslav.ciz'),
-    ('YouTube','https://www.youtube.com/user/drummyfish'),
-    ('Deviantart','http://drummyfish.deviantart.com/'),
-    ('reddit','https://www.reddit.com/user/drummyfish/'),)
+    ("GitHub","https://github.com/drummyfish"),
+    ("Facebook","https://www.facebook.com/miloslav.ciz"),
+    ("YouTube","https://www.youtube.com/user/drummyfish"),
+    ("Deviantart","http://drummyfish.deviantart.com/"),
+    ("reddit","https://www.reddit.com/user/drummyfish/"),)
 
   module_ref.DEFAULT_PAGINATION = 4
   module_ref.PLUGIN_PATHS = ["plugins"]
@@ -30,6 +30,12 @@ def set_common_variables(module_ref):
     (u"Projekty","pages/projekty.html"),
     (u"Tagy","tags.html"),
     (u"O mně","pages/about.html")]
+  
+  module_ref.MENUITEM_ACTIVE_MAPPING = {   # I added this, maps categories to menu item
+    "Articles" : 3,                        # indices that should be marked active
+    "Posts" : 2,
+    "tag" : 5
+    }
   
   module_ref.DEFAULT_LANG = u'cs'
   module_ref.THEME = "./themes/tastyfish"
