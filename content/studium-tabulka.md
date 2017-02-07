@@ -79,13 +79,52 @@ set study_data =
   }
 %}
 
-{% for study_type in study_data.studies %}
+{% macro write_points(points_tuple) %}
+{% if points_tuple[1] > 0 %}
+{{ points_tuple[0] }}/{{ points_tuple[1] }}
+{% endif %}
+{% endmacro %}
 
-{{ study_type }}
+{% macro course_total_points(course_obj) %}
+{% set projects_total = course_obj.pts.projects|map(attribute="0")|sum %}
+{{ projects_total + course_obj.pts.midterm[0] + course_obj.pts.labs[0] + course_obj.pts.other[0] + course_obj.pts.exam[0]}}
+{% endmacro %}
+
+<table>
+
+{% for study_type in study_data.studies %}
 
   {% for semester in study_data.studies[study_type].semesters %}
 
-semester: {{ loop.index }}
+    {% for course in semester.courses %}
 
+      <tr>
+  
+        <td> {{ course.abbr }} </td>
+        <td> {{ course["name cs"] }} </td>
+        <td> {{ course.credits }} </td>
+        <td> {{ course.type }} </td>
+       
+        <td> {{ write_points(course.pts.midterm) }} </td>
+
+        <td>
+       
+        {% for project_points in course.pts.projects %}
+          {{ write_points(project_points) }}
+        {% endfor %}
+       
+        </td>
+
+        <td> {{ write_points(course.pts.labs) }} </td>
+        <td> {{ write_points(course.pts.other) }} </td>
+        <td> {{ write_points(course.pts.exam) }} </td>
+
+        <td> {{ course_total_points(course) }} </td>
+       
+      </tr>
+
+    {% endfor %}
   {% endfor %}
 {% endfor %}
+
+</table>
