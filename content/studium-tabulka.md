@@ -94,7 +94,8 @@ set study_data =
 {{ semester_obj.courses|map(attribute="credits")|sum }}
 {%- endmacro %}
 
-{% macro course_mark(total_points) %}
+{% macro course_mark(course_obj) %}
+{% set total_points = course_total_points(course_obj)%}
 {% if total_points|int >= 90 %}A{% else %}
 {% if total_points|int >= 80 %}B{% else %}
 {% if total_points|int >= 70 %}C{% else %}
@@ -110,10 +111,20 @@ set study_data =
 {% if mark == "E" %}3{% else %}3.5{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
 {% endmacro %}
 
+{% macro weighted_mean_numerator(courses) %}
+{% if courses|length > 0 %}
+  {{ courses[0].credits|float * course_mark_to_number(course_mark(courses[0]))|float + (weighted_mean_numerator(courses[1:])|float) }}
+{% else %}
+  0
+{% endif %}
+{% endmacro %}
 
-{% macro semester_weighted_mean(semester_obj) -%}
-5
+{% macro courses_weighted_mean(courses) -%}
+{% set valid_courses = (courses|groupby("classified"))[1][1] %} {# reject/select filters don't work somehow #}
+{% set valid_credits = valid_courses|sum(attribute="credits") %}
+{{ (weighted_mean_numerator(valid_courses)|float / valid_credits|float)|string|truncate(5,true,"") }}
 {%- endmacro %}
+
 
 <table>
 
@@ -154,7 +165,7 @@ set study_data =
         <td>
           {% if course.classified %}
             {% set points_total = course_total_points(course) %}
-            {{ points_total }}&nbsp;{{ course_mark(points_total) }}
+            {{ points_total }}&nbsp;{{ course_mark(course) }}
           {% else %}
             ✓
           {% endif %}
@@ -162,7 +173,7 @@ set study_data =
        
         {% if loop.first %}
           <td rowspan="{{ number_of_courses }}"> {{ semester_total_credits(semester) }} </td>
-          <td rowspan="{{ number_of_courses }}"> {{ semester_weighted_mean(semester) }} </td>
+          <td rowspan="{{ number_of_courses }}"> {{ courses_weighted_mean(semester.courses) }} </td>
           <td rowspan="{{ number_of_courses }}"> {{ semester.place[0] }}-{{ semester.place[1] }}/{{ semester.place[2] }} </td>
           <td rowspan="{{ number_of_courses }}"> {{ semester.scholarship }} </td>
         {% endif %}
