@@ -263,18 +263,25 @@ set study_data =
 {%- endmacro %}
 
 
-<table>
+<table class="study-table">
 
 {% set semester_type_cycler = cycler("Z","L") %}
 {% for study_type in study_data.studies %}
 
   {% for semester in study_data.studies[study_type].semesters %}
-
     {% set number_of_courses = semester.courses|length %}
+  
+    {% if loop.index % 2 == 1 %}
+      {% set courses_in_year = number_of_courses + ((study_data.studies[study_type].semesters[loop.index].courses)|length) %}
+      {% set current_year = loop.index // 2 + 1 %}
+    {% endif %}
   
     {% for course in semester.courses %}
 
       <tr>
+        {% if loop.first and semester_type_cycler.current == "Z" %}
+        <td rowspan="{{ courses_in_year }}"> {{ current_year }} </td>
+        {% endif %}
   
         {% if loop.first %}
           <td rowspan="{{ number_of_courses }}"> {{ semester_type_cycler.next() }} </td>
