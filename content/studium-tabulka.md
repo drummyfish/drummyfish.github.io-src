@@ -10,16 +10,304 @@ Tags: study
 {%
 set study_data =
   {
-    "start_year" : 2010,
-    
     "studies" :
       {
         "Bc." :
           {
+            "start_year" : 2010,
+            "semesters" :
+              [
+                {
+                  "scholarship" :         0,
+                  "place" :               [64,72,266],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IAS",    "name cs": "Asemblery",                             "name en": "Assembly Languages",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [17,20], "labs" : [20,20], "other" : [0,0],   "exam" : [36,60] }
+                      },
+                      {
+                        "abbr": "IDA",    "name cs": "Diskrétní matematika",                  "name en": "Discrete Mathematics",
+                        "credits" : 7,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [83,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "ITO",    "name cs": "Teorie obvodů",                         "name en": "Circuit Theory",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[12.5,15]                 ],   "midterm" : [12,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [34,65] }
+                      },
+                      {
+                        "abbr": "IUS",    "name cs": "Úvod do softwarového inženýrství",      "name en": "Introduction to Software Engineering",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[5,5],[6,10],[20,20]      ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [43,65] }
+                      },
+                      {
+                        "abbr": "IZP",    "name cs": "Základy programování",                  "name en": "Introduction to Programming Systems",
+                        "credits" : 7,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[2,5],[7,10],[9.5,10],[7,8]],  "midterm" : [7,12],  "labs" : [0,0],   "other" : [1,100], "exam" : [38,55] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         7174,
+                  "place" :               [25,25,184],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IFY",    "name cs": "Fyzika",                                "name en": "Physics",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [17,20], "labs" : [18,20], "other" : [0,0],   "exam" : [55,60] }
+                      },
+                      {
+                        "abbr": "IMA",    "name cs": "Matematická analýza",                   "name en": "Mathematical Analysis",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [83,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "INC",    "name cs": "Návrh číslicových systémů",             "name en": "Digital Systems Design",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[20,20]                   ],   "midterm" : [18,25], "labs" : [0,0],   "other" : [0,0],   "exam" : [49,55] }
+                      },
+                      {
+                        "abbr": "IOS",    "name cs": "Operační systémy",                      "name en": "Operating Systems",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[5,15],[15,15]            ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [51,70] }
+                      },
+                      {
+                        "abbr": "IPR",    "name cs": "Prvky počítačů",                        "name en": "Computer Hardware",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],  "midterm" : [7.5,15], "labs" : [30,30], "other" : [0,0],   "exam" : [30,55] }
+                      },
+                      {
+                        "abbr": "BAN4",   "name cs": "Angličtina 4: středně pokročilí 2",     "name en": "New Headway Intermediate 2",
+                        "credits" : 6,    "type": "PVA",            "classified": True,
+                        "pts":
+                          { "projects" : [                          ],  "midterm" : [39,40],  "labs" : [0,0],   "other" : [0,0],   "exam" : [59,60] }
+                      },
+                      {
+                        "abbr": "ITW",    "name cs": "Tvorba webových stránek",               "name en": "Web Design",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [[18,20],[29,30]           ],  "midterm" : [12,20],  "labs" : [10,10], "other" : [0,0],   "exam" : [17,20] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [78,78,275],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IAL",    "name cs": "Algoritmy",                             "name en": "Algorithms",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[10,10],[9,10],[4.4,5],[9,10]],"midterm" : [14,14], "labs" : [0,0],   "other" : [1,100], "exam" : [28,51] }
+                      },
+                      {
+                        "abbr": "IFJ",    "name cs": "Formální jazyky a překladače",          "name en": "Formal Languages and Compilers",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[19,20],[4.4,5]           ],   "midterm" : [16,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [38.2,55]}
+                      },
+                      {
+                        "abbr": "INM",    "name cs": "Numerická matematika a pravděpodobnost","name en": "Numerical Methods and Probability",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [79,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "INP",    "name cs": "	Návrh počítačových systémů",          "name en": "Design of Computer Systems",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[12,12],[6,16]            ],   "midterm" : [20,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [32,52] }
+                      },
+                      {
+                        "abbr": "ISS",    "name cs": "Signály a systémy",                     "name en": "Signals and Systems",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[12,12]                   ],   "midterm" : [17.5,25],"labs" : [12,12],"other" : [0,0],   "exam" : [42.8,51]}
+                      },
+                      {
+                        "abbr": "IPSO",   "name cs": "Pedagogická psychologie",               "name en": "Educational Psychology",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [65,100],"exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [64,65,164],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IDS",    "name cs": "Databázové systémy",                    "name en": "Database Systems",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[5,5],[5,5],[5,5],[13,20]],    "midterm" : [12.5,14],"labs" : [0,0],   "other" : [0,0],   "exam" : [32.5,51]}
+                      },
+                      {
+                        "abbr": "IPK",    "name cs": "Počítačové komunikace a sítě",          "name en": "Computer Communications and Networks",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[3.5,4],[6,6],[8,10]      ],   "midterm" : [5.4,9], "labs" : [6,6],    "other" : [0,0],   "exam" : [44,65] }
+                      },
+                      {
+                        "abbr": "IPP",    "name cs": "Principy programovacích jazyků a OOP",  "name en": "Principles of Programming Languages",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[8.6,10],[3.9,10]         ],   "midterm" : [18,20], "labs" : [0,0],    "other" : [0,0],   "exam" : [26,60] }
+                      },
+                      {
+                        "abbr": "IZG",    "name cs": "Základy počítačové grafiky",            "name en": "Computer Graphics Principles",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[6,18]                    ],   "midterm" : [9,12],  "labs" : [18,18],  "other" : [0,0],   "exam" : [50,52] }
+                      },
+                      {
+                        "abbr": "IZU",    "name cs": "Základy umělé inteligence",             "name en": "Fundamentals of Artificial Intelligence",
+                        "credits" : 4,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [8,20],  "labs" : [17.75,20],"other" : [0,0],  "exam" : [51,60] }
+                      },
+                      {
+                        "abbr": "IJA",    "name cs": "Seminář Java",                          "name en": "Java Programming Language",
+                        "credits" : 4,    "type": "PVT",            "classified": False,
+                        "pts":
+                          { "projects" : [[20,20],[64,80]           ],   "midterm" : [0,0],   "labs" : [0,0],    "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "PRM",    "name cs": "Právní minimum",                        "name en": "Fundamentals of Law",
+                        "credits" : 3,    "type": "PVH",            "classified": False,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],    "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [96,98,240],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IIS",    "name cs": "Informační systémy",                    "name en": "Information Systems",
+                        "credits" : 4,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[30,30]                   ],    "midterm" : [15,19],"labs" : [0,0],   "other" : [0,0],   "exam" : [24,51]}
+                      },
+                      {
+                        "abbr": "IMP",    "name cs": "Mikroprocesorové a vestavěné systémy",  "name en": "Microprocessors and Embedded Systems",
+                        "credits" : 6,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[14.6,19]                 ],    "midterm" : [14,14],"labs" : [16,16], "other" : [0,0],   "exam" : [23.3,51]}
+                      },
+                      {
+                        "abbr": "IMS",    "name cs": "Modelování a simulace",                 "name en": "Modelling and Simulation",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[20,20]                   ],    "midterm" : [8,10], "labs" : [0,0],   "other" : [0,0],   "exam" : [44,70] }
+                      },
+                      {
+                        "abbr": "IPZ",    "name cs": "Periferní zařízení",                    "name en": "Peripheral Devices",
+                        "credits" : 4,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                          ],    "midterm" : [26,30],"labs" : [3.8,4], "other" : [0,0],   "exam" : [63.3,66]}
+                      },
+                      {
+                        "abbr": "ISA",    "name cs": "Síťové aplikace a správa sítí",         "name en": "Network Applications and Network Administration",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[16,21]                   ],    "midterm" : [0,0],  "labs" : [16,24], "other" : [0,0],   "exam" : [33,55] }
+                      },
+                      {
+                        "abbr": "ISP",    "name cs": "Semestrální projekt",                    "name en": "Term Project",
+                        "credits" : 2,    "type": "P",              "classified": False,
+                        "pts":
+                          { "projects" : [                          ],    "midterm" : [0,0],  "labs" : [0,0],   "other" : [100,100],"exam" : [0,0]  }
+                      },
+                      {
+                        "abbr": "ITU",    "name cs": "Tvorba uživatelských rozhraní",         "name en": "User Interface Programming",
+                        "credits" : 4,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[43,55]                   ],    "midterm" : [18,20],"labs" : [24,25], "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "JS1",    "name cs": "Španělština: začátečníci 1/2",          "name en": "Spanish for Beginners 1/2",
+                        "credits" : 3,    "type": "V",              "classified": False,
+                        "pts":
+                          { "projects" : [                          ],    "midterm" : [0,0],  "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [59,84,369],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "ITY",    "name cs": "Typografie a publikování",              "name en": "Typography and Publishing",
+                        "credits" : 4,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [[6,10],[12,15],[13,15],[10,15],[15,15]],"midterm" : [0,0],"labs" : [0,0],"other" : [0,0],"exam" : [30,30]}
+                      },
+                      {
+                        "abbr": "JS1",    "name cs": "Španělština: začátečníci 2/2",          "name en": "Spanish for Beginners 2/2",
+                        "credits" : 3,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [                         ],    "midterm" : [0,0],   "labs" : [0,0],   "other" : [85,100],"exam" : [0,0]  }
+                      },
+                    ],
+                },
+                
+                {
+                  "scholarship" :         0,
+                  "place" :               [125,138,160],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IPA",    "name cs": "Pokročilé asemblery",                   "name en": "Advanced Assembly Languages",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [[20,26]                  ],    "midterm" : [0,0],   "labs" : [14,14],  "other" : [0,0],"exam" : [23,60]}
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [59,84,369],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IBP",    "name cs": "Bakalářská práce",                      "name en": "Bachelor's Thesis",
+                        "credits" : 9,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[95,100]                 ],   "midterm" : [0,0],"labs" : [0,0],"other" : [0,0],"exam" : [0,0]}
+                      },
+                      {
+                        "abbr": "ISZ",    "name cs": "Státní závěrečná zkouška",              "name en": "Final State Examination",
+                        "credits" : 9,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [                         ],   "midterm" : [0,0],"labs" : [0,0],"other" : [85,100],"exam" : [0,0]}
+                      },
+                    ],
+                },
+              ]
           },
       
         "Ing." :
           {
+            "start_year" : 2014,
             "semesters" :
               [
                 {
@@ -270,8 +558,8 @@ set study_data =
 <table class="study-table">
 
 {% set semester_type_cycler = cycler("Z","L") %}
-{% set calendar_year_cycler = cycler(*range(study_data.start_year,100000)) %}
 {% for study_type in study_data.studies %}
+  {% set calendar_year_cycler = cycler(*range(study_data.studies[study_type].start_year,100000)) %}
 
   {% for semester in study_data.studies[study_type].semesters %}
     {% set number_of_courses = semester.courses|length %}
