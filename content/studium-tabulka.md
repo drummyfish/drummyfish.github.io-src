@@ -73,6 +73,74 @@ set study_data =
                       },
                     ],
                 },
+                {
+                  "scholarship" :         0,
+                  "place" :               [20,22,127],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "FYO",    "name cs": "Fyzikální optika",                        "name en": "Physical Optics",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[21,30]                   ],   "midterm" : [8,10],    "labs" : [0,0],   "other" : [0,0],   "exam" : [29,60] }
+                      },
+                      {
+                        "abbr": "MUL",    "name cs": "Multimédia",                              "name en": "Multimedia",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[23,24]                   ],   "midterm" : [8,10],    "labs" : [15,15], "other" : [0,0],   "exam" : [46,51] }
+                      },
+                      {
+                        "abbr": "PDS",    "name cs": "Přenos dat, počítačové sítě a protokoly", "name en": "Data Communications, Computer Networks and Protocols",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[9,25]                    ],   "midterm" : [9,15],    "labs" : [0,0],   "other" : [0,0],   "exam" : [36,60] }
+                      },
+                      {
+                        "abbr": "ZPO",    "name cs": "Zpracování obrazu",                       "name en": "Image Processing",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[24,29]                   ],   "midterm" : [10,10],   "labs" : [10,10], "other" : [0,0],   "exam" : [42,51] }
+                      },
+                      {
+                        "abbr": "ZRE",    "name cs": "Zpracování řečových signálů",             "name en": "Speech Signal Processing",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[14,15],[14,14]           ],   "midterm" : [10.5,14], "labs" : [6,6],   "other" : [0,0],   "exam" : [40.8,51] }
+                      },
+                      {
+                        "abbr": "WAP",    "name cs": "Internetové aplikace",                    "name en": "Internet Applications",
+                        "credits" : 5,    "type": "PVI",            "classified": True,
+                        "pts":
+                          { "projects" : [[30,30]                   ],   "midterm" : [16,19],   "labs" : [0,0],   "other" : [0,0],   "exam" : [48,51] }
+                      },
+                      {
+                        "abbr": "VIN",    "name cs": "Výtvarná informatika",                    "name en": "Computer Art",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                          { "projects" : [[49,49],[51,51]           ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [10,10,198],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "GZN",    "name cs": "Grafická a zvuková rozhraní a normy",     "name en": "Graphical and Sound Interfaces and Standards",
+                        "credits" : 5,    "type": "P",              "classified": True,
+                        "pts":
+                          { "projects" : [[39,40]                   ],   "midterm" : [8,9],     "labs" : [0,0],   "other" : [0,0],   "exam" : [38,51] }
+                      },
+                      {
+                        "abbr": "KRG",    "name cs": "Kreativní grafika",                       "name en": "Creative Art",
+                        "credits" : 4,    "type": "V",              "classified": True,
+                        "pts":
+                           { "projects" : [[60,60]                   ],   "midterm" : [30,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
               ],
           },
       },
@@ -120,7 +188,7 @@ set study_data =
 {% endmacro %}
 
 {% macro courses_weighted_mean(courses) -%}
-{% set valid_courses = (courses|groupby("classified"))[1][1] %} {# reject/select filters don't work somehow #}
+{% set valid_courses = (courses|groupby("classified"))[-1][1] %} {# reject/select filters don't work somehow #}
 {% set valid_credits = valid_courses|sum(attribute="credits") %}
 {{ (weighted_mean_numerator(valid_courses)|float / valid_credits|float)|string|truncate(5,true,"") }}
 {%- endmacro %}
