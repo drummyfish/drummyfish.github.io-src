@@ -137,7 +137,76 @@ set study_data =
                         "abbr": "KRG",    "name cs": "Kreativní grafika",                       "name en": "Creative Art",
                         "credits" : 4,    "type": "V",              "classified": True,
                         "pts":
-                           { "projects" : [[60,60]                   ],   "midterm" : [30,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                           { "projects" : [[60,60]                  ],   "midterm" : [30,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [110,115,198],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "ARC",    "name cs": "Architektura a programování paralelních systémů", "name en": "Parallel System Architecture and Programming",
+                        "credits" : 5,    "type": "PVC",             "classified": True,
+                        "pts":
+                          { "projects" : [[10,15],[3,15]             ],   "midterm" : [7,10],    "labs" : [0,0],   "other" : [0,0],   "exam" : [38,60] }
+                      },
+                      {
+                        "abbr": "VNV",    "name cs": "Vysoce náročné výpočty",                   "name en": "High Performance Computations",
+                        "credits" : 5,    "type": "PVM",             "classified": True,
+                        "pts":
+                           { "projects" : [                          ],   "midterm" : [18,20],   "labs" : [19,20], "other" : [0,0],   "exam" : [36,60] }
+                      },
+                      {
+                        "abbr": "VIZ",    "name cs": "Vizualizace a CAD",                        "name en": "Visualization and CAD",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                           { "projects" : [[60,60]                   ],   "midterm" : [28,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [13,19,88],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "SEP",    "name cs": "Semestrální projekt",                      "name en": "Term Project",
+                        "credits" : 5,    "type": "P",               "classified": True,
+                        "pts":
+                          { "projects" : [[90,100]                   ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "GUX",    "name cs": "Grafická uživatelská rozhraní v X Window", "name en": "Graphical User Interfaces in X Window System",
+                        "credits" : 5,    "type": "V",               "classified": True,
+                        "pts":
+                           { "projects" : [[7,8],[9,12]              ],   "midterm" : [14,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [35,60] }
+                      },
+                      {
+                        "abbr": "POV",    "name cs": "Počítačové vidění",                        "name en": "Computer Vision",
+                        "credits" : 5,    "type": "V",              "classified": True,
+                        "pts":
+                           { "projects" : [[8.1,10],[27,30]          ],   "midterm" : [9,9],     "labs" : [0,0],   "other" : [0,0],   "exam" : [46,51] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :         0,
+                  "place" :               [0,0,0],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "SIP",    "name cs": "Diplomová práce",                          "name en": "Master's Thesis",
+                        "credits" : 13,   "type": "P",               "classified": True,
+                        "pts":
+                          { "projects" : [[0,0]                      ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "SZZ",    "name cs": "Státní závěrečná zkouška",                 "name en": "Final state examination",
+                        "credits" : 0,    "type": "P",               "classified": True,
+                        "pts":
+                           { "projects" : [                          ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
                       },
                     ],
                 },
@@ -253,3 +322,5 @@ set study_data =
 {% endfor %}
 
 </table>
+
+TODO: statistiky ohledně studia spočítané z tabulky
