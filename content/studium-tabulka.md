@@ -14,6 +14,10 @@ set study_data =
     
     "studies" :
       {
+        "Bc." :
+          {
+          },
+      
         "Ing." :
           {
             "semesters" :
@@ -266,25 +270,37 @@ set study_data =
 <table class="study-table">
 
 {% set semester_type_cycler = cycler("Z","L") %}
+{% set calendar_year_cycler = cycler(*range(study_data.start_year,100000)) %}
 {% for study_type in study_data.studies %}
 
   {% for semester in study_data.studies[study_type].semesters %}
     {% set number_of_courses = semester.courses|length %}
   
-    {% if loop.index % 2 == 1 %}
-      {% set courses_in_year = number_of_courses + ((study_data.studies[study_type].semesters[loop.index].courses)|length) %}
-      {% set current_year = loop.index // 2 + 1 %}
+    {% set semester_number = loop.index %}
+  
+    {% if loop.last %}
+      {% set next_2_semester_courses = number_of_courses %}
+    {% else %}
+      {% set next_2_semester_courses = number_of_courses + ((study_data.studies[study_type].semesters[loop.index].courses)|length) %}
     {% endif %}
   
+    {% set current_school_year = loop.index // 2 + 1 %}
+    
     {% for course in semester.courses %}
 
       <tr>
-        {% if loop.first and semester_type_cycler.current == "Z" %}
-        <td rowspan="{{ courses_in_year }}"> {{ current_year }} </td>
-        {% endif %}
-  
-        {% if loop.first %}
+        {% if loop.first %}                                                     {# new semester #}
           <td rowspan="{{ number_of_courses }}"> {{ semester_type_cycler.next() }} </td>
+          
+          
+          {% if semester_number == 1 or semester_type_cycler.current == "Z" %}                        {# new calendar year #}
+            <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> {{ calendar_year_cycler.next() }} </td>
+          {% endif %}
+          
+          {% if semester_type_cycler.current == "L" %}                          {# new school year #}
+            <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
+          {% endif %}
+            
         {% endif %}
   
         <td> {{ course.abbr }} </td>
