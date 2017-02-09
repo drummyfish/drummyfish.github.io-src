@@ -284,7 +284,7 @@ set study_data =
                     ],
                 },
                 {
-                  "scholarship" :         0,
+                  "scholarship" :         500,
                   "place" :               [59,84,369],
                   "courses" :
                     [
@@ -554,8 +554,45 @@ set study_data =
 {{ (weighted_mean_numerator(valid_courses)|float / valid_credits|float)|string|truncate(5,true,"") }}
 {%- endmacro %}
 
+{% macro study_number_of_courses(study_obj) %}
+{% set helper_cycler = cycler(*range(10000000)) %}
+{% for semester in study_obj.semesters %}
+  {% for course in semester.courses %}
+    {% set nothing = helper_cycler.next() %}
+  {% endfor %}
+{% endfor %}
+{{ helper_cycler.current }}
+{% endmacro %}
 
 <table class="study-table">
+
+<tr>
+  <th colspan="4"> období </th>
+  <th colspan="4"> předmět </th>
+  <th colspan="6"> hodnocení </th>
+  <th colspan="4"> celý semestr </th>
+</tr>
+
+<tr>
+  <th> <span class="vertical-text"> studium </span> </th>
+  <th> <span class="vertical-text"> rok </span> </th>
+  <th> <span class="vertical-text"> ročník </span> </th>
+  <th> <span class="vertical-text"> semestr </span> </th>
+  <th> <span class="vertical-text"> zkratka </span> </th>
+  <th> <span class="vertical-text"> název </span> </th>
+  <th> <span class="vertical-text"> kredity </span> </th>
+  <th> <span class="vertical-text"> typ </span> </th>
+  <th> <span class="vertical-text"> půlsem </span> </th>
+  <th> <span class="vertical-text"> proj. </span> </th>
+  <th> <span class="vertical-text"> cvičení </span> </th>
+  <th> <span class="vertical-text"> ostatní </span> </th>
+  <th> <span class="vertical-text"> zkouška </span> </th>
+  <th> <span class="vertical-text"> celkem </span> </th>
+  <th> <span class="vertical-text"> kredity </span> </th>
+  <th> <span class="vertical-text"> průměr </span> </th>
+  <th> <span class="vertical-text"> pořadí </span> </th>
+  <th> <span class="vertical-text"> stip. (Kč) </span> </th>
+</tr>
 
 {% set semester_type_cycler = cycler("Z","L") %}
 {% for study_type in study_data.studies %}
@@ -578,17 +615,19 @@ set study_data =
 
       <tr>
         {% if loop.first %}                                                     {# new semester #}
-          <td rowspan="{{ number_of_courses }}"> {{ semester_type_cycler.next() }} </td>
-          
-          
-          {% if semester_number == 1 or semester_type_cycler.current == "Z" %}                        {# new calendar year #}
-            <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> {{ calendar_year_cycler.next() }} </td>
+          {% if semester_number == 1 %}                                         {# new study #}
+            <td rowspan="{{ study_number_of_courses(study_data.studies[study_type]) }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
+          {% endif %}
+        
+          {% if semester_number == 1 or semester_type_cycler.current == "L" %}                        {# new calendar year #}
+            <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> <span class="vertical-text"> {{ calendar_year_cycler.next() }} </span> </td>
           {% endif %}
           
-          {% if semester_type_cycler.current == "L" %}                          {# new school year #}
+          {% if semester_type_cycler.current == "Z" %}                          {# new school year #}
             <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
           {% endif %}
-            
+          
+          <td rowspan="{{ number_of_courses }}"> {{ semester_type_cycler.next() }} </td>
         {% endif %}
   
         <td> {{ course.abbr }} </td>
@@ -621,9 +660,9 @@ set study_data =
        
         {% if loop.first %}
           <td rowspan="{{ number_of_courses }}"> {{ semester_total_credits(semester) }} </td>
-          <td rowspan="{{ number_of_courses }}"> {{ courses_weighted_mean(semester.courses) }} </td>
-          <td rowspan="{{ number_of_courses }}"> {{ semester.place[0] }}-{{ semester.place[1] }}/{{ semester.place[2] }} </td>
-          <td rowspan="{{ number_of_courses }}"> {{ semester.scholarship }} </td>
+          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ courses_weighted_mean(semester.courses) }} </span> </td>
+          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.place[0] }}/{{ semester.place[2] }} </span> </td>
+          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.scholarship }} </span> </td>
         {% endif %}
        
       </tr>
