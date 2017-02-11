@@ -299,21 +299,6 @@ IPSO mě docela bavilo a časem, když si budu teoreticky chtít udělat
 pedagogické minimum, mám už jeden předmět v kapse. Doporučuju všem, koho
 zajímá psychologie a/nebo pedagogika.
 
-Celkové výsledky
-----------------
 
-  předmět                                       |získaných bodů  |známka
-  ----------------------------------------------|----------------|--------
-  Algoritmy (IAL)                               |75/100          |C
-  Formální jazyky a překladače (IFJ)            |78/100          |C
-  Numerická matematika a pravděpodobnost (INM)  |79/100          |C
-  Návrh počítačových systémů (INP)              |70/100          |C
-  Signály a systémy (ISS)                       |84/100          |B
-  Pedagogická psychologie (IPSO)                |65/100          |D
-
-průměr: 1,983
-
-pořadí v ročníku: 78. místo z 275 (studenti bez F s alespoň 25 kredity)
-
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",2,"cs") }}
 

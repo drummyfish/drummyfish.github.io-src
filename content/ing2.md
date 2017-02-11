@@ -402,24 +402,6 @@ chválit.
 
 ![projekt](http://i.imgur.com/Z7KEPEM.png)
 
-Celkové výsledky
-----------------
 
-  předmět                                        |získaných bodů  |známka
-  -----------------------------------------------|----------------|--------
-  Fyzikální optika (FYO)                         |58/100          |E
-  Multimédia (MUL)                               |92/100          |A
-  Přenos dat, počítačové sítě a protokoly (PDS)  |54/100          |E
-  Zpracování obrazu (ZPO)                        |86/100          |B
-  Zpracování řečových signálů (ZRE)              |85/100          |B
-  Internetové aplikace (WAP)                     |94/100          |A
-  Výtvarná informatika (VIN)                     |100/100         |A
-
-průměr: 1,714
-
-pořadí v ročníku: 19.-21. 
-
-pořadí v ročníku oboru: 3.  
-
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Ing.",1,"cs") }}
 

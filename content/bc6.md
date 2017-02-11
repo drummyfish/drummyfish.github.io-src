@@ -96,17 +96,5 @@ dokázal a to dokonce i při nižším nasazení. Španělsky teď umím opravdu
 jenom hodně málo, ale se slovníkem dokážu přečíst jednoduchý test.
 Myslím, že co se týká základů, tento kurz splnil očekávání.
 
-Celkové výsledky
-----------------
-
-  předmět                             |získaných bodů  |známka
-  ------------------------------------|----------------|--------
-  Typografie a publikování (ITY)      |86/100          |B
-  Španělština: začátečníci 2/2 (JS1)  |85/100          |B
-
-průměr: 1,5  
-  
-pořadí v ročníku: 47.-65. místo z 377 (studenti bez F s alespoň 25 kredity)  
-  
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",5,"cs") }}
 

@@ -188,20 +188,4 @@ Jste síťař nebo vás vyloženě zajímají paralelní výpočty? Pak může b
 ARC pro vás, jinak ale ne. Jako grafik bych teď asi sáhl po jiném PVC
 předmětu.
 
-Celkové výsledky
-----------------
-
-  předmět                                                |získaných bodů  |známka
-  -------------------------------------------------------|----------------|--------
-  Vizualizace a CAD (VIZ)                                |88/100          |B
-  Vysoce náročné výpočty (VNV)                           |73/100          |C
-  Architektura a programování paralelních systémů (ARC)  |58/100          |E
-
-průměr: 2,166
-
-pořadí v ročníku: 107.-112. z 203  
-
-pořadí v ročníku oboru: 4. z 46  
-
-prospěchové stipendium: 0 Kč
-
+{{ m.study_semester_summary("Ing.",3,"cs") }}

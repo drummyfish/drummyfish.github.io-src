@@ -385,22 +385,5 @@ chodit a kamarád vám bude křížkovat docházku. Myslím ale, že přednášk
 mají něco do sebe a jsem rád, že jsem si ze všech možností zapsal právě
 PRM.
 
-Celkové výsledky
-----------------
-
-  předmět                                    |získaných bodů          |známka
-  -------------------------------------------|------------------------|------------------------
-  Databázové systémy (IDS)                   |73/100                  |C
-  Počítačové komunikace a sítě (IPK)         |73/100                  |C
-  Principy programovacích jazyků a OOP (IPP) |57/100                  |E
-  Základy počítačové grafiky (IZG)           |83/100                  |B
-  Základy umělé inteligence (IZU)            |77/100                  |C
-  Seminář Java (IJA)                         |84/100                  |zápočet
-  Právní minimum (PRM)                       |                        |zápočet
-
-průměr: 2,08
-
-pořadí v ročníku: 58.-59. místo z 138 (studenti bez F s alespoň 25 kredity)  
-
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",3,"cs") }}
 

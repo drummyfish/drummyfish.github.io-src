@@ -574,25 +574,5 @@ nebo jen se spolužáky. Snažte se co nejlíp napsat půlsemestrálku - hodně
 vám to pomůže. Tohle budou asi jediné užitečné rady do doby, než se
 předmět trochu zlepší.
 
-Celkové výsledky
-----------------
-
-  předmět                                   |získaných bodů          |známka
-  ------------------------------------------|------------------------|------------------------
-  Teoretická informatika (TIN)              |86/100                  |B
-  Pokročilé databázové systémy (PDB)        |70/100                  |C
-  Seminář teoretické informatiky (STI)      |                        |zápočet
-  Dějiny a filozofie techniky (FIT)         |                        |zápočet
-  Hardware/Software Codesign (HSC)          |66/100                  |D
-  Počítačová grafika (PGR)                  |90/100                  |A
-  Pokročilá počítačová grafika (PGP)        |90/100                  |A
-  Matematické struktury v informatice (MAT) |80/100                  |B
-
-průměr: 1,583
-
-pořadí v ročníku: 10. z 106 (studenti bez F s alespoň 25 kredity)
-
-pořadí v ročníku oboru: 3. z 55
-
-prospěchové stipendium: 9913 Kč
+{{ m.study_semester_summary("Ing.",0,"cs") }}
 

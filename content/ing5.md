@@ -146,20 +146,4 @@ SEP nemá cenu hodnotit, protože zcela záleží na tématu vaší práce, na
 vedoucím a na vašem postoji. Zde lze pouze doporučit vybrat zajímavé
 téma, průběžně pracovat a konzultovat.
 
-Celkové výsledky
-----------------
-
-  předmět                                         |získaných bodů  |známka
-  ------------------------------------------------|----------------|--------
-  Počítačové vidění (POV)                         |90/100          |A
-  Grafická uživatelská rozhraní v X Window (GUX)  |65/100          |D
-  Semestrální projekt (SEP)                       |90/100          |A
-
-průměr: 1,5  
-
-pořadí v ročníku: 15.-21. z 90  
-
-pořadí v ročníku oboru: 3.-4. z 22  
-
-prospěchové stipendium: 0 Kč
-
+{{ m.study_semester_summary("Ing.",4,"cs") }}

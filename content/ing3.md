@@ -112,19 +112,4 @@ semestru předmět VIZ, který je velmi podobný.
 
 ![projekt](http://img01.deviantart.net/9388/i/2015/299/c/8/sci_fi_chess_by_drummyfish-d9effp7.png)
 
-Celkové výsledky
-----------------
-
-  předmět                                    |získaných bodů  |známka
-  -------------------------------------------|----------------|--------
-  Grafická a zvuková rozhraní a normy (GZN)  |85/100          |B
-  Kreativní grafika (KRG)                    |90/100          |A
-
-průměr: 1,277  
-
-pořadí v ročníku: 10. z 211  
-
-pořadí v ročníku oboru: 4. z 47  
-
-prospěchové stipendium: 0 Kč
-
+{{ m.study_semester_summary("Ing.",2,"cs") }}

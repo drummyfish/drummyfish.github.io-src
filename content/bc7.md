@@ -80,16 +80,7 @@ nanosekundu a nebo se jenom chce přiučit, jakými instrukcemi operační
 systém zajišťuje multitasking, ochranu paměti atd., přijde si zde na
 své.
 
-Celkové výsledky (zimní semestr)
---------------------------------
-
-  předmět                    |získaných bodů  |známka
-  ---------------------------|----------------|--------
-  Pokročilé asemblery (IPA)  |57/100          |E
-
-průměr: 3
-pořadí v ročníku: 125.-138. místo z 164
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",6,"cs") }}
 
 Bakalářská práce (IBP)
 ----------------------
@@ -207,14 +198,7 @@ na začátku si jenom pomůžete a zvýšíte pravděpodobnost úspěchu (viz
 [státnice
 otázky](https://www.dropbox.com/s/aq30uwvws1snj3q/otazky%20bc.zip?dl=0)
 
-Celkové výsledky (letní semestr)
---------------------------------
-
-  předmět                 |získaných bodů          |známka
-  ------------------------|------------------------|------------------------
-  SZZ - bakalářská práce  |                        |A
-  SZZ - ústní část        |                        |B
-  SZZ - celkově           |                        |B
+{{ m.study_semester_summary("Bc.",7,"cs") }}
 
 průměr celého studia: 1,948
 

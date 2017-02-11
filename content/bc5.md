@@ -515,38 +515,5 @@ druhou část kurzu absolvovat ze zdravotních důvodů samostudiem z domu.
 Španělštinu můžu doporučit. Je to dobrý předmět a anglicky dneska umí
 skoro každý, takže určitě není na škodu umět něco víc.
 
-Celkové výsledky
-----------------
-
-  --------------------------------------------------------------------------
-  předmět                  získaných bodů           známka
-  ------------------------ ------------------------ ------------------------
-  Informační systémy (IIS) 69/100                   D
-
-  Mikroprocesorové a       68/100                   D
-  vestavěné systémy (IMP)                           
-
-  Modelování a simulace    72/100                   C
-  (IMS)                                             
-
-  Periferní zařízení (IPZ) 93/100                   A
-
-  Síťové aplikace a správa 65/100                   D
-  sítí (ISA)                                        
-
-  Semestrální projekt      100/100                  zápočet
-  (ISP)                                             
-
-  Tvorba uživatelských     85/100                   B
-  rozhraní (ITU)                                    
-
-  Španělština: začátečníci                          zápočet
-  1/2 (JS1)                                         
-  --------------------------------------------------------------------------
-
-průměr: 2,053
-
-pořadí v ročníku: 95.-97. místo z 240 (studenti bez F s alespoň 25 kredity)
-
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",4,"cs") }}
 

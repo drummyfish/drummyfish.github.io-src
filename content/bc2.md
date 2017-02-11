@@ -382,22 +382,5 @@ naučil, co se při návrhu webů sluší a co ne a posunul mé schopnosti v
 tomto oboru o něco vpřed (výsledek vidíte ve svém prohlížeči). ITW můžu
 případným zájemcům vřele doporučit.
 
-Celkové výsledky
-----------------
-
-  předmět                                   |získaných bodů  |známka
-  ------------------------------------------|----------------|--------
-  Fyzika (IFY)                              |90/100          |A
-  Matematická analýza (IMA)                 |83/100          |B
-  Návrh číslicových systémů (INC)           |87/100          |B
-  Operační systémy (IOS)                    |71/100          |C
-  Prvky počítačů (IPR)                      |68/100          |D
-  Angličtina 4: středně pokročilý 2 (BAN4)  |98/100          |A
-  Tworba webových stránek (ITW)             |86/100          |B
-
-průměr: 1,581
-
-pořadí v ročníku: 25. místo z 184 (studenti bez F s alespoň 25 kredity)
-
-prospěchové stipendium: 7174 Kč
+{{ m.study_semester_summary("Bc.",1,"cs") }}
 

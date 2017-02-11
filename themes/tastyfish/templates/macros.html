@@ -620,6 +620,7 @@ set study_data =
 {{ projects_total + course_obj.pts.midterm[0] + course_obj.pts.labs[0] + course_obj.pts.other[0] + course_obj.pts.exam[0]}}
 {%- endmacro %}
 
+{#-------------------------------------------------------------------#}
 {% macro semester_total_credits(semester_obj) -%}
 {{ semester_obj.courses|map(attribute="credits")|sum }}
 {%- endmacro %}
@@ -668,6 +669,27 @@ set study_data =
   {% endfor %}
 {% endfor %}
 {{ helper_cycler.current }}
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
+{% macro study_semester_summary(study_type, semester_number, language="cs") %}
+
+<h2> Celkové výsledky </h2>
+
+{% set semester = study_data.studies[study_type].semesters[semester_number] %}
+{% set semester_courses = semester.courses %}
+
+<table>
+  <tr> <th> předmět </th> <th> body </th> <th> známky </th> </tr>
+  {% for course in semester_courses %}
+    <tr> <td> {{ course["name cs"] }} ({{ course["abbr"] }}) </td> <td> {{ course_total_points(course) }}/100 </td> <td> {{ course_mark(course) }} </td> </tr>
+  {% endfor %}
+</table>
+
+průměr: {{ courses_weighted_mean(semester_courses) }} <br />
+pořadí v ročníku: {{ semester.place[0] }} - {{ semester.place[1] }} / {{ semester.place[2] }} <br />
+prospěchové stipendium: {{ semester.scholarship }} Kč
+
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}

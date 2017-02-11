@@ -319,19 +319,5 @@ Na závěr bych předmět zhodnotil jako teoretický, těžký, ale nezákeřný
 zvládnutelný. Každopádně vyžaduje hodně obětování a času výměnou za
 krásný pocit sebevědomí po jeho zvládnutí.
 
-Celkové výsledky
-----------------
-
-  předmět                                 |získaných bodů  |známka
-  ----------------------------------------|----------------|--------
-  Asemblery (IAS)                         |73/100          |C
-  Diskrétní matematika (IDA)              |83/100          |B
-  Teorie obvodů (ITO)                     |59/100          |E
-  Úvod do softwarového inženýrství (IUS)  |74/100          |C
-  Základy programování (IZP)              |72/100          |C
-
-průměr: 2,08  
-pořadí v ročníku: 65.-73. místo z 269 (studenti bez F s alespoň 25
-kredity)  
-prospěchové stipendium: 0 Kč
+{{ m.study_semester_summary("Bc.",0,"cs") }}
 
