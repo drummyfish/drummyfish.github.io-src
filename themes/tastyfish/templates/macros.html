@@ -623,11 +623,6 @@ set study_data =
 {%- endmacro %}
 
 {#-------------------------------------------------------------------#}
-{% macro semester_total_credits(semester_obj) -%}
-{{ semester_obj.courses|map(attribute="credits")|sum }}
-{%- endmacro %}
-
-{#-------------------------------------------------------------------#}
 {% macro course_mark(course_obj) %}
 {% set total_points = course_total_points(course_obj)%}
 {% if total_points|int >= 90 %}A{% else %}
@@ -650,8 +645,7 @@ set study_data =
 {% macro weighted_mean_numerator(courses) %}
 {% if courses|length > 0 %}
   {{ courses[0].credits|float * course_mark_to_number(course_mark(courses[0]))|float + (weighted_mean_numerator(courses[1:])|float) }}
-{% else %}
-  0
+{% else %} 0
 {% endif %}
 {% endmacro %}
 
@@ -661,17 +655,6 @@ set study_data =
 {% set valid_credits = valid_courses|sum(attribute="credits") %}
 {{ (weighted_mean_numerator(valid_courses)|float / valid_credits|float)|string|truncate(5,true,"") }}
 {%- endmacro %}
-
-{#-------------------------------------------------------------------#}
-{% macro study_number_of_courses(study_obj) %}
-{% set helper_cycler = cycler(*range(10000000)) %}
-{% for semester in study_obj.semesters %}
-  {% for course in semester.courses %}
-    {% set nothing = helper_cycler.next() %}
-  {% endfor %}
-{% endfor %}
-{{ helper_cycler.current }}
-{% endmacro %}
 
 {#-------------------------------------------------------------------#}
 {% macro study_write_place(place) %}
@@ -700,7 +683,38 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}
+{% macro semester_total_amount(semester_obj, total_of_what, course_number=0) %}
+{# possible values: "points", "credits", "exams", "midterms", "projects", "A", "B", "C", "D", "E", "F" #}
+
+{% if total_of_what == "credits" %}
+  {{ semester_obj.courses|map(attribute="credits")|sum }}
+{% else %}
+
+  {% if course_number >= (semester_obj.courses|length) %} 0
+  {% else %}
+    {% set course = semester_obj.courses[course_number] %}
+    {% if total_of_what == "points" %}
+      {% set amount = course_total_points(course)|int %}
+    {% else %} {% if total_of_what == "exams" %}
+      {% if course.pts.exam[1] > 0 %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
+    {% else %} {% if total_of_what == "midterms" %}
+      {% if course.pts.midterm[1] > 0 %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
+    {% else %} {% if total_of_what == "projects" %}
+      {% set amount = course.pts.projects|length %}
+    {% else %} {% if total_of_what in ["A","B","C","D","E","F"] %}
+      {% if course.classified and course_mark(course) == total_of_what %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
+    {% endif %} {% endif %} {% endif %} {% endif %} {% endif %}
+  
+    {{ amount + (semester_total_amount(semester_obj,total_of_what,course_number + 1)|int) }}
+  {% endif %}
+
+{% endif %}
+  
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
 {% macro study_total_amount(study_type, total_of_what, semester_number=0) %}
+{# possible values: "scholarship", "points", "credits", "exams", "midterms", "projects", "courses", "classified", "A", "B", "C", "D", "E", "F" #}
 
 {% if total_of_what == "scholarship" %}
   {{ study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
@@ -712,10 +726,13 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
     {% if total_of_what == "scholarship" %}
       {% set amount = semester.scholarship|int %}
-    {% else %} {% if total_of_what == "credits" %}
-      {% set amount = semester_total_credits(semester)|int %}
-    {% endif %}
-    {% endif %}
+    {% else %} {% if total_of_what == "courses" %}
+      {% set amount = semester.courses|length %}
+    {% else %} {% if total_of_what == "classified" %}
+      {% set amount = semester.courses|map(attribute="classified")|select|sum %}
+    {% else %} {% if total_of_what in ["credits","points","exams","midterms","projects","A","B","C","D","E","F"] %}
+      {% set amount = semester_total_amount(semester,total_of_what)|int %}
+    {% endif %}{% endif %}{% endif %}{% endif %}
   
     {{ amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) }}
   {% endif %}
@@ -734,28 +751,25 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {% set study = study_data.studies[study_type] %}
 
-{% set number_of_courses = study_number_of_courses(study_data.studies[study_type]) %}
+{% set number_of_courses = study_total_amount(study_type,"courses") %}
 
 <h2> Statistiky pro {{ study_type }} studium </h2>
 
 <table>
   kreditů (hodin práce): {% set credits = study_total_amount(study_type,"credits") %} {{ credits }} ({{ credits_to_hours(credits) }})   <br />
-  bodů: <br />
-  zkoušek: <br />
-  půlsemestrálek: <br />
-  projektů: <br />
+  bodů: {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }} <br />
+  zkoušek: {{ study_total_amount(study_type,"exams") }} <br />
+  půlsemestrálek: {{ study_total_amount(study_type,"midterms") }} <br />
+  projektů: {{ study_total_amount(study_type,"projects") }} <br />
   předmětů: {{ number_of_courses }} <br />
   průměr: <br />
   pořadí: {{ study_write_place(study.place) }} <br />
   peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč <br />
   histogram známek:
   <ul>
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-    <li>D</li>
-    <li>E</li>
-    <li>F</li>
+    {% for mark in ["A","B","C","D","E","F"] %}
+    <li> {{ mark }}: {{ study_total_amount(study_type,mark) }} </li>
+    {% endfor %}
   </ul>
   
 </table>
@@ -816,7 +830,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
       <tr{% if loop.last %} class="semester-last-row"{% endif %}>
         {% if loop.first %}                                                     {# new semester #}
           {% if semester_number == 1 %}                                         {# new study #}
-            <td rowspan="{{ study_number_of_courses(study_data.studies[study_type]) }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
+            <td rowspan="{{ study_total_amount(study_type,"courses") }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
           {% endif %}
         
           {% if semester_number == 1 or semester_type_cycler.current == "L" %}                        {# new calendar year #}
@@ -865,7 +879,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
         </td>
        
         {% if loop.first %}
-          <td rowspan="{{ number_of_courses }}"> {{ semester_total_credits(semester) }} </td>
+          <td rowspan="{{ number_of_courses }}"> {{ semester_total_amount(semester,"credits") }} </td>
           <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ courses_weighted_mean(semester.courses) }} </span> </td>
           <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.place[0] }}/{{ semester.place[2] }} </span> </td>
           <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.scholarship }} </span> </td>
