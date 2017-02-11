@@ -114,6 +114,7 @@ set study_data =
         "Bc." :
           {
             "start_year" : 2010,
+            "place" : [5,5,123],
             "semesters" :
               [
                 {
@@ -407,6 +408,7 @@ set study_data =
         "Ing." :
           {
             "start_year" : 2014,
+            "place" : [0,0,0],
             "semesters" :
               [
                 {
@@ -672,6 +674,11 @@ set study_data =
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}
+{% macro study_write_place(place) %}
+{{ place[0] }}. {% if place[0] != place[1] %} - {{ place[1] }}. {% endif %} / {{ place[2] }}
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
 {% macro study_semester_summary(study_type, semester_number, language="cs") %}
 
 <h2> Celkové výsledky </h2>
@@ -687,8 +694,39 @@ set study_data =
 </table>
 
 průměr: {{ courses_weighted_mean(semester_courses) }} <br />
-pořadí v ročníku: {{ semester.place[0] }} - {{ semester.place[1] }} / {{ semester.place[2] }} <br />
+pořadí v ročníku: {{ study_write_place(semester.place) }} <br />
 prospěchové stipendium: {{ semester.scholarship }} Kč
+
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
+{% macro study_summary(study_type, language="cs") %}
+
+{% set study = study_data.studies[study_type] %}
+
+<h2> Statistiky pro {{ study_type }} studium </h2>
+
+<table>
+  kreditů (hodin práce): <br />
+  bodů: <br />
+  zkoušek: <br />
+  půlsemestrálek: <br />
+  projektů: <br />
+  předmětů: <br />
+  průměr: <br />
+  pořadí: {{ study_write_place(study.place) }} <br />
+  peněz z prospěchových stipendií: Kč <br />
+  histogram známek:
+  <ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+  </ul>
+  
+</table>
 
 {% endmacro %}
 

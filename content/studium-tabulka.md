@@ -9,4 +9,5 @@ Tags: study
 
 {{ m.study_table("cs") }}
 
-TODO: statistiky ohledně studia spočítané z tabulky
+{{ m.study_summary("Bc.","cs") }}
+{{ m.study_summary("Ing.","cs") }}
