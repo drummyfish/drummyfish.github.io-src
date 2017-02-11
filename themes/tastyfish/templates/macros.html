@@ -591,13 +591,13 @@ set study_data =
                     [
                       {
                         "abbr": "SIP",    "name cs": "Diplomová práce",                          "name en": "Master's Thesis",
-                        "credits" : 13,   "type": "P",               "classified": true,
+                        "credits" : 13,   "type": "P",               "classified": false,
                         "pts":
                           { "projects" : [[0,0]                      ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
                       },
                       {
                         "abbr": "SZZ",    "name cs": "Státní závěrečná zkouška",                 "name en": "Final state examination",
-                        "credits" : 0,    "type": "P",               "classified": true,
+                        "credits" : 0,    "type": "P",               "classified": false,
                         "pts":
                           { "projects" : [                           ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
                       },
@@ -684,10 +684,14 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {#-------------------------------------------------------------------#}
 {% macro semester_total_amount(semester_obj, total_of_what, course_number=0) %}
-{# possible values: "points", "credits", "exams", "midterms", "projects", "A", "B", "C", "D", "E", "F" #}
+{# possible values: "points", "credits", "exams", "midterms", "projects", "classified credits", "weighted numerator", "A", "B", "C", "D", "E", "F" #}
 
 {% if total_of_what == "credits" %}
   {{ semester_obj.courses|map(attribute="credits")|sum }}
+  
+{% else %} {% if total_of_what == "classified credits" %}
+  {{ semester_obj.courses|selectattr("classified")|map(attribute="credits")|sum }}
+  
 {% else %}
 
   {% if course_number >= (semester_obj.courses|length) %} 0
@@ -703,21 +707,26 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
       {% set amount = course.pts.projects|length %}
     {% else %} {% if total_of_what in ["A","B","C","D","E","F"] %}
       {% if course.classified and course_mark(course) == total_of_what %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
-    {% endif %} {% endif %} {% endif %} {% endif %} {% endif %}
+    {% else %} {% if total_of_what == "weighted numerator" %}
+      {% if course.classified %} {% set amount = (course_mark_to_number(course_mark(course))|float) * (course.credits|float) %} {% else %} {% set amount = 0 %} {% endif %}
+    {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %}
   
-    {{ amount + (semester_total_amount(semester_obj,total_of_what,course_number + 1)|int) }}
+    {{ (amount|float) + (semester_total_amount(semester_obj,total_of_what,course_number + 1)|float) }}
   {% endif %}
 
+{% endif %}
 {% endif %}
   
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}
 {% macro study_total_amount(study_type, total_of_what, semester_number=0) %}
-{# possible values: "scholarship", "points", "credits", "exams", "midterms", "projects", "courses", "classified", "A", "B", "C", "D", "E", "F" #}
+{# possible values: "scholarship", "points", "credits", "exams", "midterms", "projects", "courses", "classified", "classified credits", "weighted numerator", "mean", "A", "B", "C", "D", "E", "F" #}
 
 {% if total_of_what == "scholarship" %}
   {{ study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
+{% else %} {% if total_of_what == "mean" %}
+  {{ (study_total_amount(study_type,"weighted numerator")|float) / (study_total_amount(study_type,"classified credits")|float)  }}
 {% else %}
 
   {% if semester_number >= (study_data.studies[study_type].semesters|length) %} 0
@@ -730,13 +739,14 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
       {% set amount = semester.courses|length %}
     {% else %} {% if total_of_what == "classified" %}
       {% set amount = semester.courses|map(attribute="classified")|select|sum %}
-    {% else %} {% if total_of_what in ["credits","points","exams","midterms","projects","A","B","C","D","E","F"] %}
+    {% else %} {% if total_of_what in ["credits","points","exams","midterms","projects","classified credits","weighted numerator","A","B","C","D","E","F"] %}
       {% set amount = semester_total_amount(semester,total_of_what)|int %}
     {% endif %}{% endif %}{% endif %}{% endif %}
   
     {{ amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) }}
   {% endif %}
 
+{% endif %}
 {% endif %}
 
 {% endmacro %}
@@ -762,7 +772,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
   půlsemestrálek: {{ study_total_amount(study_type,"midterms") }} <br />
   projektů: {{ study_total_amount(study_type,"projects") }} <br />
   předmětů: {{ number_of_courses }} <br />
-  průměr: <br />
+  průměr:  {{ study_total_amount(study_type,"mean") }} <br />
   pořadí: {{ study_write_place(study.place) }} <br />
   peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč <br />
   histogram známek:
