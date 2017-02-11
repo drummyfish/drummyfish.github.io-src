@@ -396,7 +396,7 @@ set study_data =
                       },
                       {
                         "abbr": "ISZ",    "name cs": "Státní závěrečná zkouška",              "name en": "Final State Examination",
-                        "credits" : 9,    "type": "P",              "classified": true,
+                        "credits" : 0,    "type": "P",              "classified": true,
                         "pts":
                           { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],"other" : [85,100],"exam" : [0,0]}
                       },
@@ -700,22 +700,54 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}
+{% macro study_total_amount(study_type, total_of_what, semester_number=0) %}
+
+{% if total_of_what == "scholarship" %}
+  {{ study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
+{% else %}
+
+  {% if semester_number >= (study_data.studies[study_type].semesters|length) %} 0
+  {% else %}
+    {% set semester = study_data.studies[study_type].semesters[semester_number] %}
+
+    {% if total_of_what == "scholarship" %}
+      {% set amount = semester.scholarship|int %}
+    {% else %} {% if total_of_what == "credits" %}
+      {% set amount = semester_total_credits(semester)|int %}
+    {% endif %}
+    {% endif %}
+  
+    {{ amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) }}
+  {% endif %}
+
+{% endif %}
+
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
+{%- macro credits_to_hours(credits) -%}
+{{ (credits|int) * 28 }}
+{%- endmacro -%}
+
+{#-------------------------------------------------------------------#}
 {% macro study_summary(study_type, language="cs") %}
 
 {% set study = study_data.studies[study_type] %}
 
+{% set number_of_courses = study_number_of_courses(study_data.studies[study_type]) %}
+
 <h2> Statistiky pro {{ study_type }} studium </h2>
 
 <table>
-  kreditů (hodin práce): <br />
+  kreditů (hodin práce): {% set credits = study_total_amount(study_type,"credits") %} {{ credits }} ({{ credits_to_hours(credits) }})   <br />
   bodů: <br />
   zkoušek: <br />
   půlsemestrálek: <br />
   projektů: <br />
-  předmětů: <br />
+  předmětů: {{ number_of_courses }} <br />
   průměr: <br />
   pořadí: {{ study_write_place(study.place) }} <br />
-  peněz z prospěchových stipendií: Kč <br />
+  peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč <br />
   histogram známek:
   <ul>
     <li>A</li>
