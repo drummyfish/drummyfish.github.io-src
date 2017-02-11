@@ -115,6 +115,7 @@ set study_data =
           {
             "start_year" : 2010,
             "place" : [5,5,123],
+            "final_exam_marks": ["A","B"],
             "semesters" :
               [
                 {
@@ -390,15 +391,9 @@ set study_data =
                     [
                       {
                         "abbr": "IBP",    "name cs": "Bakalářská práce",                      "name en": "Bachelor's Thesis",
-                        "credits" : 9,    "type": "P",              "classified": true,
+                        "credits" : 9,    "type": "P",              "classified": false,
                         "pts":
-                          { "projects" : [[95,100]                  ],   "midterm" : [0,0],   "labs" : [0,0],"other" : [0,0],"exam" : [0,0]         }
-                      },
-                      {
-                        "abbr": "ISZ",    "name cs": "Státní závěrečná zkouška",              "name en": "Final State Examination",
-                        "credits" : 0,    "type": "P",              "classified": true,
-                        "pts":
-                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],"other" : [85,100],"exam" : [0,0]}
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],"other" : [0,0],"exam" : [0,0]         }
                       },
                     ],
                 },
@@ -409,6 +404,7 @@ set study_data =
           {
             "start_year" : 2014,
             "place" : [0,0,0],
+            "final_exam_marks": ["F","F"],
             "semesters" :
               [
                 {
@@ -595,12 +591,6 @@ set study_data =
                         "pts":
                           { "projects" : [[0,0]                      ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
                       },
-                      {
-                        "abbr": "SZZ",    "name cs": "Státní závěrečná zkouška",                 "name en": "Final state examination",
-                        "credits" : 0,    "type": "P",               "classified": false,
-                        "pts":
-                          { "projects" : [                           ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
-                      },
                     ],
                 },
               ],
@@ -726,10 +716,33 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% if total_of_what == "scholarship" %}
   {{ study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
 {% else %} {% if total_of_what == "mean" %}
-  {{ (study_total_amount(study_type,"weighted numerator")|float) / (study_total_amount(study_type,"classified credits")|float)  }}
+ 
+ {% set final_marks = study_data.studies[study_type]["final_exam_marks"] %}
+ {{
+   (
+     ((study_total_amount(study_type,"weighted numerator")|float) + (course_mark_to_number(final_marks[0])|float) + (course_mark_to_number(final_marks[1])|float)) /
+     (study_total_amount(study_type,"classified credits")|float)
+   )|string|truncate(5,true,"")
+  }}
+
 {% else %}
 
-  {% if semester_number >= (study_data.studies[study_type].semesters|length) %} 0
+  {% if semester_number >= (study_data.studies[study_type].semesters|length) %}
+    {% if total_of_what in ["A","B","C","D","E","F"]  %}   {# check the final study marks if summing marks #}
+      {% set amount = 0 %}
+    
+      {% if total_of_what == study_data.studies[study_type]["final_exam_marks"][0] %}
+        {% set amount = amount + 1 %}
+      {% endif %}
+    
+      {% if total_of_what == study_data.studies[study_type]["final_exam_marks"][1] %}
+        {% set amount = amount + 1 %}
+      {% endif %}
+    
+      {{ amount }}
+    {% else %}
+      0
+    {% endif %}
   {% else %}
     {% set semester = study_data.studies[study_type].semesters[semester_number] %}
 
