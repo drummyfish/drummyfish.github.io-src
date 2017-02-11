@@ -198,13 +198,9 @@ na začátku si jenom pomůžete a zvýšíte pravděpodobnost úspěchu (viz
 [státnice
 otázky](https://www.dropbox.com/s/aq30uwvws1snj3q/otazky%20bc.zip?dl=0)
 
-{{ m.study_semester_summary("Bc.",7,"cs") }}
-
-průměr celého studia: 1,948
-
-pořadí v ročníku: 6. místo z 164
-
-prospěchové stipendium: 600 Kč
+bakalářská práce - A <br />
+ústní zkouška - B <br />
+celkově - B <br />
 
 Závěrem k bakalářskému studiu
 -----------------------------
@@ -238,14 +234,7 @@ lituji, tak snad jenom toho, že jsem si nezapsal předmět IKR.
 Dal jsem si tu práci a sestavil pár statistik. Za dobu studia jsem
 absolvoval/získal:
 
--   37 předmětů
--   30 zkoušek (z toho 2 ústní)
--   185 kreditů (dle definice 11100 hodin studia a práce)
--   cca 43 projektů (od malých domácích úkolů až po větší týmové
-    projekty a kvalifikační práci)
--   cca 30 semestrálních testů
--   6 obhajob
--   2622 bodů
+{{ m.study_summary("Bc.","cs") }}
 
 A konečně malý výčet toho, co jsem se (konkrétně já) naučil:
 

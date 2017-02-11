@@ -778,24 +778,24 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 <h2> Statistiky pro {{ study_type }} studium </h2>
 
-<table>
-  kreditů (hodin práce): {% set credits = study_total_amount(study_type,"credits") %} {{ credits }} ({{ credits_to_hours(credits) }})   <br />
-  bodů: {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }} <br />
-  zkoušek: {{ study_total_amount(study_type,"exams") }} <br />
-  půlsemestrálek: {{ study_total_amount(study_type,"midterms") }} <br />
-  projektů: {{ study_total_amount(study_type,"projects") }} <br />
-  předmětů: {{ number_of_courses }} <br />
-  průměr:  {{ study_total_amount(study_type,"mean") }} <br />
-  pořadí: {{ study_write_place(study.place) }} <br />
-  peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč <br />
-  histogram známek:
-  <ul>
-    {% for mark in ["A","B","C","D","E","F"] %}
-    <li> {{ mark }}: {{ study_total_amount(study_type,mark) }} </li>
-    {% endfor %}
-  </ul>
-  
-</table>
+<ul>
+  <li> kreditů (hodin práce): {% set credits = study_total_amount(study_type,"credits") %}{{ credits }} ({{ credits_to_hours(credits) }}) </li>
+  <li> bodů: {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }} </li>
+  <li> zkoušek: {{ study_total_amount(study_type,"exams") }} </li>
+  <li> půlsemestrálek: {{ study_total_amount(study_type,"midterms") }} </li>
+  <li> projektů: {{ study_total_amount(study_type,"projects") }} </li>
+  <li> předmětů: {{ number_of_courses }} </li>
+  <li> průměr: {{ study_total_amount(study_type,"mean") }} </li>
+  <li> pořadí: {{ study_write_place(study.place) }} </li>
+  <li> peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč </li>
+  <li> histogram známek:
+    <ul>
+      {% for mark in ["A","B","C","D","E","F"] %}
+        <li> {{ mark }}: {{ study_total_amount(study_type,mark) }} </li>
+      {% endfor %}
+    </ul>
+    </li>
+</ul>
 
 {% endmacro %}
 
