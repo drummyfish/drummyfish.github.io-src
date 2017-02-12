@@ -3,8 +3,8 @@
 {% block content %}
 
 <section id="content" class="body">
-  {% include "random_texts.txt" %}
   {% import "macros.html" as m %}
+  {{ m.random_texts_script() }}
 
   {% if DEFAULT_LANG == "cs" %}
     Vítejte na mých stránkách {{m.e(':)')}} Jejich účelem je shromažďovat různé věci, které mě zajímají a o které se chci podělit.
