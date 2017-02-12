@@ -16,7 +16,8 @@ def set_common_variables(module_ref):
     ("Facebook","https://www.facebook.com/miloslav.ciz"),
     ("YouTube","https://www.youtube.com/user/drummyfish"),
     ("Deviantart","http://drummyfish.deviantart.com/"),
-    ("reddit","https://www.reddit.com/user/drummyfish/"),)
+    ("reddit","https://www.reddit.com/user/drummyfish/"),
+    )
 
   module_ref.DEFAULT_PAGINATION = 4
   module_ref.PLUGIN_PATHS = ["plugins"]
