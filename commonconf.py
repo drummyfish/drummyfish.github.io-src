@@ -30,7 +30,7 @@ def set_common_variables(module_ref):
   module_ref.MENUITEMS = [
     (u"Úvod","index.html"),
     (u"Příspěvky","category/posts.html"),
-    (u"Clánky","category/articles.html"),
+    (u"Články","category/articles.html"),
     (u"Projekty","pages/projekty.html"),
     (u"Tagy","tags.html"),
     (u"O mně","pages/about.html")]
@@ -39,6 +39,11 @@ def set_common_variables(module_ref):
     "Articles" : 3,                        # indices that should be marked active
     "Posts" : 2,
     "tag" : 5
+    }
+  
+  module_ref.JINJA_ENVIRONMENT = {
+    "trim_blocks": True,
+    "lstrip_blocks": True
     }
   
   module_ref.DEFAULT_LANG = u'cs'
