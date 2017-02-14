@@ -338,6 +338,7 @@ set study_data =
             "start_year" : 2010,
             "place" : [5,5,123],
             "final_exam_marks": ["A","B"],
+            "slug_prefix" : "bc",
             "semesters" :
               [
                 {
@@ -627,6 +628,7 @@ set study_data =
             "start_year" : 2014,
             "place" : [0,0,0],
             "final_exam_marks": ["F","F"],
+            "slug_prefix" : "ing",
             "semesters" :
               [
                 {
@@ -1086,7 +1088,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
             <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
           {% endif %}
           
-          <td rowspan="{{ number_of_courses }}"> {{ semester_type_cycler.next() }} </td>
+          <td rowspan="{{ number_of_courses }}"> <a href="{{ study_data.studies[study_type]["slug_prefix"] }}{{semester_number}}.html"> {{ semester_type_cycler.next() }} </a> </td>
         {% endif %}
   
         <td> <a href="http://www.fit.vutbr.cz/study/course-l.php?tab1_f2={{ course.abbr }}"> {{ course.abbr }} </a> </td>

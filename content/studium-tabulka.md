@@ -1,4 +1,4 @@
-Title: Studium na FIT VUT - tabulka
+Title: Studium na FIT VUT - rozcestník a statistiky
 Date: 2016-04-26 21:23
 Author: tastyfish
 Category: Articles

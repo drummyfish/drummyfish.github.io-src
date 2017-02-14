@@ -25,7 +25,7 @@
         <div class="entry-content">
           {% include "article_infos.html" %}
           
-          {{ article.summary }}
+          <p> {{ article.summary | striptags }} </p>
           <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">{% if DEFAULT_LANG == "cs" %}pokračovat ve čtení{% else %}read more{%- endif %}</a>
           {% include "comments.html" %}
         </div>

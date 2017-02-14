@@ -65,7 +65,7 @@ def set_common_variables(module_ref):
     },
     "output_format": "html5",
     }
-  module_ref.SUMMARY_MAX_LENGTH = 10
+  module_ref.SUMMARY_MAX_LENGTH = 30
   module_ref.I18N_SUBSITES = {
     "en": { "MENUITEMS" : [
          (u"Intro","index.html"),
