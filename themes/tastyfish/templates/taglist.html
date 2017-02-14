@@ -1,11 +1,12 @@
 {% if article.tags %}
-  {% if DEFAULT_LANG == "cs" %}
-    tagy:
-  {% else %}
-    tags:
-  {% endif %}
+            {% if DEFAULT_LANG == "cs" %}
+            tagy:
+            {% else %}
+            tags:
+            {% endif %}
   
-  {% for tag in article.tags %}
-    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
-  {% endfor %}
+            {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
+            {% endfor %}
+            <br />
 {% endif %}

@@ -1,5 +1,5 @@
-<section id="extras" class="body">
-  {% if LINKS %}
+  <section id="extras" class="body">
+    {% if LINKS %}
     <div class="blogroll">
       <h2>{{ LINKS_WIDGET_NAME | default('links') }}</h2>
       <ul>
@@ -7,6 +7,6 @@
           <li><a href="{{ link }}">{{ name }}</a></li>
         {% endfor %}
       </ul>
-    </div><!-- /.blogroll -->
-  {% endif %}
-</section><!-- /#extras -->
+    </div>
+    {% endif %}
+  </section>

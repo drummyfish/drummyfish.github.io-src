@@ -24,8 +24,9 @@
 
         <div class="entry-content">
           {% include "article_infos.html" %}
+          
           {{ article.summary }}
-          <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
+          <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">{% if DEFAULT_LANG == "cs" %}pokračovat ve čtení{% else %}read more{%- endif %}</a>
           {% include "comments.html" %}
         </div>
       </article>
@@ -40,7 +41,5 @@
     
   </section>
 {% endif %}
-
 {% endfor %}
-
 {% endblock content %}
