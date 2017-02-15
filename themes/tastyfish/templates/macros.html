@@ -824,11 +824,11 @@ set study_data =
 %}
 
 {#-------------------------------------------------------------------#}
-{% macro write_points(points_tuple) %}
-{% if points_tuple[1] > 0 %}
+{% macro write_points(points_tuple) -%}
+{% if points_tuple[1] > 0 -%}
 {{ points_tuple[0] }}/{{ points_tuple[1] }}
-{% endif %}
-{% endmacro %}
+{%- endif %}
+{%- endmacro %}
 
 {#-------------------------------------------------------------------#}
 {% macro course_total_points(course_obj) -%}
@@ -897,96 +897,96 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% endmacro %}
 
 {#-------------------------------------------------------------------#}
-{% macro semester_total_amount(semester_obj, total_of_what, course_number=0) %}
+{%- macro semester_total_amount(semester_obj, total_of_what, course_number=0) -%}
 {# possible values: "points", "credits", "exams", "midterms", "projects", "classified credits", "weighted numerator", "A", "B", "C", "D", "E", "F" #}
 
-{% if total_of_what == "credits" %}
-  {{ semester_obj.courses|map(attribute="credits")|sum }}
+{%- if total_of_what == "credits" -%}
+  {{- semester_obj.courses|map(attribute="credits")|sum -}}
   
-{% else %} {% if total_of_what == "classified credits" %}
-  {{ semester_obj.courses|selectattr("classified")|map(attribute="credits")|sum }}
+{%- else -%} {%- if total_of_what == "classified credits" -%}
+  {{- semester_obj.courses|selectattr("classified")|map(attribute="credits")|sum -}}
   
-{% else %}
+{%- else -%}
 
-  {% if course_number >= (semester_obj.courses|length) %} 0
-  {% else %}
-    {% set course = semester_obj.courses[course_number] %}
-    {% if total_of_what == "points" %}
-      {% set amount = course_total_points(course)|int %}
-    {% else %} {% if total_of_what == "exams" %}
-      {% if course.pts.exam[1] > 0 %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
-    {% else %} {% if total_of_what == "midterms" %}
-      {% if course.pts.midterm[1] > 0 %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
-    {% else %} {% if total_of_what == "projects" %}
-      {% set amount = course.pts.projects|length %}
-    {% else %} {% if total_of_what in ["A","B","C","D","E","F"] %}
-      {% if course.classified and course_mark(course) == total_of_what %} {% set amount = 1 %} {% else %} {% set amount = 0 %} {% endif %}
-    {% else %} {% if total_of_what == "weighted numerator" %}
-      {% if course.classified %} {% set amount = (course_mark_to_number(course_mark(course))|float) * (course.credits|float) %} {% else %} {% set amount = 0 %} {% endif %}
-    {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %}
+  {%- if course_number >= (semester_obj.courses|length) -%} 0
+  {%- else -%}
+    {%- set course = semester_obj.courses[course_number] -%}
+    {%- if total_of_what == "points" -%}
+      {%- set amount = course_total_points(course)|int -%}
+    {%- else %} {% if total_of_what == "exams" -%}
+      {%- if course.pts.exam[1] > 0 -%} {%- set amount = 1 -%} {%- else -%} {%- set amount = 0 -%} {%- endif -%}
+    {%- else -%} {%- if total_of_what == "midterms" -%}
+      {%- if course.pts.midterm[1] > 0 -%} {%- set amount = 1 -%} {%- else -%} {%- set amount = 0 -%} {%- endif -%}
+    {%- else -%} {%- if total_of_what == "projects" -%}
+      {%- set amount = course.pts.projects|length -%}
+    {%- else -%} {%- if total_of_what in ["A","B","C","D","E","F"] -%}
+      {%- if course.classified and course_mark(course) == total_of_what -%} {%- set amount = 1 -%} {%- else -%} {%- set amount = 0 -%} {%- endif -%}
+    {%- else -%} {%- if total_of_what == "weighted numerator" -%}
+      {%- if course.classified -%} {%- set amount = (course_mark_to_number(course_mark(course))|float) * (course.credits|float) -%} {%- else -%} {%- set amount = 0 -%} {%- endif -%}
+    {%- endif -%} {%- endif -%} {%- endif -%} {%- endif -%} {%- endif -%} {%- endif -%}
   
-    {{ (amount|float) + (semester_total_amount(semester_obj,total_of_what,course_number + 1)|float) }}
-  {% endif %}
+    {{- (amount|float) + (semester_total_amount(semester_obj,total_of_what,course_number + 1)|float) -}}
+  {%- endif -%}
 
-{% endif %}
-{% endif %}
+{%- endif -%}
+{%- endif -%}
   
-{% endmacro %}
+{%- endmacro -%}
 
 {#-------------------------------------------------------------------#}
-{% macro study_total_amount(study_type, total_of_what, semester_number=0) %}
+{%- macro study_total_amount(study_type, total_of_what, semester_number=0) -%}
 {# possible values: "scholarship", "points", "credits", "exams", "midterms", "projects", "courses", "classified", "classified credits", "weighted numerator", "mean", "A", "B", "C", "D", "E", "F" #}
 
-{% if total_of_what == "scholarship" %}
+{%- if total_of_what == "scholarship" -%}
   {{ study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
-{% else %} {% if total_of_what == "mean" %}
+{%- else -%} {%- if total_of_what == "mean" -%}
  
- {% set final_marks = study_data.studies[study_type]["final_exam_marks"] %}
- {{
+ {%- set final_marks = study_data.studies[study_type]["final_exam_marks"] -%}
+ {{-
    (
      ((study_total_amount(study_type,"weighted numerator")|float) + (course_mark_to_number(final_marks[0])|float) + (course_mark_to_number(final_marks[1])|float)) /
      (study_total_amount(study_type,"classified credits")|float)
    )|string|truncate(5,true,"")
-  }}
+  -}}
 
-{% else %}
+{%- else -%}
 
-  {% if semester_number >= (study_data.studies[study_type].semesters|length) %}
-    {% if total_of_what in ["A","B","C","D","E","F"]  %}   {# check the final study marks if summing marks #}
-      {% set amount = 0 %}
+  {%- if semester_number >= (study_data.studies[study_type].semesters|length) -%}
+    {%- if total_of_what in ["A","B","C","D","E","F"]  -%}   {# check the final study marks if summing marks #}
+      {%- set amount = 0 -%}
     
-      {% if total_of_what == study_data.studies[study_type]["final_exam_marks"][0] %}
-        {% set amount = amount + 1 %}
-      {% endif %}
+      {%- if total_of_what == study_data.studies[study_type]["final_exam_marks"][0] -%}
+        {%- set amount = amount + 1 -%}
+      {%- endif -%}
     
-      {% if total_of_what == study_data.studies[study_type]["final_exam_marks"][1] %}
-        {% set amount = amount + 1 %}
-      {% endif %}
+      {%- if total_of_what == study_data.studies[study_type]["final_exam_marks"][1] -%}
+        {%- set amount = amount + 1 -%}
+      {%- endif -%}
     
-      {{ amount }}
-    {% else %}
+      {{- amount -}}
+    {%- else -%}
       0
-    {% endif %}
-  {% else %}
-    {% set semester = study_data.studies[study_type].semesters[semester_number] %}
+    {%- endif -%}
+  {%- else -%}
+    {%- set semester = study_data.studies[study_type].semesters[semester_number] -%}
 
-    {% if total_of_what == "scholarship" %}
-      {% set amount = semester.scholarship|int %}
-    {% else %} {% if total_of_what == "courses" %}
-      {% set amount = semester.courses|length %}
-    {% else %} {% if total_of_what == "classified" %}
-      {% set amount = semester.courses|map(attribute="classified")|select|sum %}
-    {% else %} {% if total_of_what in ["credits","points","exams","midterms","projects","classified credits","weighted numerator","A","B","C","D","E","F"] %}
-      {% set amount = semester_total_amount(semester,total_of_what)|int %}
-    {% endif %}{% endif %}{% endif %}{% endif %}
+    {%- if total_of_what == "scholarship" -%}
+      {% set amount = semester.scholarship|int -%}
+    {%- else -%} {%- if total_of_what == "courses" -%}
+      {% set amount = semester.courses|length -%}
+    {%- else -%} {%- if total_of_what == "classified" -%}
+      {% set amount = semester.courses|map(attribute="classified")|select|sum -%}
+    {%- else -%} {%- if total_of_what in ["credits","points","exams","midterms","projects","classified credits","weighted numerator","A","B","C","D","E","F"] -%}
+      {% set amount = semester_total_amount(semester,total_of_what)|int -%}
+    {%- endif %}{% endif %}{% endif %}{% endif -%}
   
-    {{ amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) }}
-  {% endif %}
+    {{- amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) -}}
+  {%- endif -%}
 
-{% endif %}
-{% endif %}
+{%- endif %}
+{%- endif -%}
 
-{% endmacro %}
+{%- endmacro -%}
 
 {#-------------------------------------------------------------------#}
 {%- macro credits_to_hours(credits) -%}
@@ -1000,19 +1000,57 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {% set number_of_courses = study_total_amount(study_type,"courses") %}
 
-<h2> Statistiky pro {{ study_type }} studium </h2>
+<h2> {%if language == "cs" %} Statistiky pro {{ study_type }} studium {% else %} Stats for {{ study_type }} study {% endif %} </h2>
 
 <ul>
-  <li> kreditů (hodin práce): {% set credits = study_total_amount(study_type,"credits") %}{{ credits }} ({{ credits_to_hours(credits) }}) </li>
-  <li> bodů: {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }} </li>
-  <li> zkoušek: {{ study_total_amount(study_type,"exams") }} </li>
-  <li> půlsemestrálek: {{ study_total_amount(study_type,"midterms") }} </li>
-  <li> projektů: {{ study_total_amount(study_type,"projects") }} </li>
-  <li> předmětů: {{ number_of_courses }} </li>
-  <li> průměr: {{ study_total_amount(study_type,"mean") }} </li>
-  <li> pořadí: {{ study_write_place(study.place) }} </li>
-  <li> peněz z prospěchových stipendií: {{ study_total_amount(study_type,"scholarship") }} Kč </li>
-  <li> histogram známek:
+  <li>
+    {%if language == "cs" %} kreditů (hodin práce): {% else %} credits (work hours) {% endif %}
+    {% set credits = study_total_amount(study_type,"credits") %}{{ credits }} ({{ credits_to_hours(credits) }})
+  </li>
+  
+  <li>
+    {%if language == "cs" %} bodů:: {% else %} points: {% endif %}
+    {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} zkoušek: {% else %} exams: {% endif %}
+    {{ study_total_amount(study_type,"exams") }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} půlsemestrálek: {% else %} midterms: {% endif %}
+    {{ study_total_amount(study_type,"midterms") }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} projektů: {% else %} projects: {% endif %}
+    {{ study_total_amount(study_type,"projects") }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} předmětů: {% else %} courses: {% endif %}
+    {{ number_of_courses }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} průměr: {% else %} mean: {% endif %}
+    {{ study_total_amount(study_type,"mean") }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} pořadí: {% else %} place: {% endif %}
+    {{ study_write_place(study.place) }}
+  </li>
+  
+  <li>
+    {%if language == "cs" %} peněz z prospěchových stipendií: {% else %} merit scholarship money: {% endif %}
+    {{ study_total_amount(study_type,"scholarship") }} Kč
+  </li>
+  
+  <li>
+    {%if language == "cs" %} histogram známek: {% else %} mark histogram: {% endif %}
+  
     <ul>
       {% for mark in ["A","B","C","D","E","F"] %}
         <li> {{ mark }}: {{ study_total_amount(study_type,mark) }} </li>
@@ -1025,119 +1063,114 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {#-------------------------------------------------------------------#}
 {% macro study_table(language="cs") %}
+
 <table class="study-table">
 
 <tr>
-  <th colspan="4"> období </th>
-  <th colspan="4"> předmět </th>
-  <th colspan="6"> hodnocení </th>
-  <th colspan="4"> celý semestr </th>
+  <th colspan="4"> {% if language == "cs" %} období {% else %} time period {% endif %} </th>
+  <th colspan="4"> {% if language == "cs" %} předmět {% else %} course {% endif %} </th>
+  <th colspan="6"> {% if language == "cs" %} hodnocení {% else %} results {% endif %} </th>
+  <th colspan="4"> {% if language == "cs" %} celý semestr {% else %} whole semester {% endif %} </th>
 </tr>
 
 <tr>
-  <th> <span class="vertical-text"> studium </span> </th>
-  <th> <span class="vertical-text"> rok </span> </th>
-  <th> <span class="vertical-text"> ročník </span> </th>
-  <th> <span class="vertical-text"> semestr </span> </th>
-  <th> <span class="vertical-text"> zkratka </span> </th>
-  <th> <span class="vertical-text"> název </span> </th>
-  <th> <span class="vertical-text"> kredity </span> </th>
-  <th> <span class="vertical-text"> typ </span> </th>
-  <th> <span class="vertical-text"> půlsem </span> </th>
-  <th> <span class="vertical-text"> proj. </span> </th>
-  <th> <span class="vertical-text"> cvičení </span> </th>
-  <th> <span class="vertical-text"> ostatní </span> </th>
-  <th> <span class="vertical-text"> zkouška </span> </th>
-  <th> <span class="vertical-text"> celkem </span> </th>
-  <th> <span class="vertical-text"> kredity </span> </th>
-  <th> <span class="vertical-text"> průměr </span> </th>
-  <th> <span class="vertical-text"> pořadí </span> </th>
-  <th> <span class="vertical-text"> stip.&nbsp;(Kč) </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} studium {% else %} study {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} rok {% else %} year {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} ročník {% else %} ac.&nbsp;year {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} semestr {% else %} semester {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} zkratka {% else %} abbr. {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} název {% else %} name {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} kredity {% else %} credits {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} typ {% else %} type {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} půlsem. {% else %} midterm {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} proj {% else %} proj. {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} cvičení {% else %} labs {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} ostatní {% else %} other {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} zkouška {% else %} exam {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} celkem {% else %} total {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} kredity {% else %} credits {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} průměr {% else %} mean {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} pořadí {% else %} place {% endif %} </span> </th>
+  <th> <span class="vertical-text"> {% if language == "cs" %} stip.&nbsp;(Kč) {% else %} stip.&nbsp;(Kč) {% endif %} </span> </th>
 </tr>
 
-{% set semester_type_cycler = cycler("Z","L") %}
-{% for study_type in study_data.studies %}
-  {% set calendar_year_cycler = cycler(*range(study_data.studies[study_type].start_year,100000)) %}
+{%- set semester_type_cycler = cycler("Z","L") -%}
+{%- for study_type in study_data.studies -%}
+  {%- set calendar_year_cycler = cycler(*range(study_data.studies[study_type].start_year,100000)) -%}
 
-  {% for semester in study_data.studies[study_type].semesters %}
-    {% set number_of_courses = semester.courses|length %}
+  {%- for semester in study_data.studies[study_type].semesters -%}
+    {%- set number_of_courses = semester.courses|length -%}
   
-    {% set semester_number = loop.index %}
+    {%- set semester_number = loop.index -%}
   
-    {% if loop.last %}
-      {% set next_2_semester_courses = number_of_courses %}
-    {% else %}
-      {% set next_2_semester_courses = number_of_courses + ((study_data.studies[study_type].semesters[loop.index].courses)|length) %}
-    {% endif %}
+    {%- if loop.last -%}
+      {%- set next_2_semester_courses = number_of_courses -%}
+    {%- else -%}
+      {%- set next_2_semester_courses = number_of_courses + ((study_data.studies[study_type].semesters[loop.index].courses)|length) -%}
+    {%- endif -%}
   
-    {% set current_school_year = loop.index // 2 + 1 %}
+    {%- set current_school_year = loop.index // 2 + 1 -%}
     
-    {% for course in semester.courses %}
+    {%- for course in semester.courses %}
 
       <tr{% if loop.last %} class="semester-last-row"{% endif %}>
-        {% if loop.first %}                                                     {# new semester #}
-          {% if semester_number == 1 %}                                         {# new study #}
-            <td rowspan="{{ study_total_amount(study_type,"courses") }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
-          {% endif %}
+        {%- if loop.first -%}                                                   {# new semester #}
+        {%- if semester_number == 1 -%}                                         {# new study #}
+          
+        <td rowspan="{{ study_total_amount(study_type,"courses") }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
+            
+        {%- endif -%}
         
-          {% if semester_number == 1 or semester_type_cycler.current == "L" %}                        {# new calendar year #}
-            <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> <span class="vertical-text"> {{ calendar_year_cycler.next() }} </span> </td>
-          {% endif %}
+        {%- if semester_number == 1 or semester_type_cycler.current == "L" -%}  {# new calendar year #}
+        
+        <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> <span class="vertical-text"> {{ calendar_year_cycler.next() }} </span> </td>
+        
+        {%- endif -%}
           
-          {% if semester_type_cycler.current == "Z" %}                          {# new school year #}
-            <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
-          {% endif %}
+        {%- if semester_type_cycler.current == "Z" -%}                          {# new school year #}
+        
+        <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
+        
+        {%- endif -%}
           
-          <td rowspan="{{ number_of_courses }}"> <a href="{{ study_data.studies[study_type]["slug_prefix"] }}{{semester_number}}.html"> {{ semester_type_cycler.next() }} </a> </td>
-        {% endif %}
+        <td rowspan="{{ number_of_courses }}"> <a href="{{ study_data.studies[study_type]["slug_prefix"] }}{{semester_number}}.html"> {{ semester_type_cycler.next() }} </a> </td>
+        
+        {%- endif -%}
   
         <td> <a href="http://www.fit.vutbr.cz/study/course-l.php?tab1_f2={{ course.abbr }}"> {{ course.abbr }} </a> </td>
-        <td> {{ course["name cs"] }} </td>
+        <td> {% if language == "cs" -%} {{ course["name cs"] }} {%- else -%} {{ course["name en"] }} {%- endif %} </td>
         <td> {{ course.credits }} </td>
         <td> {{ course.type }} </td>
-       
         <td> {{ write_points(course.pts.midterm) }} </td>
-
         <td>
        
-        {% for project_points in course.pts.projects %}
-          {{ write_points(project_points) }}
-        {% endfor %}
+        {%- for project_points in course.pts.projects -%}
+          {{- " " }} {{ write_points(project_points) -}}
+        {%- endfor -%}
        
         </td>
-
         <td> {{ write_points(course.pts.labs) }} </td>
         <td> {{ write_points(course.pts.other) }} </td>
         <td> {{ write_points(course.pts.exam) }} </td>
 
-        {% if course.classified %}
+        {%- if course.classified %}
           {% set final_mark = course_mark(course) %}
           {% set points_total = course_total_points(course) %}
         {% else %}
           {% set final_mark = "none" %}
         {% endif %}
         
-        <td class="mark-{{ final_mark }}">
-          {% if course.classified %}
-            {{ points_total }}&nbsp;{{ final_mark }}
-          {% else %}
-            ✓
-          {% endif %}
-        </td>
-       
+        <td class="mark-{{ final_mark }}"> {% if course.classified -%} {{ points_total }}&nbsp;{{ final_mark }} {%- else -%} ✓ {%- endif %} </td>
         {% if loop.first %}
-          <td rowspan="{{ number_of_courses }}"> {{ semester_total_amount(semester,"credits") }} </td>
-          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ courses_weighted_mean(semester.courses) }} </span> </td>
-          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.place[0] }}/{{ semester.place[2] }} </span> </td>
-          <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.scholarship }} </span> </td>
+        <td rowspan="{{ number_of_courses }}"> {{ semester_total_amount(semester,"credits") }} </td>
+        <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ courses_weighted_mean(semester.courses) }} </span> </td>
+        <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.place[0] }}/{{ semester.place[2] }} </span> </td>
+        <td rowspan="{{ number_of_courses }}"> <span class="vertical-text"> {{ semester.scholarship }} </span> </td>
         {% endif %}
-       
       </tr>
-
     {% endfor %}
   {% endfor %}
 {% endfor %}
-
 </table>
 {% endmacro %}
 

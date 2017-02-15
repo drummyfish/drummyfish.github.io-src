@@ -3,6 +3,8 @@ Date: 2016-04-26 21:23
 Author: tastyfish
 Category: Articles
 Status: published
+Lang: cs
+Slug: studium-tabulka
 Tags: study
 
 {% import "macros.html" as m %}
