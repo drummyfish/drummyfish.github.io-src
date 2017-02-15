@@ -7,7 +7,20 @@
   {{ m.random_texts_script() }}
 
   {% if DEFAULT_LANG == "cs" %}
-    Vítejte na mých stránkách {{m.e(':)')}} Jejich účelem je shromažďovat různé věci, které mě zajímají a o které se chci podělit.
+    <p>
+      Vítejte na mých stránkách {{m.e(':)')}} Jejich účelem je shromažďovat různé věci, které mě zajímají a o které se chci podělit.
+      Zde jsou rychlé odkazy na klíčové články:
+    </p>
+    
+    <ul>
+      {% for article in articles %}
+      {% for tag in article.tags %}
+      {% if tag.name == "frontpage" %}
+      <li> <a href="{{ article.url }}"> {{ article.title }} </a> </li>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
     
     <script>
       write_random_item("Náhodný fakt", facts_cs);
@@ -15,7 +28,20 @@
     </script>
     
   {% else %}
-    Welcome to my website {{m.e(':)')}} Its purpose is to store different things I'm interested in and want to share.
+    <p>
+      Welcome to my website {{m.e(':)')}} Its purpose is to store different things I'm interested in and want to share.
+      Here are some quick links to key pages:
+    </p>
+    
+    <ul>
+      {% for article in articles %}
+      {% for tag in article.tags %}
+      {% if tag.name == "frontpage" %}
+      <li> <a href="{{ article.url }}"> {{ article.title }} </a> </li>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
     
     <script>
       write_random_item("Random fact", facts_en);
@@ -24,6 +50,5 @@
   {% endif %}
   
   {% include "social.html" %}
-  
 </section>
 {% endblock content %}

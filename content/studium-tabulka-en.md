@@ -5,7 +5,7 @@ Category: Articles
 Status: published
 Lang: en
 Slug: studium-tabulka
-Tags: study
+Tags: study, frontpage
 
 {% import "macros.html" as m %}
 
