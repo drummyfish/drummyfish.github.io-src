@@ -16,6 +16,15 @@
 {%
   set projects = [
     {
+      "name"            : "Mage Rage",
+      "language"        : "C++",
+      "description"     : "First place game competition winner. You play as three wizards to save the world. You can watch a trailer <a href=\"https://www.youtube.com/watch?v=970kqtKzgdM\">here</a>.",
+      "description_cz"  : "Hra, která získala první místo v soutěži. Hrajete za tři čaroděje, abyste zachránili svět. <a href=\"https://www.youtube.com/watch?v=970kqtKzgdM\">Zde</a> můžete shlédnou trailer.",
+      "image"           : "http://i.imgur.com/xyJIXkFl.png",
+      "filename"        : "https://www.dropbox.com/s/ndcd5vt7l002nx7/Mage%20Rage%20v%201.0.zip?dl=0",
+      "github"          : "mages"
+    },
+    {
       "name"            : "Wave Simulator",
       "language"        : "JavaScript",
       "description"     : "Simple physics simulator running in browser. You can try it online <a href=\"../extra/wave_simulation.html\">here</a>.",
@@ -45,10 +54,16 @@
 
 {% for project in projects %}
 <div class="project">
-<a class="project-download" href="{{ project.filename }}"><img src="../theme/images/download.png"></a>
-<h2> {{ project.name }} </h2>
-{% if project.filename is defined and project.filename != 0 %}
+
+{% if project.github is defined and (project.github | length) != 0 %}
+<a class="project-github" href="https://github.com/drummyfish/{{ project.github }}"><img src="../theme/images/github.png"></a>
 {% endif %}
+
+{% if project.filename is defined and (project.filename | length) != 0 %}
+<a class="project-download" href="{{ project.filename }}"><img src="../theme/images/download.png"></a>
+{% endif %}
+
+<h2> {{ project.name }} </h2>
 <span> {{ project.language }} </span>
 <p> {{ project.description }} </p>
 <img class="project-image" src="{{ project.image }}"></img>
