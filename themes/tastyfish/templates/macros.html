@@ -2,6 +2,72 @@
    in templates, but also articles. #}
 
 {#-------------------------------------------------------------------#}
+{# Projects info - for more see the "display_projects" macro. Project properties:
+
+   name                         project name
+   language       [optional]    main programming language
+   github         [optional]    github project name
+   description    [optional]    short project description
+   description_cz [optional]    czech description
+   image          [optional]    thumbnail image url
+   filename       [optional]    download file name
+#}
+
+{%
+  set projects = [
+    {
+      "name"            : "Wave Simulator",
+      "language"        : "JavaScript",
+      "description"     : "Simple physics simulator running in browser. You can try it online <a href=\"../extra/wave_simulation.html\">here</a>.",
+      "description_cz"  : "Jednoduchý simulátor vlnění běžící v prohlížeči. Můžete vyzkoušet online <a href=\"../extra/wave_simulation.html\">zde</a>.",
+      "image"           : "http://i.imgur.com/GrcPQ8il.png",
+      "filename"        : "https://www.dropbox.com/s/f6m9a3bll6max82/wave_simulator.zip?dl=0"
+    },
+    {
+      "name"            : "Speed of Light Distortion",
+      "language"        : "JavaScript",
+      "description"     : "Simulates the distortion that happends because of the finite speed of light. You can try it online <a href=\"../extra/speed_of_light.html\">here</a>.",
+      "description_cz"  : "Simuluje zkreslení nastávající kvůli konečné rychlosti světla. Můžete vyzkoušet online <a href=\"../extra/speed_of_light.html\">zde</a>.",
+      "image"           : "http://i.imgur.com/A6RBrIJl.png",
+      "filename"        : "https://www.dropbox.com/s/f7xjah2kvowx447/speed_of_light_simulator.zip?dl=0"
+    },
+  ]
+%}
+   
+{#-------------------------------------------------------------------#}
+{# Writes out projects, intended for the projects page. The projects are
+   displayd like this:
+   1. display all projects from "projects" array, keeping the order
+   2. display GitHub projects (using the GitHub project plugin) that
+      were not displayed in step 1 #}
+
+{% macro display_projects(language="cs") %}
+
+{% for project in projects %}
+<div class="project">
+<h2> {{ project.name }} </h2>
+<span> {{ project.language }} </span>
+<p> {{ project.description }} </p>
+<img src="{{ project.image }}"></img>
+</div>
+{% endfor %}
+
+{#
+{% if GITHUB_USER %}
+  <table class="github-projects">
+    {% for project in github_projects %}
+      <tr>
+        <td> <a href="{{ project.github_url }}">  {{ project.name }}</a><sup>{{ project.language }}</sup> </td>
+        <td> {{ project.description }} </td>
+      </tr>  
+    {% endfor %}
+  </table>
+{% endif %}
+#}
+
+{% endmacro %}
+   
+{#-------------------------------------------------------------------#}
 {% macro random_texts_script() %}
 <script>
   function quote_string(quote_text, author)
