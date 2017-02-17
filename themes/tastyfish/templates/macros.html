@@ -45,10 +45,13 @@
 
 {% for project in projects %}
 <div class="project">
+<a class="project-download" href="{{ project.filename }}"><img src="../theme/images/download.png"></a>
 <h2> {{ project.name }} </h2>
+{% if project.filename is defined and project.filename != 0 %}
+{% endif %}
 <span> {{ project.language }} </span>
 <p> {{ project.description }} </p>
-<img src="{{ project.image }}"></img>
+<img class="project-image" src="{{ project.image }}"></img>
 </div>
 {% endfor %}
 
