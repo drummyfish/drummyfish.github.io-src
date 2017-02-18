@@ -7,7 +7,7 @@ Slug:
 Lang: cs
 Status: draft
 
-<h1> Užitečné UTF8 symboly </h1>
+<h2> Užitečné UTF8 symboly </h2>
 
 TODOOOOO
 
@@ -50,3 +50,5 @@ Hledáte unicode symbol? [Nakreselete si ho](http://shapecatcher.com/).
 ∑ ∏
  
 ∀ ∃ ∄
+
+<h2> odkazy </h2>

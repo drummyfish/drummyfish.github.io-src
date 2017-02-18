@@ -1,0 +1,848 @@
+{# This file contains various data, mainly used from macros.html. #}
+
+{# Projects info - for more see the "display_projects" macro. Project properties:
+
+   name                         project name
+   language       [optional]    main programming language
+   github         [optional]    github project name
+   description    [optional]    short project description
+   description_cz [optional]    czech description
+   image          [optional]    thumbnail image url
+   filename       [optional]    download file name
+#}
+
+{%
+set projects = [
+  {
+   "name"            : "Mage Rage",
+   "language"        : "C++",
+   "description"     : "First place game competition winner. You play as three wizards to save the world. You can watch a trailer <a href=\"https://www.youtube.com/watch?v=970kqtKzgdM\">here</a>.",
+   "description_cz"  : "Hra, která získala první místo v soutěži. Hrajete za tři čaroděje, abyste zachránili svět. <a href=\"https://www.youtube.com/watch?v=970kqtKzgdM\">Zde</a> můžete shlédnou trailer.",
+   "image"           : "http://i.imgur.com/xyJIXkFl.png",
+   "filename"        : "https://www.dropbox.com/s/ndcd5vt7l002nx7/Mage%20Rage%20v%201.0.zip?dl=0",
+   "github"          : "mages"
+  },
+  {
+   "name"            : "Wave Simulator",
+   "language"        : "JavaScript",
+   "description"     : "Simple physics simulator running in browser. You can try it online <a href=\"../extra/wave_simulation.html\">here</a>.",
+   "description_cz"  : "Jednoduchý simulátor vlnění běžící v prohlížeči. Můžete vyzkoušet online <a href=\"../extra/wave_simulation.html\">zde</a>.",
+   "image"           : "http://i.imgur.com/GrcPQ8il.png",
+    "filename"        : "https://www.dropbox.com/s/f6m9a3bll6max82/wave_simulator.zip?dl=0"
+  },
+  {
+    "name"            : "Speed of Light Distortion",
+    "language"        : "JavaScript",
+    "description"     : "Simulates the distortion that happends because of the finite speed of light. You can try it online <a href=\"../extra/speed_of_light.html\">here</a>.",
+    "description_cz"  : "Simuluje zkreslení nastávající kvůli konečné rychlosti světla. Můžete vyzkoušet online <a href=\"../extra/speed_of_light.html\">zde</a>.",
+    "image"           : "http://i.imgur.com/A6RBrIJl.png",
+    "filename"        : "https://www.dropbox.com/s/f7xjah2kvowx447/speed_of_light_simulator.zip?dl=0"
+  },
+]
+%}
+
+{%
+set random_facts_cs = [
+  "<a href='https://en.wikipedia.org/wiki/Lojban'>Lojban</a> je umělý jazyk pro mezilidskou komunikaci, založený na predikátové logice, a snaží se vyhnout veškerým nejasnostem ve vyjadřování.",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/Compute'>Compute</a> dokáže vyřešit jakýkoli problém, ale neumí vypsat výsledek.",
+  "Každý program v jazyku <a href='https://esolangs.org/wiki/Quiler'>Quiler</a> je kompilátor jazyka Quiler.",
+  "Program poznámkový blog je interpret programovacího jazyka <a href='https://esolangs.org/wiki/Text'>Text</a>.",
+  "Vstupem programovacího jazyka <a href='https://esolangs.org/wiki/Piet'>Piet</a> jsou obrázky.",
+  "Skladby Moonlight Shadow a Man in the Rain od Mika Oldfielda <a href='https://en.wikipedia.org/wiki/Moonlight_Shadow#Production'>používají stejnou nahrávku bicích.</a>",
+  "Vstupem programovacího jazyka <a href='https://esolangs.org/wiki/Velato'>Velato</a> jsou hudební MIDI soubory.",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/Befunge'>Befunge</a> je prakticky nemožné zkompilovat, protože jeho instrukce jsou psány ve dvourozměrné mřížce.",
+  "Programování v jazyku Malbolge je tak obtížné, že <a href='https://en.wikipedia.org/wiki/Malbolge#Programming_in_Malbolge'>první validní program v něm se objevil až po dvou letech.</a>",
+  "Zdrojový kód v programovacím jazyku <a href='https://esolangs.org/wiki/English'>English</a> vypadá jako běžná lidmi používaná angličtina.",
+  "Pokud program v jazyku <a href='https://esolangs.org/wiki/INTERCAL'>INTERCAL</a> neobsahuje dostatek klíčových slov PLEASE, kompilátor jej odmítne přeložit.",
+  "Jazyk <a href='https://esolangs.org/wiki/Eodermdrome'>Eodermdrome</a> funguje na principu přepisování grafů, je Turingovsky úplný, avšak jeho implementace je složitostně NP-úplná.",
+  "Jazyk <a href='https://esolangs.org/wiki/Bugmaker'>Bugmaker</a> se zaměřuje na vysokou náchylnost k chybám, programátor musí např. explicitně uvádět, že chce výsledek vypočítat přesně a ihned.",
+  "Programy v jazyku <a href='https://esolangs.org/wiki/Chef'>Chef</a> vypadají jako kuchařské recepty.",
+  "Zdrojový kód jazyka <a href='https://esolangs.org/wiki/Drawkcab'>Drawkcab</a> je psán pozpátku.",
+  "Zásobníkový automat nedokáže říct, které řetězce jsou tvaru a<sup>n</sup>b<sup>n</sup>c<sup>n</sup>, ale <a href='http://cs.stackexchange.com/questions/7190/construct-a-pda-for-the-complement-of-anbncn'>dokáže přesně říct, které v tomto tvaru nejsou</a>.",
+  "Zdrojovým kódem programovacího jazyka <a href='https://esolangs.org/wiki/Pi'>Pi</a> je číslo pí s některými číslicemi zapsanými chybně, instrukce jsou rozpoznávány jako odchylka od skutečné hodnoty.",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/Unary'>Unary</a> používá jenom jeden znak, zdrojový kód jakéhokoli programu je jen různě dlouhá posloupnost nul (je však Turingovsky úplný).",
+  "<a href='https://esolangs.org/wiki/List_of_ideas#Joke.2FSilly_Ideas'>Komunistická filosofie</a> v programování propaguje myšlenku, že by měl existovat jeden velký program, který dělá všechno a je instancí jediné třídy (např. Web).",
+  "<a href='https://esolangs.org/wiki/Brainfork'>Brainfork</a> je vícevláknová varianta programovacího jazyka <a href='https://esolangs.org/wiki/Brainfuck'>Brainfuck</a>.",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/FALSE'>FALSE</a> je navržen tak, aby byl jeho překladač co nejmenší, a je pojmenován po oblíbené pravdivostní hodnotě svého autora.",
+  "V jazyku <a href='https://esolangs.org/wiki/Unnecessary'>Unnecessary</a> je přítomnost zdrojového kódu programu považována za chybu a program se nepřeloží.",
+  "Existuje rozpracovaný programovací jazyk <a href='https://esolangs.org/wiki/Chess'>Chess</a>, jehož zdrojové kódy jsou záznamy šachových her a tahy mají význam příkazů.",
+  "Programy v jazyku <a href='https://esolangs.org/wiki/Shakespeare'>Shakespeare</a> vypadají jako Shakespearovy hry.",
+  "Heliový balónek <a href='https://www.youtube.com/watch?v=y8mzDvpKzfY'>se v rozjíždějícím autě bude setrvačnou silou pohybovat dopředu</a>, ne dozadu.",
+  "Programy v jazyku <a href='https://esolangs.org/wiki/Whitespace'>Whitespace</a> se skládají pouze z bílých znaků a proto je nelze vytisknout na papír.",
+  "Proměnné v jazyku <a href='https://esolangs.org/wiki/Omgrofl'>Omgrofl</a> mohou mít název pouze lol, lool, loool atd.",
+  "<a href='https://esolangs.org/wiki/Quine'>Quine</a> je program, který vypíše svůj vlastní zdrojový kód, jazyk HQ9+ to umí nejjednodušeji.",
+  "Jazyk <a href='https://esolangs.org/wiki/Brainfuck'>Brainfuck</a> je Turingovsky úplný.",
+  "Prvočísla lišící se o 2 se nazývají <a href='https://en.wikipedia.org/wiki/Twin_prime'>prvočíselné dvojice</a> a zatím (2016) není dokázáno, jestli jich je nekonečně mnoho.",
+  "Prvočísla lišící se o 6 se nazývají <a href='https://en.wikipedia.org/wiki/Sexy_prime'>sexy</a>, nejvyšší počet sexy prvočísel jdoucích za sebou je 5 a existuje pouze tato pětice: 5, 11, 17, 23, 29.",
+  "7 je pravděpodobně <a href='http://scienceblogs.com/cognitivedaily/2007/02/05/is-17-the-most-random-number/'>lidmi nejčastěji vybírané náhodné číslo</a> od 1 do 10.",
+  "Existuje myšlenka <a href='https://esolangs.org/wiki/List_of_ideas#Joke.2FSilly_Ideas'>ironických</a> (nebo také hipster) programovacích jazyků, jejichž příkazy provádějí opak toho, jak se tváří.",
+  "Celulární automat Game of life může být ve zvětšeném měřítku <a href='http://www.conwaylife.com/w/index.php?title=OTCA_metapixel'>naprogramován pomocí sebe samotného použitím tzv. 2048 x 2048 OTCA metapixelů</a>.",
+  "Existuje <a href='https://www.youtube.com/watch?v=KJe9H6qS82I'>spojitá varianta</a> celulárního automatu Game of life.",
+  "<a href='https://esolangs.org/wiki/Quantum_brainfuck'>Quantum brainfuck</a> je obdobou jazyka Brainfuck pracující s qubity (kvantovými bity).",
+  "<a href='http://rationalwiki.org/wiki/Last_Thursdayism'>Last Thursdayism</a> je myšlenka, že vesmír mohl být stvořen minulý čtvrtek (včetně všech důkazů, že tomu tak není).",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/LOLCODE'>LOLCODE</a> napodobuje lolcat jazyk, příkladem může být příkaz CAN HAZ STDIO? pro načtení knihovny.",
+  "Vesmír <a href='http://www.space.com/33306-how-does-the-universe-expand-faster-than-light.html'>se rozpíná tak rychle</a>, že se galaxie na jeho opačných koncích vzájemně vůči sobě pohybují rychleji než světlo.",
+  "Matematika na profesionální úrovni je věda kreativity, počítání je rutina, kterou obstarají počítače.",
+  "<a href='https://en.wikipedia.org/wiki/Graham%27s_number'>Grahamovo číslo</a> je pravděpodobně největší smysluplně použité číslo, končí na ...195387, ale zatím (2015) neznáme jeho začátek.",
+  "Za nejkrásnější matematickou rovnici je často považována <a href='https://en.wikipedia.org/wiki/Euler's_identity'>Eulerova identita</a> e<sup>iπ</sup> + 1 = 0.",
+  "Pokud si asociujete čísla nebo hudbu s barvami, máte neobvyklou schopnost zvanou <a href='https://en.wikipedia.org/wiki/Synesthesia'>synestezie</a>.",
+  "Programovací jazyk <a href='https://esolangs.org/wiki/Nothing'>Nothing</a> je jediný jazyk, jehož programy fungují na všech platformách a nikdy neobsahují chyby.",
+  "Příkazy programovacího jazyka <a href='https://esolangs.org/wiki/DOG'>DOG</a> se podobají příkazům pro psa, čísla jsou reprezentována hromádkami pamlsků, příkaz die ukončí program.",
+  "Existuje velmi malé procento žen, zvaných <a href='https://en.wikipedia.org/wiki/Tetrachromacy'>tetrachromatky</a>, které jsou schopné vnímat mnohem více barev než ostatní lidé.",
+  "Proměnné v jazyku <a href='https://esolangs.org/wiki/Entropy'>Entropy</a> náhodně mírně pozměňují svou hodnotu při každém přístupu k nim, proto je výstup programu vždy přibližný.",
+  "Kromě koule existují i <a href='https://en.wikipedia.org/wiki/Curve_of_constant_width'>jiné tvary</a>, které mají ve všech směrech konstantní šířku.",
+  "Univerzální názvy identifikátorů 'foo' a 'bar' byly v kontextu programování poprvé použity na MIT a <a href='https://en.wikipedia.org/wiki/Foobar#History_and_etymology#History_and_etymology'>pocházejí nejspíš z vojenského slangu</a>, jako třetí identifikátor se někdy používá 'baz'...",
+  "Superpočítač ověřil, že <a href='https://en.wikipedia.org/wiki/Mathematics_of_Sudoku#Minimum_number_of_givens'>nejmenším počtem nápověd v sudoku s jednoznačným řešením je 17</a>.",
+  "Superpočítač ověřil, že každou konfiguraci Rubikovy kostky <a href='https://en.wikipedia.org/wiki/Optimal_solutions_for_Rubik's_Cube'>lze vyřešit při nejhorším ve 20 tazích</a>.",
+  "<a href='https://www.youtube.com/watch?v=R3unPcJDbCc'>Téměř žádná barva na monitoru není skutečná</a>, např. žlutá je vyvolána stimulací čípků čevenou, zelenou a modrou barvou v poměru daném skutečnou žlutou barvou.",
+  "Existují <a href='https://en.wikipedia.org/wiki/Illegal_number'>nelegální čísla</a> (pokud představují binární reprezentaci nějaké chráněné informace).",
+  "Občas těsně po pohledu na hodiny se může sekundová ručička zdánlivě zastavit na více než sekundu, což způsobuje mozek <a href='https://en.wikipedia.org/wiki/Chronostasis'>zpětným nahrazením rozmazaného vjemu z pohybu oka prvním smysluplným obrazem.</a>",
+  "<a href='https://en.wikipedia.org/wiki/Year_2038_problem'>19. ledna roku 2038</a> dojde ke konci unixového času na 32bitových počítačích, což může potenciálně způsobit katastrofu.",
+  "Seriál Futurama má <a href='https://en.wikipedia.org/wiki/The_Prisoner_of_Benda#The_theorem'>vlastní matematickou větu</a> z teorie grup, kterou odvodil jeden ze scénáristů, matematik Ken Keeler, speciálně pro jednu epizodu seriálu.",
+  "Snad nejhorší řadicí algoritmus je <a href='http://wiki.c2.com/?SlowSort'>Slow Sort</a>, který pracuje na principu multiply and surrender (opak divide and conquer).",
+  "Řadicí algoritmus <a href='https://en.wikipedia.org/wiki/Bogosort'>Bogosort</a> nebo také Stupidsort provádí náhodné permutace pole tak dlouho, dokud není seřazené.",
+  "Snad nejsložitější znak v čínštině reprezentuje <a href='https://en.wikipedia.org/wiki/Biangbiang_noodles#Chinese_character_for_bi.C3.A1ng'>druh nudlí</a> a má 58 tahů.",
+  "Nejdelší název chemické značky (C<sub>1289</sub>H<sub>2051</sub>N<sub>343</sub>O<sub>375</sub>S<sub>8</sub>) má 1913 písmen.",
+  "<a href='https://en.wikipedia.org/wiki/William_Lawrence_Bragg'>William Lawrence Bragg</a> získal Nobelovu cenu za fyziku ve věku 25 let.",
+  "Zatím (2015) nejpozději byla do knihovny roku 1968 vrácena kniha po 145 letech pravnukem původního zákazníka.",
+  "Nejprimitivnější číselný systém mají příslušníci kmene Yanco, kteří neumějí počítat dále než do tří.",
+  "Roku 1897 byl ve státě Indiana většinou 1 hlasu prosazen zákon zjednodušující hodnotu čísla pí na 3,2.",
+  "Od 1. ledna roku 2000 hraje v Trinity Buoy Wharf Lighthouse nepřetržitě skladba Longplayer, za pomoci lidí i počítačů. Cílem je, aby hrála nepřetržitě celých tisíc let.",
+  "Licence <a href='http://www.wtfpl.net/'>WTFPL</a> (Do What the Fuck You Want to Public License) dovoluje uživateli dělat se softwarem cokoliv.",
+  "Kočičí předení <a href='https://en.wikipedia.org/wiki/Purr#Frequency.2C_amplitude.2C_and_respiratory_variation'>má frekvenci cca 25 Hz</a>.",
+  "Mobilní <a href='https://en.wikipedia.org/wiki/Vocoder'>kodeky</a> nepřenáší zvuk přímo, ale posílají pouze informace o nastavení řečového ústrojí a činnosti hlasivek, takže hlas, který je na druhé straně slyšet, je ve skutečnosti syntetizovaný...",
+  "<a href='https://en.wikipedia.org/wiki/Cicada_3301'>Cicada 3301</a> je dosud neodhalená organizace, která verbuje vysoce inteligentní lidi formou extrémně obtížných hádanek objevujících se po celém světě.",
+  "Existují tzv. <a href='https://en.wikipedia.org/wiki/Impossible_color'>zakázané barvy</a>, které nemůžeme za normálních podmínek vidět. Jsou ale triky, jak je spatřit.",
+  "Ve hře <a href='https://en.wikipedia.org/wiki/Core_War'>Core War</a> spolu soupeří programy ve strojovém kódu - každý se snaží ukončit běh ostatních.",
+  "Python umožňuje spustit <a href='https://docs.python.org/2/library/simplehttpserver.html'>jednoduchý HTTP server</a> příkazem 'python -m SimpleHTTPServer 8000'. Parádní pro posílání souborů na domácí síti.",
+  "<a href='https://en.wikipedia.org/wiki/Collatz_conjecture'>Collatzova domněnka</a> (3n + 1 problém) je nevyřešený matematický problém, který se ptá, zda opakovanou aplikací dvou jednoduchých pravidel na libovolné číslo dojdeme vždy k nule.",
+  "<a href='https://en.wikipedia.org/wiki/Time_(xkcd)'>'Time'</a> je xkcd komiks, který byl prezentován po jednotlivých snímcích přibližně každou hodinu po 123 dní, ve výsledku tvořící jeden velký epický příběh o 3099 snímcích.",
+  "<a href='https://www.youtube.com/watch?v=Y30VF3cSIYQ&t=395s'>Otázka č. 6</a> na mezinárodní matematické olympiádě 1988 byla tak těžká, že ji za 6 hodin nedokázal vyřešit tým expertů, dokonce ani účastník Terence Tao (držitel Fieldsovy medaile).",
+  "Je <a href='https://en.wikipedia.org/wiki/Borsuk%E2%80%93Ulam_theorem'>matematicky zaručeno</a>, že na Zemi budou vždy existovat alespoň dvě místa, která jsou přesně naproti sobě a mají stejnou teplotu a tlak."
+]
+%}
+
+{%
+set random_facts_en = [
+  "<a href='https://en.wikipedia.org/wiki/Lojban'>Lojban</a> is an artificial language for human communication based on formal logic and tries to avoid any ambiguities in its expressions.",
+  "<a href='https://esolangs.org/wiki/Compute'>Compute</a> is a programming language that can solve any problem, but cannot write out its output.",
+  "Every program in <a href='https://esolangs.org/wiki/Quiler'>Quiler</a> programming language is a Quiler compiler.",
+  "Programming language <a href='https://esolangs.org/wiki/Text'>Text</a> can be interpreted by simple Notepad.",
+  "<a href='https://esolangs.org/wiki/Piet'>Piet</a> programming language takes images as its input.",
+  "The songs Moonlight Shadow and Man in the Rain by Mike Oldfield both <a href='https://en.wikipedia.org/wiki/Moonlight_Shadow#Production'>use the same prerecorded drum track.</a>",
+  "<a href='https://esolangs.org/wiki/Velato'>Velato</a> programming language takes MIDI files as its input.",
+  "<a href='https://esolangs.org/wiki/Befunge'>Befunge</a> programming language is almost impossible to compile, as its intructions are arranged in 2D array.",
+  "Programming in Malbolge is so hard that <a href='https://en.wikipedia.org/wiki/Malbolge#Programming_in_Malbolge'>it took two years to write its first valid program.</a>",
+  "Source codes of <a href='https://esolangs.org/wiki/English'>English</a> programming language look like an ordinary English language.",
+  "If there is not enough PLEASE keywords in <a href='https://esolangs.org/wiki/INTERCAL'>INTERCAL</a> source code, the compiler refuses to compile it.",
+  "<a href='https://esolangs.org/wiki/Eodermdrome'>Eodermdrome</a> is a graph-rewriting-based programming language, it is Turing-complete but its compilation is NP-complete.",
+  "<a href='https://esolangs.org/wiki/Bugmaker'>Bugmaker</a> programming language focuses on high error ratio, for exaplme it must be explicitly told to compute a result at given time and accurately.",
+  "Programs in <a href='https://esolangs.org/wiki/Chef'>Chef</a> programming language look like cooking recipes.",
+  "<a href='https://esolangs.org/wiki/Drawkcab'>Drawkcab</a> programming language source codes are written backwards.",
+  "Pushdown automaton cannot tell which strings are of form a<sup>n</sup>b<sup>n</sup>c<sup>n</sup>, <a href='http://cs.stackexchange.com/questions/7190/construct-a-pda-for-the-complement-of-anbncn'>but it can tell which ones are not</a>.",
+  "<a href='https://esolangs.org/wiki/Pi'>Pi</a> programming language source codes are pi decimals, instructions are encoded as errors.",
+  "<a href='https://esolangs.org/wiki/Unary'>Unary</a> programming language uses only one character, any source code is a series of zeroes (but it is Turing-complete).",
+  "<a href='https://esolangs.org/wiki/List_of_ideas#Joke.2FSilly_Ideas'>Communist philosophy</a> in programming says that there should be only one global program that does everything (for example Web).",
+  "<a href='https://esolangs.org/wiki/Brainfork'>Brainfork</a> is a multithread version of <a href='https://esolangs.org/wiki/Brainfuck'>Brainfuck</a>.",
+  "<a href='https://esolangs.org/wiki/FALSE'>FALSE</a> programming language is designed to have as small compiler as possible, and it's named after its author's favorite boolean value.",
+  "In <a href='https://esolangs.org/wiki/Unnecessary'>Unnecessary</a> programming language a presence of source code is considered an error and it won't compile.",
+  "There is a work-in-progress programming language named <a href='https://esolangs.org/wiki/Chess'>Chess</a> whose source codes are chess notations.",
+  "Programes in <a href='https://esolangs.org/wiki/Shakespeare'>Shakespeare</a> programming language look like Shakespeare's plays.",
+  "A helium-filled baloon inside an accelerating car <a href='https://www.youtube.com/watch?v=y8mzDvpKzfY'>will move forwards by inertia</a>, not backwards.",
+  "<a href='https://esolangs.org/wiki/Whitespace'>Whitespace</a> programming language source codes consist only of blank characters and cannot therefore be printed on paper.",
+  "<a href='https://esolangs.org/wiki/Omgrofl'>Omgrofl</a> programming language variables can only be named lol, lool, loool etc.",
+  "<a href='https://esolangs.org/wiki/Quine'>Quine</a> is a program that writes out its own source code, it is written easiest in HQ9+.",
+  "<a href='https://esolangs.org/wiki/Brainfuck'>Brainfuck</a> programming language is Turing-complete.",
+  "Prime numbers that differ by 2 are called <a href='https://en.wikipedia.org/wiki/Twin_prime'>twin primes</a> and it is (as of 2016) still unknown whether there is infinitely many of them.",
+  "Prime numbers that differ by 6 are called <a href='https://en.wikipedia.org/wiki/Sexy_prime'>sexy primes</a>, the longest sexy-prime series is this one (and no other exist): 5, 11, 17, 23, 29.",
+  "7 is probably <a href=' <a href='http://scienceblogs.com/cognitivedaily/2007/02/05/is-17-the-most-random-number/'>the most often picked as random number from 1 to 10 by humans.</a>",
+  "There is an idea of <a href='https://esolangs.org/wiki/List_of_ideas#Joke.2FSilly_Ideas'>ironic</a> (or hipster) programming languages whose commands do the opposite of what they look like.",
+  "Game of life cellular automaton can be <a href='http://www.conwaylife.com/w/index.php?title=OTCA_metapixel'>programmed in bigger scale using itself with a technique called 2048 x 2048 OTCA metapixels</a>.",
+  "There is a <a href='https://www.youtube.com/watch?v=KJe9H6qS82I'>continuous version</a> of Game of life cellular automaton.",
+  "<a href='https://esolangs.org/wiki/Quantum_brainfuck'>Quantum brainfuck</a> is a Brainfuck variation that works with qubits (quantum bits).",
+  "<a href='http://rationalwiki.org/wiki/Last_Thursdayism'>Last Thursdayism</a> is an idea that the universe may have been created last thursday (including the proofs against it).",
+  "<a href='https://esolangs.org/wiki/LOLCODE'>LOLCODE</a> programming language imitates lolcat language, one can for example write CAN HAZ STDIO? to load a library.",
+  "The universe expansion causes the galaxies on its opposite ends to <a href='http://www.space.com/33306-how-does-the-universe-expand-faster-than-light.html'>move faster than light</a> relatively to each other.",
+  "High-level math is about creativity, computing is left for computers.",
+  "<a href='https://en.wikipedia.org/wiki/Graham%27s_number'>Graham's number</a> is very likely the biggest number used in serious science, it ends with ..195387, but it is (as of 2015) still unknow what it begins with.",
+  "<a href='https://en.wikipedia.org/wiki/Euler's_identity'>Euler's identity</a> e<sup>iπ</sup> + 1 = 0 is considered the most beautiful mathematical formula.",
+  "If you associate number or music with colors, you have an unusual condition called <a href='https://en.wikipedia.org/wiki/Synesthesia'>synesthesia</a>.",
+  "<a href='https://esolangs.org/wiki/Nothing'>Nothing</a> is the only programming language whose programs work on every platform and are completely bug-free.",
+  "Commands in <a href='https://esolangs.org/wiki/DOG'>DOG</a> programming language look like dog orders, numbers are represented by piles of cookies, die ends the program.",
+  "There is a small number of women called <a href='https://en.wikipedia.org/wiki/Tetrachromacy'>tetrachromats</a> who are able to distinguish more colors than ordinary people.",
+  "Variables in <a href='https://esolangs.org/wiki/Entropy'>Entropy</a> programming language randomly alter their values each time they're used so the output is always only approximate.",
+  "Besides sphere there are also <a href='https://en.wikipedia.org/wiki/Curve_of_constant_width'>other shapes</a> that have constant width in all directions.",
+  "Universal identifiers names 'foo' and 'bar' were first used in programming at MIT and likely <a href='https://en.wikipedia.org/wiki/Foobar#History_and_etymology#History_and_etymology'>come from military slang</a>, the third identifier is often 'baz'.",
+  "It's been verified by a supercomputer that <a href='https://en.wikipedia.org/wiki/Mathematics_of_Sudoku#Minimum_number_of_givens'>the smallest number of clues in unique-solution sudoku is 17</a>.",
+  "A supercomputer has verified that any Rubik's cube configuration <a href='https://en.wikipedia.org/wiki/Optimal_solutions_for_Rubik's_Cube'>can be solved in 20 steps or less</a>.",
+  "<a href='https://www.youtube.com/watch?v=R3unPcJDbCc'>Almost no color at the computer screen is real</a>, for example the color yellow is faked by combining red, green and blue in given ratio.",
+  "There are <a href='https://en.wikipedia.org/wiki/Illegal_number'>illegal numbers</a> (the ones that represent a copyright-protected binary information).",
+  "After looking at watch the second hand sometimes seems to stop for a while, the illusion is caused by <a href='https://en.wikipedia.org/wiki/Chronostasis'>brain replacing a fuzzy picture with the first meaningful image.</a>",
+  "The Unix time will end on <a href='https://en.wikipedia.org/wiki/Year_2038_problem'>january 19 2038</a>, potentially causing a disaster.",
+  "Futurama TV series has its own <a href='https://en.wikipedia.org/wiki/The_Prisoner_of_Benda#The_theorem'>mathematical theorem</a> that was prooven by Ken Keeler, one of its autors, just for the show.",
+  "<a href='http://wiki.c2.com/?SlowSort'>Slow Sort</a> is maybe the worst sorting algorithm, it works by multiply and surrender principle (the opposite of divide and conquer).",
+  "<a href='https://en.wikipedia.org/wiki/Bogosort'>Bogosort</a> (also Stupidsort) is a sorting algorithm that makes random permutations of the array until it's sorted.",
+  "Maybe the most complicated Chinese symbol represents a <a href='https://en.wikipedia.org/wiki/Biangbiang_noodles#Chinese_character_for_bi.C3.A1ng'>type of noodles</a> and is drawn with 58 strokes.",
+  "<a href='https://en.wikipedia.org/wiki/William_Lawrence_Bragg'>William Lawrence Bragg</a> received a Nobel prize in physics when he was 25.",
+  "<a href='http://www.wtfpl.net/'>WTFPL</a> (Do What the Fuck You Want to Public License) allows a user to do whatever they want with the software.",
+  "Cat purr frequency <a href='https://en.wikipedia.org/wiki/Purr#Frequency.2C_amplitude.2C_and_respiratory_variation'>is about 25 Hz</a>.",
+  "Mobile <a href='https://en.wikipedia.org/wiki/Vocoder'>codecs</a> don't transfer the sound directly, instead they transfer only parameters of the vocal tract and vocal chords, so the voice on the other end is in fact synthesized.",
+  "<a href='https://en.wikipedia.org/wiki/Cicada_3301'>Cicada 3301</a> is so far unrevealed organisation that recruits highly intelligent individuals with extremely difficult puzzles that appear all over the world.",
+  "There are so called <a href='https://en.wikipedia.org/wiki/Impossible_color'>impossible (also forbidden) colors</a> that cannot be perceived under normal conditions. There are, however, tricks to see them.",
+  "In <a href='https://en.wikipedia.org/wiki/Core_War'>Core War</a> game, programs in machine code fight each other and try to terminate other programs.",
+  "Python lets you run a <a href='https://docs.python.org/2/library/simplehttpserver.html'>simple HTTP server</a> with a command 'python -m SimpleHTTPServer 8000'. Awesome for sending files in your home network.",
+  "<a href='https://en.wikipedia.org/wiki/Collatz_conjecture'>Collatz conjecture</a> (3n + 1 conjecture) is an unsolved mathematical problem that asks if by repeatedly applying two simple rules to any number will always eventually lead to zero.",
+  "<a href='https://en.wikipedia.org/wiki/Time_(xkcd)'>'Time'</a> is xkcd comic strip that was presented by individual frames approximately every hour over 123 days, eventually forming an epic story of 3099 frames.",
+  "<a href='https://www.youtube.com/watch?v=Y30VF3cSIYQ&t=395s'>Question no. 6</a> at 1988 International Mathematical Olympiad was so hard that it couldn't be solved by a team of experts in 6 hours, not even by one of the participants, Terence Tao (holder of Fields Medal)...",
+  "It is <~ href='https://en.wikipedia.org/wiki/Borsuk%E2%80%93Ulam_theorem'>mathematically guaranteed</a> that there will always exist at least two places on Earth that are exactly on the opposite sides of the globe and have the same temperature and pressure."
+]
+%}
+
+{%
+set quotes_cs = [
+  ["Slepá úcta k autoritám je největším nepřítelem pravdy.","A. Einstein"],
+  ["Člověk může jednat, jak se mu zachce, ale nemůže chtít, jak se mu zachce.","A. Einstein"],
+  ["Nedospívejte, je to past.","neznámý autor (graffiti)"],
+  ["Jsem tak chytrý, že občas nerozumím ani slovu z toho, co říkám.","Oscar Wilde"],
+  ["Ten se směje jizvám, kdo nikdy nepocítil rány.","William Shakespeare"],
+  ["Bůh nehraje kostky.","A. Einstein"],
+  ["Nepřestáváme si hrát proto, že stárneme. Stárneme proto, že si přestáváme hrát.","George Bernard Shaw"],
+  ["Někteří lidé jsou tak chudí, že vše co mají, jsou peníze.","Patrick Meagher"],
+  ["Nejsem dost populární, abych mohl být jiný.","Homer Simpson"],
+  ["Moudří lidé mluví proto, že mají co říct. Hloupí proto, že něco musí říct.","Platón"],
+  ["Když mluvíš pravdu, nemusíš si nic pamatovat.","Mark Twain"],
+  ["Přátelství je sračka.","Sam (Mafia)"],
+  ["Idioti jsou géniové v bytí idioty.","The Amazing Atheist"],
+  ["Kdo jste a proč by mě to mělo zajímat?","Bender Bending Rodríguez"],
+  ["Nechci se stát nesmrtelným skrze svou práci; chci se stát nesmrtelným tím, že neumřu. Nechci dál žít v srdcích svých spoluobčanů; chci dál žít ve svém bytě.","W. Allen"],
+  ["Charakter člověka můžete lehce soudit podle toho, jak se chová k těm, kteří pro něj nemohou nic udělat.","James D. Miles"],
+  ["Než u sebe diagnostikujete depresi nebo nízkou sebedůvěru, ujistěte se, že ve skutečnosti nejste jen obklopeni idioty.","William Gibson"],
+  ["Je mi zle, Pse, ale dobře zle, protože jsme vyhráli.","Kočkopes"],
+  ["Jen zbabělec zálohuje na pásku. SKUTEČNÝ muž nahraje svoje data na ftp a nechá zbytek světa udělat mirror.","Linus Torvalds"],
+  ["Lineární regresi nevěřím, když je z bodového grafu těžší odhadnout směr korelace než najít v něm novou hvězdnou konstelaci.","xkcd"],
+  ["Teorie a praxe jsou teoreticky to samé, prakticky však ne.","neznámý"]
+]
+%}
+
+set quotes_en = [
+  ["Blind belief in authority is the greatest enemy of truth.","A. Einstein"],
+  ["A man can do what he wants, but not will what he wants.","A. Einstein"],
+  ["Don't grow up, it's a trap.","unknown (graffiti)"],
+  ["I am so clever that sometimes I don't understand a single word of what I am saying.","Oscar Wilde"],
+  ["He jests at scars that never felt a wound.","William Shakespeare"],
+  ["God doesn't play dice.","A. Einstein"],
+  ["We don't stop playing because we grow old; we grow old because we stop playing.","George Bernard Shaw"],
+  ["Some people are so poor, all they have is money.","Patrick Meagher"],
+  ["I'm not popular enough to be different.","Homer Simpson"],
+  ["Wise men speak because they have something to say; fools because they have to say something.","Plato"],
+  ["If you tell the truth, you don't have to remember anything.","Mark Twain"],
+  ["Friendship ain't worth shit.","Sam (Mafia)"],
+  ["Idiots are geniuses at being idiots.","The Amazing Atheist"],
+  ["Who Are You and Why Should I Care?","Bender Bending Rodríguez"],
+  ["I don't want to achieve immortality through my work; I want to achieve immortality through not dying. I don't want to live on in the hearts of my countrymen; I want to live on in my apartment.","Woody Allen..."],
+  ["You can easily judge the character of a man by how he treats those who can do nothing for him.","James D. Miles"],
+  ["Before you diagnose yourself with depression or low self-esteem, first make sure that you are not, in fact, just surrounded by assholes.","William Gibson"],
+  ["I am sick, Dog, but it's a good sick, because we won.","Catdog"],
+  ["Only wimps use tape backup. REAL men just upload their important stuff on ftp and let the rest of the world mirror it.","Linus Torvalds"],
+  ["I don't trust linear regressions when it's harder to guess the direction of the correlation from the scatter plot than to find new constellations on it.","xkcd"],
+  ["In theory, theory and practice are the same. In practice, they are not.","unknown"],
+  ["There is no I in collaboraton.","KenM"]
+]
+%}
+
+{% 
+set things_i_like =
+  [
+    ("informatika"                   ,"computer science"),
+    ("matematika"                    ,"math"),
+    ("fyzika"                        ,"physics"),
+    ("psychologie"                   ,"psychology"),
+    ("zvířata"                       ,"animals"),
+    ("klid"                          ,"peace"),
+    ("PC hry"                        ,"PC games"),
+    ("PCMR"                          ,"PCMR"),
+    ("The Elder Scrolls"             ,"The Elder Scrolls"),
+    ("Half Life"                     ,"Half Life"),
+    ("Trackmania"                    ,"Trackmania"),
+    ("Pokémon"                       ,"Pokémon"),
+    ("Warcraft III"                  ,"Warcraft III"),
+    ("Quake III"                     ,"Quake III"),
+    ("Doom"                          ,"Doom"),
+    ("GTA"                           ,"GTA"),
+    ("Legend of Grimrock"            ,"Legend of Grimrock"),
+    ("Mafia"                         ,"Mafia"),
+    ("Crash Bandicoot"               ,"Crash Bandicoot"),
+    ("šachy"                         ,"chess"),
+    ("hudba"                         ,"music"),
+    ("Pink Floyd"                    ,"Pink Floyd"),
+    ("Lana Del Rey"                  ,"Lana Del Rey"),
+    ("Linkin Park"                   ,"Linkin Park"),
+    ("Led Zeppelin"                  ,"Led Zeppelin"),
+    ("Deep Purple"                   ,"Deep Purple"),
+    ("Queen"                         ,"Queen"),
+    ("romantika"                     ,"romance"),
+    ("Futurama"                      ,"Futurama"),
+    ("Simpsonovi"                    ,"The Simpsons"),
+    ("South Park"                    ,"South Park"),
+    ("Kočkopes"                      ,"Catdog"),
+    ("Bořiči mýtů"                   ,"Mythbusters"),
+    ("Pulp Fiction"                  ,"Pulp Fiction"),
+    ("Poslední Mohykán"              ,"The Last of the Mohicans"),
+    ("Stařec a moře"                 ,"The Old Man and the Sea"),
+    ("Čistá duše"                    ,"Beautiful Mind"),
+    ("fotbal"                        ,"football"),
+    ("KISS"                          ,"KISS"),
+    ("orchestrální hudba"            ,"orchestral music"),
+    ("command line"                  ,"command line"),
+    ("open-source"                   ,"open-source"),
+    ("platformní nezávislost"        ,"platform independence"),
+    ("VSauce"                        ,"VSauce"),
+    ("reddit"                        ,"reddit"),
+    ("4chan/b"                       ,"4chan/b"),
+    ("Hello Internet"                ,"Hello Internet"),
+    ("Python"                        ,"Python"),
+    ("Haskell"                       ,"Haskell"),
+    ("svoboda projevu"               ,"freedom of speech"),
+    ("Grammar Nazi"                  ,"Grammar Nazi"),
+    ("ezoterické programovacé jazyky","esoteric programming languages"),
+    ("Esperanto"                     ,"Esperanto"),
+    ("univerzalita"                  ,"universality"),
+    ("náramky přátelství"            ,"friendship bracelets"),
+    ("malé střelné zbraně"           ,"small guns"),
+    ("Sci-Hub"                       ,"Sci-Hub"),
+    ("GitHub"                        ,"GitHub"),
+    ("Linux/Unix"                    ,"Linux/Unix")
+  ]
+%}
+
+{% 
+set things_i_dont_like =
+  [
+    ("nedochvilnost"                                   ,"bad timekeeping"),
+    ("arogance"                                        ,"arrogance"),
+    ("blbci"                                           ,"idiots"),
+    ("párty"                                           ,"party"),
+    ("většina lidí"                                    ,"most people"),
+    ("komplexní IDE a frameworky"                      ,"complex IDEs and frameworks"),
+    ("C#"                                              ,"C#"),
+    ("Objective-C"                                     ,"Objective-C"),
+    ("neznalost rodného jazyka"                        ,"native language ignorance"),
+    ("neznalost definice slova \"definice\""           ,"wrong use of the word \"definition\""),
+    ("TV Nova"                                         ,"TV Nova"),
+    ("M\*A\*S\*H"                                      ,"M\*A\*S\*H"),
+    ("feministky"                                      ,"feminism"),
+    ("makeup"                                          ,"makeup"),
+    ("PewDiePie"                                       ,"PewDiePie"),
+    ("Smosh"                                           ,"Smosh"),
+    ("tetování/piercing"                               ,"tatoo/piercing"),
+    ("módy do her"                                     ,"game mods"),
+    ("politická korektnost"                            ,"political correctness"),
+    ("svatby gayů"                                     ,"gay marriage"),
+    ("zbytečné práce (jako např. odhrnování listí)"    ,"useless work"),
+    ("komunismus"                                      ,"communism"),
+    ("hořká (nikoliv horká) čokoláda"                  ,"unsweetened chocolate"),
+    ("zima"                                            ,"cold"),
+    ("alkohol"                                         ,"alcohol"),
+    ("kouření"                                         ,"smoking"),
+    ("Zeman"                                           ,"Zeman"),
+    ("Česká republika"                                 ,"Czech Republic"),
+    ("Steam"                                           ,"Steam"),
+    ("Hra o trůny"                                     ,"Game of Thrones"),
+    ("marketing"                                       ,"marketing")
+  ]
+%}
+
+{%
+set study_data =
+  {
+    "studies" :
+      {
+        "Bc." :
+          {
+            "start_year" : 2010,
+            "place" : [5,5,123],
+            "final_exam_marks": ["A","B"],
+            "slug_prefix" : "bc",
+            "semesters" :
+              [
+                {
+                  "scholarship" :        0,
+                  "place" :              [64,72,266],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IAS",    "name cs": "Asemblery",                             "name en": "Assembly Languages",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [17,20], "labs" : [20,20], "other" : [0,0],   "exam" : [36,60] }
+                      },
+                      {
+                        "abbr": "IDA",    "name cs": "Diskrétní matematika",                  "name en": "Discrete Mathematics",
+                        "credits" : 7,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [83,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "ITO",    "name cs": "Teorie obvodů",                         "name en": "Circuit Theory",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[12.5,15]                 ],   "midterm" : [12,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [34,65] }
+                      },
+                      {
+                        "abbr": "IUS",    "name cs": "Úvod do softwarového inženýrství",      "name en": "Introduction to Software Engineering",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[5,5],[6,10],[20,20]      ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [43,65] }
+                      },
+                      {
+                        "abbr": "IZP",    "name cs": "Základy programování",                  "name en": "Introduction to Programming Systems",
+                        "credits" : 7,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[2,5],[7,10],[9.5,10],[7,8]],  "midterm" : [7,12],  "labs" : [0,0],   "other" : [1,100], "exam" : [38,55] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        7174,
+                  "place" :              [25,25,184],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IFY",    "name cs": "Fyzika",                                "name en": "Physics",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [17,20], "labs" : [18,20], "other" : [0,0],   "exam" : [55,60] }
+                      },
+                      {
+                        "abbr": "IMA",    "name cs": "Matematická analýza",                   "name en": "Mathematical Analysis",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [83,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "INC",    "name cs": "Návrh číslicových systémů",             "name en": "Digital Systems Design",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[20,20]                   ],   "midterm" : [18,25], "labs" : [0,0],   "other" : [0,0],   "exam" : [49,55] }
+                      },
+                      {
+                        "abbr": "IOS",    "name cs": "Operační systémy",                      "name en": "Operating Systems",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[5,15],[15,15]            ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [51,70] }
+                      },
+                      {
+                        "abbr": "IPR",    "name cs": "Prvky počítačů",                        "name en": "Computer Hardware",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [7.5,15],"labs" : [30,30], "other" : [0,0],   "exam" : [30,55] }
+                      },
+                      {
+                        "abbr": "BAN4",   "name cs": "Angličtina 4: středně pokročilí 2",     "name en": "New Headway Intermediate 2",
+                        "credits" : 6,    "type": "PVA",            "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [39,40], "labs" : [0,0],   "other" : [0,0],   "exam" : [59,60] }
+                      },
+                      {
+                        "abbr": "ITW",    "name cs": "Tvorba webových stránek",               "name en": "Web Design",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[18,20],[29,30]           ],   "midterm" : [12,20], "labs" : [10,10], "other" : [0,0],   "exam" : [17,20] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [78,78,275],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IAL",    "name cs": "Algoritmy",                             "name en": "Algorithms",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[10,10],[9,10],[4.4,5],[9,10]],"midterm" : [14,14], "labs" : [0,0],   "other" : [1,100], "exam" : [28,51] }
+                      },
+                      {
+                        "abbr": "IFJ",    "name cs": "Formální jazyky a překladače",          "name en": "Formal Languages and Compilers",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[19,20],[4.4,5]           ],   "midterm" : [16,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [38.2,55]}
+                      },
+                      {
+                        "abbr": "INM",    "name cs": "Numerická matematika a pravděpodobnost","name en": "Numerical Methods and Probability",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [79,100],"exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "INP",    "name cs": "	Návrh počítačových systémů",          "name en": "Design of Computer Systems",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[12,12],[6,16]            ],   "midterm" : [20,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [32,52] }
+                      },
+                      {
+                        "abbr": "ISS",    "name cs": "Signály a systémy",                     "name en": "Signals and Systems",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[12,12]                   ],   "midterm" : [17.5,25],"labs" : [12,12],"other" : [0,0],   "exam" : [42.8,51]}
+                      },
+                      {
+                        "abbr": "IPSO",   "name cs": "Pedagogická psychologie",               "name en": "Educational Psychology",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [65,100],"exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [64,65,164],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IDS",    "name cs": "Databázové systémy",                    "name en": "Database Systems",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[5,5],[5,5],[5,5],[13,20]],    "midterm" : [12.5,14],"labs" : [0,0],  "other" : [0,0],   "exam" : [32.5,51]}
+                      },
+                      {
+                        "abbr": "IPK",    "name cs": "Počítačové komunikace a sítě",          "name en": "Computer Communications and Networks",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[3.5,4],[6,6],[8,10]      ],   "midterm" : [5.4,9], "labs" : [6,6],   "other" : [0,0],   "exam" : [44,65] }
+                      },
+                      {
+                        "abbr": "IPP",    "name cs": "Principy programovacích jazyků a OOP",  "name en": "Principles of Programming Languages",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[8.6,10],[3.9,10]         ],   "midterm" : [18,20], "labs" : [0,0],   "other" : [0,0],   "exam" : [26,60] }
+                      },
+                      {
+                        "abbr": "IZG",    "name cs": "Základy počítačové grafiky",            "name en": "Computer Graphics Principles",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[6,18]                    ],   "midterm" : [9,12],  "labs" : [18,18], "other" : [0,0],   "exam" : [50,52] }
+                      },
+                      {
+                        "abbr": "IZU",    "name cs": "Základy umělé inteligence",             "name en": "Fundamentals of Artificial Intelligence",
+                        "credits" : 4,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [8,20],  "labs" : [17.75,20],"other" : [0,0],  "exam" : [51,60]}
+                      },
+                      {
+                        "abbr": "IJA",    "name cs": "Seminář Java",                          "name en": "Java Programming Language",
+                        "credits" : 4,    "type": "PVT",            "classified": false,
+                        "pts":
+                          { "projects" : [[20,20],[64,80]           ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "PRM",    "name cs": "Právní minimum",                        "name en": "Fundamentals of Law",
+                        "credits" : 3,    "type": "PVH",            "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [96,98,240],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IIS",    "name cs": "Informační systémy",                    "name en": "Information Systems",
+                        "credits" : 4,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[30,30]                   ],   "midterm" : [15,19], "labs" : [0,0],   "other" : [0,0],   "exam" : [24,51] }
+                      },
+                      {
+                        "abbr": "IMP",    "name cs": "Mikroprocesorové a vestavěné systémy",  "name en": "Microprocessors and Embedded Systems",
+                        "credits" : 6,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[14.6,19]                 ],   "midterm" : [14,14], "labs" : [16,16], "other" : [0,0],   "exam" : [23.3,51]}
+                      },
+                      {
+                        "abbr": "IMS",    "name cs": "Modelování a simulace",                 "name en": "Modelling and Simulation",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[20,20]                   ],   "midterm" : [8,10],  "labs" : [0,0],   "other" : [0,0],   "exam" : [44,70] }
+                      },
+                      {
+                        "abbr": "IPZ",    "name cs": "Periferní zařízení",                    "name en": "Peripheral Devices",
+                        "credits" : 4,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [26,30], "labs" : [3.8,4], "other" : [0,0],   "exam" : [63.3,66]}
+                      },
+                      {
+                        "abbr": "ISA",    "name cs": "Síťové aplikace a správa sítí",         "name en": "Network Applications and Network Administration",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[16,21]                   ],   "midterm" : [0,0],   "labs" : [16,24], "other" : [0,0],   "exam" : [33,55] }
+                      },
+                      {
+                        "abbr": "ISP",    "name cs": "Semestrální projekt",                   "name en": "Term Project",
+                        "credits" : 2,    "type": "P",              "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [100,100],"exam" : [0,0]  }
+                      },
+                      {
+                        "abbr": "ITU",    "name cs": "Tvorba uživatelských rozhraní",         "name en": "User Interface Programming",
+                        "credits" : 4,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[43,55]                   ],   "midterm" : [18,20], "labs" : [24,25], "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                      {
+                        "abbr": "JS1",    "name cs": "Španělština: začátečníci 1/2",          "name en": "Spanish for Beginners 1/2",
+                        "credits" : 3,    "type": "V",              "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]   }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [59,84,369],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "ITY",    "name cs": "Typografie a publikování",              "name en": "Typography and Publishing",
+                        "credits" : 4,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[6,10],[12,15],[13,15],[10,15],[15,15]],"midterm" : [0,0],"labs" : [0,0],"other" : [0,0],"exam" : [30,30] }
+                      },
+                      {
+                        "abbr": "JS1",    "name cs": "Španělština: začátečníci 2/2",          "name en": "Spanish for Beginners 2/2",
+                        "credits" : 3,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],   "other" : [85,100],"exam" : [0,0]   }
+                      },
+                    ],
+                },
+                
+                {
+                  "scholarship" :        0,
+                  "place" :              [125,138,160],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IPA",    "name cs": "Pokročilé asemblery",                   "name en": "Advanced Assembly Languages",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[20,26]                   ],   "midterm" : [0,0],   "labs" : [14,14], "other" : [0,0],"exam" : [23,60]    }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        500,
+                  "place" :              [59,84,369],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "IBP",    "name cs": "Bakalářská práce",                      "name en": "Bachelor's Thesis",
+                        "credits" : 9,    "type": "P",              "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],   "labs" : [0,0],"other" : [0,0],"exam" : [0,0]         }
+                      },
+                    ],
+                },
+              ]
+          },
+      
+        "Ing." :
+          {
+            "start_year" : 2014,
+            "place" : [0,0,0],
+            "final_exam_marks": ["F","F"],
+            "slug_prefix" : "ing",
+            "semesters" :
+              [
+                {
+                  "scholarship" :        9913,
+                  "place" :              [10,10,110],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "HSC",    "name cs": "Hardware/Software Codesign",              "name en": "Hardware/Software Codesign",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[5,25]                    ],   "midterm" : [16,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [45,55]}
+                      },
+                      {
+                        "abbr": "MAT",    "name cs": "Matematické struktury v informatice",     "name en": "Mathematical Structures in Computer Science",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [14,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [68,80]}
+                      },
+                      {
+                        "abbr": "PDB",    "name cs": "Pokročilé databázové systémy",            "name en": "Advanced Database Systems",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[17,20]                   ],   "midterm" : [14,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [39,60]}
+                      },
+                      {
+                        "abbr": "PGR",    "name cs": "Počítačová grafika",                      "name en": "Computer Graphics",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[30,30]                   ],   "midterm" : [7,7],     "labs" : [12,12], "other" : [0,0],   "exam" : [41,51]}
+                      },
+                      {
+                        "abbr": "TIN",    "name cs": "Teoretická informatika",                  "name en": "Theoretical Computer Science",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[5,5],[4,5],[4.2,5],[5,5] ],   "midterm" : [19,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [49,60]}
+                      },
+                      {
+                        "abbr": "FIT",    "name cs": "Dějiny a filozofie techniky",             "name en": "History and Philosophy of Technology",
+                        "credits" : 3,    "type": "PVH",            "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0] }
+                      },
+                      {
+                        "abbr": "PGP",    "name cs": "Pokročilá počítačová grafika",            "name en": "Advanced Computer Graphics",
+                        "credits" : 5,    "type": "PVG",            "classified": true,
+                        "pts":
+                          { "projects" : [[10,10],[30,30]           ],   "midterm" : [7,9],     "labs" : [0,0],   "other" : [0,0],   "exam" : [43,51]}
+                      },
+                      {
+                        "abbr": "STI",    "name cs": "Seminář teoretické informatiky",          "name en": "Theoretical Computer Science Seminar",
+                        "credits" : 2,    "type": "V",              "classified": false,
+                        "pts":
+                          { "projects" : [                          ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [20,22,127],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "FYO",    "name cs": "Fyzikální optika",                        "name en": "Physical Optics",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[21,30]                   ],   "midterm" : [8,10],    "labs" : [0,0],   "other" : [0,0],   "exam" : [29,60]}
+                      },
+                      {
+                        "abbr": "MUL",    "name cs": "Multimédia",                              "name en": "Multimedia",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[23,24]                   ],   "midterm" : [8,10],    "labs" : [15,15], "other" : [0,0],   "exam" : [46,51]}
+                      },
+                      {
+                        "abbr": "PDS",    "name cs": "Přenos dat, počítačové sítě a protokoly", "name en": "Data Communications, Computer Networks and Protocols",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[9,25]                    ],   "midterm" : [9,15],    "labs" : [0,0],   "other" : [0,0],   "exam" : [36,60]}
+                      },
+                      {
+                        "abbr": "ZPO",    "name cs": "Zpracování obrazu",                       "name en": "Image Processing",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[24,29]                   ],   "midterm" : [10,10],   "labs" : [10,10], "other" : [0,0],   "exam" : [42,51]}
+                      },
+                      {
+                        "abbr": "ZRE",    "name cs": "Zpracování řečových signálů",             "name en": "Speech Signal Processing",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[14,15],[14,14]           ],   "midterm" : [10.5,14], "labs" : [6,6],   "other" : [0,0],   "exam" : [40.8,51]}
+                      },
+                      {
+                        "abbr": "WAP",    "name cs": "Internetové aplikace",                    "name en": "Internet Applications",
+                        "credits" : 5,    "type": "PVI",            "classified": true,
+                        "pts":
+                          { "projects" : [[30,30]                   ],   "midterm" : [16,19],   "labs" : [0,0],   "other" : [0,0],   "exam" : [48,51]}
+                      },
+                      {
+                        "abbr": "VIN",    "name cs": "Výtvarná informatika",                    "name en": "Computer Art",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[49,49],[51,51]           ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [10,10,198],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "GZN",    "name cs": "Grafická a zvuková rozhraní a normy",     "name en": "Graphical and Sound Interfaces and Standards",
+                        "credits" : 5,    "type": "P",              "classified": true,
+                        "pts":
+                          { "projects" : [[39,40]                   ],   "midterm" : [8,9],     "labs" : [0,0],   "other" : [0,0],   "exam" : [38,51]}
+                      },
+                      {
+                        "abbr": "KRG",    "name cs": "Kreativní grafika",                       "name en": "Creative Art",
+                        "credits" : 4,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[60,60]                   ],   "midterm" : [30,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0] }
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [110,115,198],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "ARC",    "name cs": "Architektura a programování paralelních systémů", "name en": "Parallel System Architecture and Programming",
+                        "credits" : 5,    "type": "PVC",             "classified": true,
+                        "pts":
+                          { "projects" : [[10,15],[3,15]             ],   "midterm" : [7,10],    "labs" : [0,0],   "other" : [0,0],   "exam" : [38,60]}
+                      },
+                      {
+                        "abbr": "VNV",    "name cs": "Vysoce náročné výpočty",                   "name en": "High Performance Computations",
+                        "credits" : 5,    "type": "PVM",             "classified": true,
+                        "pts":
+                          { "projects" : [                           ],   "midterm" : [18,20],   "labs" : [19,20], "other" : [0,0],   "exam" : [36,60]}
+                      },
+                      {
+                        "abbr": "VIZ",    "name cs": "Vizualizace a CAD",                        "name en": "Visualization and CAD",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[60,60]                    ],   "midterm" : [28,40],   "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [13,19,88],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "SEP",    "name cs": "Semestrální projekt",                      "name en": "Term Project",
+                        "credits" : 5,    "type": "P",               "classified": true,
+                        "pts":
+                          { "projects" : [[90,100]                   ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
+                      },
+                      {
+                        "abbr": "GUX",    "name cs": "Grafická uživatelská rozhraní v X Window", "name en": "Graphical User Interfaces in X Window System",
+                        "credits" : 5,    "type": "V",               "classified": true,
+                        "pts":
+                          { "projects" : [[7,8],[9,12]               ],   "midterm" : [14,20],   "labs" : [0,0],   "other" : [0,0],   "exam" : [35,60]}
+                      },
+                      {
+                        "abbr": "POV",    "name cs": "Počítačové vidění",                        "name en": "Computer Vision",
+                        "credits" : 5,    "type": "V",              "classified": true,
+                        "pts":
+                          { "projects" : [[8.1,10],[27,30]           ],   "midterm" : [9,9],     "labs" : [0,0],   "other" : [0,0],   "exam" : [46,51]}
+                      },
+                    ],
+                },
+                {
+                  "scholarship" :        0,
+                  "place" :              [0,0,0],
+                  "courses" :
+                    [
+                      {
+                        "abbr": "SIP",    "name cs": "Diplomová práce",                          "name en": "Master's Thesis",
+                        "credits" : 13,   "type": "P",               "classified": false,
+                        "pts":
+                          { "projects" : [[0,0]                      ],   "midterm" : [0,0],     "labs" : [0,0],   "other" : [0,0],   "exam" : [0,0]}
+                      },
+                    ],
+                },
+              ],
+          },
+      },
+  }
+%}
