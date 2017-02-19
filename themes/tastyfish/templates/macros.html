@@ -203,10 +203,37 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {%- endmacro -%}
 
 {#-------------------------------------------------------------------#}
-{%- macro study_total_amount(study_type, total_of_what, semester_number=0) -%}
+{%- macro study_total_amount(study_type, total_of_what, semester_number=0) -%}   {# if study_type == "", then all studies are summed #}
 {# possible values: "scholarship", "points", "credits", "exams", "midterms", "projects", "courses", "classified", "classified credits", "weighted numerator", "mean", "A", "B", "C", "D", "E", "F" #}
 
-{%- if total_of_what == "scholarship" -%}
+{%- if study_type == "" -%}
+  {# Total stats of all studies - this is hard-cocded to "Bc." and "Ing." keep it simple. #}
+  
+  {% if total_of_what in ["scholarship","credits","points","exams","projects","courses","midterms","classified","classified credits","A","B","C","D","E","F"] %}
+    {{ (study_total_amount("Bc.",total_of_what)|int) + (study_total_amount("Ing.",total_of_what)|int) }}
+  {% else %} {% if total_of_what in ["weighted numerator"] %}
+    {{ (study_total_amount("Bc.",total_of_what)|float) + (study_total_amount("Ing.",total_of_what)|float) }}
+  {% else %} {% if total_of_what in ["mean"] %}
+    {%- set final_marks = d.study_data.studies["Bc."]["final_exam_marks"] -%}
+    {%- set final_marks2 = d.study_data.studies["Ing."]["final_exam_marks"] -%}
+    {{
+      (
+        (
+          (study_total_amount(study_type,"weighted numerator")|float) +
+          (course_mark_to_number(final_marks[0])|float) +
+          (course_mark_to_number(final_marks[1])|float) +
+          (course_mark_to_number(final_marks2[0])|float) +
+          (course_mark_to_number(final_marks2[1])|float)
+        ) / (study_total_amount(study_type,"classified credits")|float)
+      )|string|truncate(5,true,"")
+    }}
+  {% else %}
+    -
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  
+{%- else -%} {%- if total_of_what == "scholarship" -%}
   {{ d.study_data.studies[study_type].semesters|map(attribute=total_of_what)|sum }}
 {%- else -%} {%- if total_of_what == "mean" -%}
  
@@ -252,7 +279,8 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
     {{- amount + (study_total_amount(study_type,total_of_what,semester_number + 1)|int) -}}
   {%- endif -%}
 
-{%- endif %}
+{%- endif -%}
+{%- endif -%}
 {%- endif -%}
 
 {%- endmacro -%}
@@ -263,13 +291,21 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {%- endmacro -%}
 
 {#-------------------------------------------------------------------#}
-{% macro study_summary(study_type, language="cs") %}
+{% macro study_summary(study_type, language="cs") %}  {# if study_type == "", then all studies are summed #}
 
-{% set study = d.study_data.studies[study_type] %}
+{% if study_type == "" %}
+{% set study_place = 0 %}
+{% else %}
+{% set study_place = d.study_data.studies[study_type].place %}
+{% endif %}
 
 {% set number_of_courses = study_total_amount(study_type,"courses") %}
 
+{% if study_type == "" %}
+<h2> {%if language == "cs" %} Celkové statistiky všech studíí {% else %} Total study stats {% endif %} </h2>
+{% else %}
 <h2> {%if language == "cs" %} Statistiky pro {{ study_type }} studium {% else %} Stats for {{ study_type }} study {% endif %} </h2>
+{% endif %}
 
 <ul>
   <li>
@@ -278,7 +314,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
   </li>
   
   <li>
-    {%if language == "cs" %} bodů:: {% else %} points: {% endif %}
+    {%if language == "cs" %} bodů: {% else %} points: {% endif %}
     {{ study_total_amount(study_type,"points") }} / {{ study_total_amount(study_type,"classified")|int * 100 }}
   </li>
   
@@ -307,10 +343,12 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
     {{ study_total_amount(study_type,"mean") }}
   </li>
   
+  {% if study_type != "" %}
   <li>
     {%if language == "cs" %} pořadí: {% else %} place: {% endif %}
-    {{ study_write_place(study.place) }}
+    {{ study_write_place(study_place) }}
   </li>
+  {% endif %}
   
   <li>
     {%if language == "cs" %} peněz z prospěchových stipendií: {% else %} merit scholarship money: {% endif %}

@@ -13,3 +13,4 @@ Tags: study, frontpage
 
 {{ m.study_summary("Bc.","cs") }}
 {{ m.study_summary("Ing.","cs") }}
+{{ m.study_summary("","cs") }}

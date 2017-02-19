@@ -3,8 +3,11 @@
 # config both for local and publish
 
 import __builtin__
+import time
 
 def set_common_variables(module_ref):
+  module_ref.PUBLISH_INFO_TEXT += ", built on: " + str(time.strftime("%d.%m.%Y, %H:%M:%S")) + "."
+    
   module_ref.SITENAME = u"tastyfish"
   module_ref.AUTHOR = u"Miloslav Číž"
 

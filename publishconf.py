@@ -6,7 +6,7 @@ import sys
 sys.path.append('.')
 import commonconf
 
-commonconf.set_common_variables(sys.modules[__name__])
-
 SITEURL = "https://drummyfish.github.io"
 PUBLISH_INFO_TEXT = u'publish version'
+
+commonconf.set_common_variables(sys.modules[__name__])

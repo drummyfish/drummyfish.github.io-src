@@ -52,3 +52,5 @@ Hledáte unicode symbol? [Nakreselete si ho](http://shapecatcher.com/).
 ∀ ∃ ∄
 
 <h2> odkazy </h2>
+
+
