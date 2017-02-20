@@ -3,48 +3,6 @@
 {# This file contains macros usable in templates AS WELL AS articles. #}
    
 {#-------------------------------------------------------------------#}
-{# Writes out projects, intended for the projects page. The projects are
-   displayd like this:
-   1. display all projects from "projects" array, keeping the order
-   2. display GitHub projects (using the GitHub project plugin) that
-      were not displayed in step 1 #}
-
-{% macro display_projects(language="cs") %}
-
-{% for project in d.projects %}
-<div class="project">
-
-{% if project.github is defined and (project.github | length) != 0 %}
-<a class="project-github" href="https://github.com/drummyfish/{{ project.github }}"><img src="../theme/images/github.png"></a>
-{% endif %}
-
-{% if project.filename is defined and (project.filename | length) != 0 %}
-<a class="project-download" href="{{ project.filename }}"><img src="../theme/images/download.png"></a>
-{% endif %}
-
-<h2> {{ project.name }} </h2>
-<span> {{ project.language }} </span>
-<p> {{ project.description }} </p>
-<img class="project-image" src="{{ project.image }}"></img>
-</div>
-{% endfor %}
-
-{#
-{% if GITHUB_USER %}
-  <table class="github-projects">
-    {% for project in github_projects %}
-      <tr>
-        <td> <a href="{{ project.github_url }}">  {{ project.name }}</a><sup>{{ project.language }}</sup> </td>
-        <td> {{ project.description }} </td>
-      </tr>  
-    {% endfor %}
-  </table>
-{% endif %}
-#}
-
-{% endmacro %}
-   
-{#-------------------------------------------------------------------#}
 {% macro random_texts_script() %}
 <script>
   function quote_string(quote_text, author)

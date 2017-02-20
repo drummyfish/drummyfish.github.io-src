@@ -9,17 +9,21 @@
 {% if DEFAULT_LANG == "cs" %}
   <h1> Projekty </h1>
     
-  <p> Tato stránka nabízí přehled mých programovacích projektů. Většinu z nich naleznete na mém <a href="https://github.com/{{GITHUB_USER}}">GitHubovém profilu</a>. </p>
+  {% if GITHUB_USER %}
+    {% for project in github_projects | reverse %}
+    {% if not project.fork %}
+    <h2>{{ project.name }} <sup>({{ project.language }})</sup></h2>
+    <p>{{ project.description }}, {{ project.stars }} stars, {{ project.size }}, {{ project.fork }} </p>
+    <p>
+      <a href="{{ project.homepage }}">Homepage</a>
+      <a href="{{ project.github_url }}">GitHub</a>
+    </p>
+    {% endif %}
+    {% endfor %}
+  {% endif %}
 
-  {{ m.display_projects() }}
-  
-{% else %}
-  <h1> Projects </h1>
-    
-  <p> This page is dedicated to my programming projects. They can all be found as open-source at my <a href="https://github.com/{{GITHUB_USER}}">GitHub profile</a>. </p>
 {% endif %}
-
-{% include "social.html" %}
+    
 
 </section>
 {% endblock content %}
