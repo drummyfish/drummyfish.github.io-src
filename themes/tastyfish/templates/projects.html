@@ -9,21 +9,29 @@
 {% if DEFAULT_LANG == "cs" %}
   <h1> Projekty </h1>
     
-  {% if GITHUB_USER %}
-    {% for project in github_projects | reverse %}
-    {% if not project.fork %}
-    <h2>{{ project.name }} <sup>({{ project.language }})</sup></h2>
-    <p>{{ project.description }}, {{ project.stars }} stars, {{ project.size }}, {{ project.fork }} </p>
-    <p>
-      <a href="{{ project.homepage }}">Homepage</a>
-      <a href="{{ project.github_url }}">GitHub</a>
-    </p>
-    {% endif %}
-    {% endfor %}
-  {% endif %}
-
+  <p> Tato stránka je automaticky generovaným seznamem projektů z mého <a href="https://github.com/{{ GITHUB_USER }}">GitHubu</a>. </p>
+{% else %}
+  <h1> Projects </h1>
+    
+  <p> This page is an automatically generated list of projects from my <a href="https://github.com/{{ GITHUB_USER }}">GitHub</a>. </p>  
 {% endif %}
     
-
+{% if GITHUB_USER %}
+  {% for project in github_projects | reverse %}
+  {% if not project.fork %}
+    
+  <div class="project">
+    <img src="{{ project.github_url }}/blob/master/screenshot.png?raw=true" alt="screenshot"></img>
+    <a href="{{ project.github_url }}"> <h2> {{ project.name }} </h2> </a>
+    <span class="project-lang"> {{ project.language }} </span>
+    <span class="project-stars"> &#x2606; {{ project.stars }} </span>
+    <span class="project-size"> {% if project.size < 1000 %} {{ project.size }} kB {% else %} {{ (project.size / 1000)|int }} mB {% endif %} </span>
+    <p>{{ project.description }} </p>
+  </div>
+    
+  {% endif %}
+  {% endfor %}
+{% endif %}
+    
 </section>
 {% endblock content %}
