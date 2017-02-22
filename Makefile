@@ -1,4 +1,5 @@
 # use make ... GIT_MSG to set the git message for all commits
+# Tidy is required to be installed for HTML prettifying
 
 PY?=python
 PELICAN?=pelican
@@ -31,10 +32,15 @@ clean:
 
 local:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(MAKE) prettify
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	$(MAKE) prettify
 
+prettify:
+	$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),tidy -i2 -wrap 120 -m "$f" || :;)
+	
 upload_src:
 	git add * || :
 	git commit -m "source update: $$GIT_MSG"

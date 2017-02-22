@@ -45,7 +45,7 @@
   function write_random_item(title, choices, force_index)     // force index can be used to preview a certain text
     {
       index = force_index == undefined ? Math.floor(Math.random()*choices.length) : force_index;
-      document.write ("<div class=\"random-text\"> <span> " + title + ": </span> <p> " + choices[index] + " </p> </p>");
+      document.write ("<div class=\"random-text\"> <span> " + title + ": </span> <p> " + choices[index] + " </p> </div>");
     }
 </script>
 {% endmacro %}
