@@ -7,6 +7,8 @@
   {{ m.random_texts_script() }}
 
   {% if DEFAULT_LANG == "cs" %}
+    <h1 class="entry-title"> Úvod </h1>
+  
     <p>
       Vítejte na mých stránkách {{m.e(':)')}} Jejich účelem je shromažďovat různé věci, které mě zajímají a o které se chci podělit.
       Zde jsou rychlé odkazy na klíčové články:
@@ -26,6 +28,18 @@
       write_random_item("Náhodný fakt", facts_cs);
       write_random_item("Náhodný citát", quotes_cs);
     </script>
+    
+    <hr>
+    
+    <h1> Nedávno přidáno </h1>
+    
+    <ul>
+    {% for article in articles %}
+    {% if loop.index < 3 %}
+      <li> {{ article.title }} </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
     
     {% include "donate.html" %}
     

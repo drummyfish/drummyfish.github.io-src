@@ -1,10 +1,10 @@
-# Usage: 
+# usage: 
 # make target [args], args:
 #
 #    GIT_MSG="..."         - message for git comments
 #    NO_PRETTY=1           - do not prettify
 #
-# Tidy is required to be installed for HTML prettifying
+# Tidy is required to be installed for HTML prettifying.
 
 PY?=python
 PELICAN?=pelican
@@ -48,7 +48,7 @@ ifndef NO_PRETTY
 endif
 
 prettify:
-	$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep "line" || :;)
+	@-$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep "line" || :;)
 
 upload_src:
 	git clean -f || :
