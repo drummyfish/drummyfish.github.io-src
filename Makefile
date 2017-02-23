@@ -1,4 +1,9 @@
-# use make ... GIT_MSG to set the git message for all commits
+# Usage: 
+# make target [args], args:
+#
+#    GIT_MSG="..."         - message for git comments
+#    NO_PRETTY=1           - do not prettify
+#
 # Tidy is required to be installed for HTML prettifying
 
 PY?=python
@@ -32,15 +37,19 @@ clean:
 
 local:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+ifndef NO_PRETTY
 	$(MAKE) prettify
+endif
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+ifndef NO_PRETTY
 	$(MAKE) prettify
+endif
 
 prettify:
-	$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),tidy -i2 -wrap 120 -m "$f" || :;)
-	
+	$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i 2 -wrap 120 -m "$f" || :;)
+
 upload_src:
 	git add * || :
 	git commit -m "source update: $$GIT_MSG"

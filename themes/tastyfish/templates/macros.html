@@ -459,7 +459,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {#-------------------------------------------------------------------#}
 
 {% macro things_i_like_text(language='cs') %}
-{% for thing_cs, thing_en in things_i_like %}
+{% for thing_cs, thing_en in d.things_i_like %}
 {% if language == "cs" %}{{ thing_cs }}{% else %}{{ thing_en }}{% endif %}{% if not loop.last %}, {% endif %}
 {% endfor %}
 {% endmacro %}
@@ -467,7 +467,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {#-------------------------------------------------------------------#}
 
 {% macro things_i_dont_like_text(language='cs') %}
-{% for thing_cs, thing_en in things_i_dont_like %}
+{% for thing_cs, thing_en in d.things_i_dont_like %}
 {% if language == "cs" %}{{ thing_cs }}{% else %}{{ thing_en }}{% endif %}{% if not loop.last %}, {% endif %}
 {% endfor %}
 {% endmacro %}

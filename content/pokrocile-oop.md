@@ -385,47 +385,46 @@ a *Stroj*. Od třídy *Živočich* odvodíme za pomoci dědičnosti třídy
 číslo* (viz obrázek).
 
 ![příklad](http://i.imgur.com/QOD0at7.png){.center}  
-<pre>
-třída Živočich  
-{  
-atributy:  
-datum narození
 
-metody:  
-}
+    třída Živočich  
+    {  
+    atributy:  
+    datum narození
+    
+    metody:  
+    }
+    
+    třída Stroj  
+    {  
+    atributy:  
+    výrobní číslo
+    
+    metody:  
+    }
+    
+    třída Člověk, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }
+    
+    třída Kočka, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }
+    
+    třída Robot, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }
 
-třída Stroj  
-{  
-atributy:  
-výrobní číslo
-
-metody:  
-}
-
-třída Člověk, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}
-
-třída Kočka, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}
-
-třída Robot, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}
-
-třída Auto, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}  
-</pre>
+    třída Auto, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }
 
 Všechno je zatím evidentně v pořádku, kočky a lidé budou mít svá data
 narození a auta a roboti výrobní čísla. Nyní nás ale může napadnout
@@ -449,54 +448,53 @@ navíc od třídy *Mluvící*, čímž právě tyto třídy zdědí požadovanou
 (viz obrázek). Rázem vidíme, jak elegantní naše řešení je.
 
 ![příklad](http://i.imgur.com/EGsk1He.png){.center}  
-<pre>  
-třída Živočich  
-{  
-atributy:  
-datum narození
-
-metody:  
-}
-
-třída Stroj  
-{  
-atributy:  
-výrobní číslo
-
-metody:  
-}
-
-třída Mluvící  
-{  
-atributy:  
-metody:  
-mluv  
-}
-
-třída Člověk, potomek třídy Živočich a Mluvící  
-{  
-atributy:  
-metody:  
-}
-
-třída Kočka, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}
-
-třída Robot, potomek třídy Živočich a Mluvící  
-{  
-atributy:  
-metody:  
-}
-
-třída Auto, potomek třídy Živočich  
-{  
-atributy:  
-metody:  
-}  
-</pre>
+  
+    třída Živočich  
+    {  
+    atributy:  
+    datum narození
+    
+    metody:  
+    }
+    
+    třída Stroj  
+    {  
+    atributy:  
+    výrobní číslo
+    
+    metody:  
+    }
+    
+    třída Mluvící  
+    {  
+    atributy:  
+    metody:  
+    mluv  
+    }
+    
+    třída Člověk, potomek třídy Živočich a Mluvící  
+    {  
+    atributy:  
+    metody:  
+    }
+    
+    třída Kočka, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }
+    
+    třída Robot, potomek třídy Živočich a Mluvící  
+    {  
+    atributy:  
+    metody:  
+    }
+    
+    třída Auto, potomek třídy Živočich  
+    {  
+    atributy:  
+    metody:  
+    }  
 
 Celé to má obrovskou výhodu – představme si nějakou funkci nebo metodu,
 která jako parametr požaduje objekt, který umí mluvit, a přitom je jí
