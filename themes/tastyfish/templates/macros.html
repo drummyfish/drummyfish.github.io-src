@@ -4,7 +4,7 @@
    
 {#-------------------------------------------------------------------#}
 {% macro random_texts_script() %}
-<script>
+<script type="text/javascript">
   function quote_string(quote_text, author)
     {
       return "\"" + quote_text + "\"" + " -" + author;
@@ -45,7 +45,7 @@
   function write_random_item(title, choices, force_index)     // force index can be used to preview a certain text
     {
       index = force_index == undefined ? Math.floor(Math.random()*choices.length) : force_index;
-      document.write ("<div class=\"random-text\"> <span> " + title + ": </span> <p> " + choices[index] + " </p> </div>");
+      document.write ("<div class=\"random-text\"> <span> " + title + ": <\/span> <p> " + choices[index] + " <\/p> <\/div>");
     }
 </script>
 {% endmacro %}
@@ -382,23 +382,23 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
         {%- if loop.first -%}                                                   {# new semester #}
         {%- if semester_number == 1 -%}                                         {# new study #}
           
-        <td rowspan="{{ study_total_amount(study_type,"courses") }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
+        <td rowspan="{{ study_total_amount(study_type,"courses") | int }}"> <span class="vertical-text"> {{ study_type }} </span> </td>
             
         {%- endif -%}
         
         {%- if semester_number == 1 or semester_type_cycler.current == "L" -%}  {# new calendar year #}
         
-        <td rowspan="{% if semester_number == 1 %} {{ number_of_courses }} {% else %} {{ next_2_semester_courses }} {% endif %}"> <span class="vertical-text"> {{ calendar_year_cycler.next() }} </span> </td>
+        <td rowspan="{% if semester_number == 1 %}{{ number_of_courses | int }}{% else %}{{ next_2_semester_courses | int }}{% endif %}"> <span class="vertical-text"> {{ calendar_year_cycler.next() }} </span> </td>
         
         {%- endif -%}
           
         {%- if semester_type_cycler.current == "Z" -%}                          {# new school year #}
         
-        <td rowspan="{{ next_2_semester_courses }}"> {{ current_school_year }} </td>
+        <td rowspan="{{ next_2_semester_courses | int }}"> {{ current_school_year }} </td>
         
         {%- endif -%}
           
-        <td rowspan="{{ number_of_courses }}"> <a href="{{ d.study_data.studies[study_type]["slug_prefix"] }}{{semester_number}}.html"> {{ semester_type_cycler.next() }} </a> </td>
+        <td rowspan="{{ number_of_courses | int }}"> <a href="{{ d.study_data.studies[study_type]["slug_prefix"] }}{{semester_number}}.html"> {{ semester_type_cycler.next() }} </a> </td>
         
         {%- endif -%}
   
@@ -531,7 +531,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% macro fit_but_cheatsheet(course,page,imgur_id) -%}
 <div class="fit-but-cheatsheet">
 <a href="http://i.imgur.com/{{ imgur_id }}.jpg" target="blank">
-<img src="http://i.imgur.com/{{ imgur_id }}m.jpg" alt="{{ course }} tahák"/></img>
+<img src="http://i.imgur.com/{{ imgur_id }}m.jpg" alt="{{ course }} tahák">
 </a>
 
 <p>

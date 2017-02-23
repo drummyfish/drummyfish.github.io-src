@@ -12,7 +12,7 @@ rád spoustu dalších věcí, jako např. hudbu, sport atd.
 ## Fun facts:
 
 - Nepiju alkohol, nechutná mi.
-- Podle testů jsem 100% introvert (INTJ).
+- Podle testů jsem 100% introvert (melancholik, INTJ).
 - Nemám čich.
 - Jsem členem Mensy.
 - Neumím hvízdat.
