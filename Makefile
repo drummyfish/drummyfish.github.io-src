@@ -51,15 +51,15 @@ prettify:
 	$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep "line" || :;)
 
 upload_src:
-	git add * || :
 	git clean -f || :
+	git add -A || :
 	git commit -m "source update: $$GIT_MSG"
 	git push
 
 upload_web:
 	cd $(OUTPUTDIR); \
-	git add * || : ; \
 	git clean -f || : ;\
+	git add -A || : ; \
 	git commit -m "web update: $$GIT_MSG"; \
 	git push
 
