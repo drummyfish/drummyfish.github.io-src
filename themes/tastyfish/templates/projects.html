@@ -21,7 +21,9 @@
   {% if not project.fork %}
     
   <div class="project">
-    <img src="{{ project.github_url }}/blob/master/screenshot.png?raw=true" alt="screenshot">
+    <div>
+      <img src="{{ project.github_url }}/blob/master/screenshot.png?raw=true" alt="screenshot">
+    </div>
     <a href="{{ project.github_url }}"> <h2> {{ project.name }} </h2> </a>
     <span class="project-lang"> {{ project.language }} </span>
     <span class="project-stars"> &#x2606; {{ project.stars }} </span>
