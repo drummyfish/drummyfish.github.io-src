@@ -20,8 +20,8 @@
     
   quotes_cs =
     [
-      {% for fact in d.quotes_cs %}
-        quote_string("{{ fact[0] }}","{{ fact[1] }}"){% if not loop.last %},{% endif %}
+      {% for quote in d.quotes_cs %}
+        quote_string("{{ quote[0] }}","{{ quote[1] }}"){% if not loop.last %},{% endif %}
         
       {% endfor %}
     ];
@@ -36,8 +36,8 @@
 
   quotes_en =
     [
-      {% for fact in d.quotes_en %}
-        quote_string("{{ fact[0] }}","{{ fact[1] }}"){% if not loop.last %},{% endif %}
+      {% for quote in d.quotes_en %}
+        quote_string("{{ quote[0] }}","{{ quote[1] }}"){% if not loop.last %},{% endif %}
         
       {% endfor %}
     ];
@@ -267,7 +267,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 <ul>
   <li>
-    {%if language == "cs" %} kreditů (hodin práce): {% else %} credits (work hours) {% endif %}
+    {%if language == "cs" %} kreditů (hodin práce): {% else %} credits (work hours): {% endif %}
     {% set credits = study_total_amount(study_type,"credits") %}{{ credits }} ({{ credits_to_hours(credits) }})
   </li>
   
