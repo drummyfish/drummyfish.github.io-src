@@ -1,0 +1,15 @@
+      <article class="hentry">
+        <header>
+          <h1>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}"> {{ article.title }} </a>
+          </h1>
+        </header>
+
+        <div class="entry-content">
+          {% include "article_infos.html" %}
+          
+          <p> {{ article.summary | striptags }} </p>
+          <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">{% if DEFAULT_LANG == "cs" %}pokračovat ve čtení{% else %}read more{%- endif %}</a>
+          {% include "comments.html" %}
+        </div>
+      </article>

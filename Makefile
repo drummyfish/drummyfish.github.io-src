@@ -48,17 +48,15 @@ ifndef NO_PRETTY
 endif
 
 prettify:
-	@-$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep "line" || :;)
+	@-$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep --color -E "Warning|Error" || :;)
 
 upload_src:
-	git clean -f || :
 	git add -A || :
 	git commit -m "source update: $$GIT_MSG"
 	git push
 
 upload_web:
 	cd $(OUTPUTDIR); \
-	git clean -f || : ;\
 	git add -A || : ; \
 	git commit -m "web update: $$GIT_MSG"; \
 	git push
