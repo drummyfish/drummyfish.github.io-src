@@ -321,7 +321,17 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
         <li> {{ mark }}: {{ study_total_amount(study_type,mark) }} </li>
       {% endfor %}
     </ul>
-    </li>
+  </li>
+  
+  {% if study_type != "" %}
+  <li>
+    {%if language == "cs" %} Výsledné známky (závěrečná práce, závěrečná zkouška, celkem): {% else %} Final marks (thesis, final exam, total): {% endif %}
+    {{ d.study_data.studies[study_type].final_exam_marks[0] }},
+    {{ d.study_data.studies[study_type].final_exam_marks[1] }},
+    {{ d.study_data.studies[study_type].final_exam_marks[2] }}
+  </li>
+  {% endif %}
+  
 </ul>
 
 {% endmacro %}
