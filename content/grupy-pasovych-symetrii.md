@@ -34,7 +34,7 @@ Budeme se zaobírat tzv. pásovým dlážděním (line groups, frieze groups).
 U tohoto dláždění máme 2D vzor, který se ale opakuje jen v horizontálním
 směru, např. takto:
 
-![real life](http://tastyfish.cz/wp-content/uploads/2016/08/real-life.jpg)
+![real life](http://i.imgur.com/EhFuUXC.png)
 
 Intuitivně vidíme, že tento vzor v sobě má něco symetrického. Naším
 úkolem je nyní toto intuitivní tušení vyjádřit matematicky. Abychom to
@@ -87,7 +87,7 @@ dokázáno, pro pásové vzory pouze 7. Jsou následující:
 Takže např. symetrie č. 2 má dvě symetrie (vůči posunu a vůči posunu
 plus vertikálnímu překlopení, což se také nazývá gliding reflection):
 
-![animaion](http://tastyfish.cz/wp-content/uploads/2016/08/animaion.gif)
+![animaion](http://i.imgur.com/nzZWSWZ.gif)
 
 Zkuste si ověřit, že všechny zbývající vzorové příklady vykazují uvedené
 symetrie (a popřípadě napište, že jsem udělal chybu {{m.e(':D')}}).
@@ -97,7 +97,7 @@ základní transformace (P,V,H) jako množinu a skládání transformací (tj.
 +) jako operaci, dostaneme grupu pro každou ze sedmi uvedených symetrií.
 Můžeme si např. nakreslit graf prvků grupy symetrie č.1:
 
-![g1](http://tastyfish.cz/wp-content/uploads/2016/08/g1.png)
+![g1](http://i.imgur.com/rykgekQ.png)
 
 Vidíme, že platí všechno, co v grupě platit má - máme zde neutrální
 prvek (P), který když složíme (pomocí +) s jakýmkoliv prvkem, dostaneme
