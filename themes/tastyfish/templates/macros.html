@@ -540,40 +540,13 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {#-------------------------------------------------------------------#}
 
-{% macro css_scripts() %}
+{% macro unix_theme_scripts() %}
   <script>
-    function change_css(old_css, new_css)
-      {
-        var old_link = document.getElementsByTagName("link").item(0);
-        var new_href = old_link.getAttribute("href").replace(old_css,new_css);
-        var new_link = document.createElement("link");
-        new_link.setAttribute("rel", "stylesheet");
-        new_link.setAttribute("type", "text\/css");
-        new_link.setAttribute("href", new_href);
-        document.getElementsByTagName("head").item(0).replaceChild(new_link, old_link);
-      }
-
     function get_cookie(name)
       {
         var value = "; " + document.cookie;
         var parts = value.split("; " + name + "=");
         if (parts.length == 2) return parts.pop().split(";").shift();
-      }
-
-    function reload_css()  // dynamically change the document css
-      {
-        if (get_cookie("unix") == "true")
-          {
-            old_css = "main.css";
-            new_css = "unix.css";
-          }  
-        else
-          {
-            old_css = "unix.css";
-            new_css = "main.css";
-          }
-
-        change_css(old_css,new_css);
       }
 
     function unix_click()      // on unix button click
@@ -586,7 +559,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
         expire_string = "Sun, 4 Mar 2040 18:54:31 +01:00";
         document.cookie = "unix=" + value + ";expires=" + expire_string + ";path=\/";
 
-        reload_css();
+        location.reload();
       }
 
     function make_unix_button()
