@@ -540,6 +540,28 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 
 {#-------------------------------------------------------------------#}
 
+{% macro svg_filters() %}
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <filter id="unix" x="0" y="0" width="100%" height="100%"> 
+        <feComponentTransfer result="b">
+          <feFuncR type="discrete" tableValues="0 0.33 0.66 1"></feFuncR> 
+          <feFuncG type="discrete" tableValues="0 0.33 0.66 1"></feFuncG> 
+          <feFuncB type="discrete" tableValues="0 0.33 0.66 1"></feFuncB> 
+        </feComponentTransfer>
+
+        <feFlood x="1" y="1" height="2" width="2" flood-color="white" in="SourceGraphic" result="c" />  
+        <feFlood x="0" y="0" height="4" width="4" flood-color="black" in="SourceGraphic" result="d" />
+        <feComposite width="4" height="4" operator="over" in="c" in2="d"/>
+        <feTile result="a"/>
+        <feBlend in="b" in2="a" mode="multiply"/>
+      </filter>
+    </defs>
+  </svg>
+{% endmacro %}
+
+{#-------------------------------------------------------------------#}
+
 {% macro unix_theme_scripts() %}
   <script>
     function get_cookie(name)
