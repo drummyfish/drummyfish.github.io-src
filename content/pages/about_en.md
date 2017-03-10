@@ -10,7 +10,10 @@ My name is Miloslav Číž (Bc.) and I study computer science at [FIT BUT](http:
 I focus on computer graphics but my interests lie in more or less all exact sciences.
 I also like many other things, such as music, sports etc.
 
-## Fun facts:
+As I believe in freedom of information, like lists and am a little bit narcissistic, I will
+provide a lengthful info about myself.
+
+## Fun facts
 
 - I don't drink alcohol, I don't like its taste.
 - I am a 100 % introvert acoording to psychological tests (melancholic, INTJ).
@@ -20,11 +23,11 @@ I also like many other things, such as music, sports etc.
 - I have the CYP1A2-1A gene, which means I can drink cofee before I go to sleep.
 - I suffer from depression and anxiety {{m.e(':(')}}
 
-## A few things I like:
+## A few things I like
 
 {{ m.things_i_like_text("en") }}
 
-## A few things I don't like:
+## A few things I don't like
 
 {{ m.things_i_dont_like_text("en") }}
 

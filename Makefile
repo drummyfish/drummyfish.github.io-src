@@ -41,7 +41,7 @@ ifndef NO_PRETTY
 	$(MAKE) prettify
 endif
 
-publish:
+publish: update_subreddits
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 ifndef NO_PRETTY
 	$(MAKE) prettify
@@ -49,6 +49,9 @@ endif
 
 prettify:
 	@-$(foreach f,$(shell find $(OUTPUTDIR) -iname "*.html"),echo "prettifying $f"; tidy -i -wrap 120 -m "$f" 2>&1 | grep --color -E "Warning|Error" || :;)
+
+update_subreddits:
+	python syncsubreddits.py
 
 upload_src:
 	git add -A || :

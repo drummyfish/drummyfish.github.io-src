@@ -1,7 +1,19 @@
 {% import "data.html" as d %}
+{% import "subreddits.html" as s %}
 
 {# This file contains macros usable in templates AS WELL AS articles. #}
-   
+  
+{#-------------------------------------------------------------------#}
+{% macro subreddit_list() %}
+
+<p>
+{% for sub in s.subreddits %}
+  <a href="http://reddit.com/r/{{ sub }}">{{ sub }}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}
+</p>
+
+{% endmacro %}
+ 
 {#-------------------------------------------------------------------#}
 {% macro random_texts_script() %}
 <script type="text/javascript">

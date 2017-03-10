@@ -9,7 +9,10 @@ Jmenuji se Miloslav Číž (Bc.) a studuji informatiku na [FIT VUT](http://www.f
 Zaměřuji se na počítačovou grafiku, ale baví mě více či méně exaktní vědy v celé šíři. Mám
 rád spoustu dalších věcí, jako např. hudbu, sport atd.
 
-## Fun facts:
+Neboť věřím ve svobodu informace, mám rád seznamy a jsem trochu narcista, uvedu o sobě dále
+spoustu informací.
+
+## Fun facts
 
 - Nepiju alkohol, nechutná mi.
 - Podle testů jsem 100% introvert (melancholik, INTJ).
@@ -19,11 +22,11 @@ rád spoustu dalších věcí, jako např. hudbu, sport atd.
 - Mám variantu 1A genu CYP1A2, tzn. můžu si dát kafe před spaním.
 - Trpím úzkostmi a depresemi {{m.e(':(')}}
 
-## Pár věcí, které mám rád:
+## Pár věcí, které mám rád
 
 {{ m.things_i_like_text("cs") }}
 
-## Pár věcí, které nemám rád:
+## Pár věcí, které nemám rád
 
 {{ m.things_i_dont_like_text("cs") }}
 
