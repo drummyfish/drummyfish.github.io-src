@@ -1,1 +1,0 @@
-- Add new random fact: In Functional programming language even comments are functions (https://esolangs.org/wiki/Functional).
