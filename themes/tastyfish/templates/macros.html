@@ -272,7 +272,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
 {% set number_of_courses = study_total_amount(study_type,"courses") %}
 
 {% if study_type == "" %}
-<h2> {%if language == "cs" %} Celkové statistiky všech studíí {% else %} Total study stats {% endif %} </h2>
+<h2> {%if language == "cs" %} Celkové statistiky všech studií {% else %} Total study stats {% endif %} </h2>
 {% else %}
 <h2> {%if language == "cs" %} Statistiky pro {{ study_type }} studium {% else %} Stats for {{ study_type }} study {% endif %} </h2>
 {% endif %}
