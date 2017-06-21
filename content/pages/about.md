@@ -5,7 +5,7 @@ Lang: cs
 
 {% import 'macros.html' as m %}
 
-Jmenuji se Miloslav Číž (Bc.) a studuji informatiku na [FIT VUT](http://www.fit.vutbr.cz/).
+Jmenuji se Miloslav Číž (Ing.). Vystudoval jsem informatiku (bakalář) a počítačovou grafiku (magistr) na [FIT VUT](http://www.fit.vutbr.cz/).
 Zaměřuji se na počítačovou grafiku, ale baví mě více či méně exaktní vědy v celé šíři. Mám
 rád spoustu dalších věcí, jako např. hudbu, sport atd.
 

@@ -6,7 +6,7 @@ Lang: en
 
 {% import 'macros.html' as m %}
 
-My name is Miloslav Číž (Bc.) and I study computer science at [FIT BUT](http://www.fit.vutbr.cz/).
+My name is Miloslav Číž (Ing.). I studied computer science (bachelor) and computer graphics (master) at [FIT BUT](http://www.fit.vutbr.cz/).
 I focus on computer graphics but my interests lie in more or less all exact sciences.
 I also like many other things, such as music, sports etc.
 

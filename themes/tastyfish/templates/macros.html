@@ -210,7 +210,7 @@ prospěchové stipendium: {{ semester.scholarship }} Kč
  {%- set final_marks = d.study_data.studies[study_type]["final_exam_marks"] -%}
  {{-
    (
-     ((study_total_amount(study_type,"weighted numerator")|float) + (course_mark_to_number(final_marks[0])|float) + (course_mark_to_number(final_marks[1])|float)) /
+     ((study_total_amount(study_type,"weighted numerator")|float) + (course_mark_to_number(final_marks[0])|float) + (course_mark_to_number(final_marks[2])|float)) /
      (study_total_amount(study_type,"classified credits")|float)
    )|string|truncate(5,true,"")
   -}}
