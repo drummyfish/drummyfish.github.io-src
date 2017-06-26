@@ -1,4 +1,4 @@
-Title: Ing. na FIT – 5. semestr
+Title: Ing. na FIT – 5. a 6. semestr
 Date: 2017-01-30 00:44
 Author: tastyfish
 Category: Articles
@@ -8,6 +8,9 @@ Lang: cs
 Status: published
 
 {% import 'macros.html' as m %}
+
+Zimní semestr
+=============
 
 Tak a mám za sebou všechny předměty na FITu. Na doktorském další
 předměty jsou, to ano, ale rozhodl jsem se, možná trochu zbaběle leč
@@ -120,6 +123,8 @@ potřeby kreditů.
 
 ![projekt](http://i.imgur.com/TxkrkiX.png)
 
+{{ m.study_semester_summary("Ing.",4,"cs") }}
+
 Semestrální projekt (SEP)
 -------------------------
 
@@ -146,4 +151,125 @@ SEP nemá cenu hodnotit, protože zcela záleží na tématu vaší práce, na
 vedoucím a na vašem postoji. Zde lze pouze doporučit vybrat zajímavé
 téma, průběžně pracovat a konzultovat.
 
-{{ m.study_semester_summary("Ing.",4,"cs") }}
+Letní semestr
+=============
+
+Poslední semestr na FITu jsem absolvoval z domu s občasnými návštěvami
+fakulty kvůli konzultacím. Zde je jeho zhodnocení.
+
+Diplomová práce
+---------------
+
+Práce na diplomce pokračovala stejným tempem jako na semestrálním
+projektu. Chodil jsem pravidelně na konzultace a čas od času napsal
+pár řádků kódu, až jsem si uvědomil, že zbývá asi měsíc do odevzdání.
+V té době jsem znervózněl a začaly na mě jít úzkosti, cítil jsem,
+že práci nestihnu dodělat. S vypětím posledních sil jsem se ale
+přinutil k poslednímu sprintu před cílem a zvládl jsem nějakým
+způsobem dopsat zprávu a uzavřít kód tak, abych s nimi mohl být
+alespoň částečně spokojený. Ne tak spokojený, jako jsem byl při
+odevzdávání bakalářky, ale dost spokojený s ohledem na svůj
+psychický stav. Zprávu jsem nechal zhotovit stejně jako na bakaláři
+<a href="http://www.milangruber.cz/rubrika/copycentrum/">Copy Centru na Purkyňově</a>.
+
+Po odevzdání započalo čekání na posudky. Během tohoto období mi přišla zpráva
+od mého oponenta, dr. Pečivy, zda bych se mohl dostavit na předvedení
+své práce, neboť byl zvědavý, jak vypadá realizace algoritmu, který vymyslel.
+Tomu jsem samozřejmě vyhověl a zároveň jsem si uvědomil, že jsem se dopustil menšího
+faux pas (či jak se to píše) - dr. Pečiva byl autorem původního konceptu mého
+algoritmu, což jsem ale ve zprávě nezmínil, neboť jsem si toho nebyl vědom. Za
+toto jsem se mu omluvil a dále jsem jej uvedl jako autora původního konceptu v
+repozitáři své práce. On z toho naštěstí nedělal žádnou vědu, ale i tak
+cítím, že bych svou chybu měl napravit i zde. Tímto mu tedy děkuji za
+původní nápad pro mou diplomku.
+
+Posudky mého vedoucího i oponenta byly velmi pozitivní, oba mi navrhli
+známku A. Myslím, že tak dobré hodnocení jsem si ani nezasloužil, a opět to
+mi to potvrzuje, že grafici na FITu jsou velmi hodní a pohodoví lidé.
+Velice doporučuji kohokoliv z renderingové skupiny (ing. Milet, dr. Pečiva,
+ing. Starka atd.) jako vedoucího závěrečné práce. S těmito lidmi jsem se
+setkával často a nikdy jsem z jejich strany nezažil sebemenší zákeřnost
+nebo problém, naopak vždycky ochotně poskytli svůj čas (i mimo konzultační
+hodiny), prostředky a pomoc.
+
+Diplomka je k dispozici na mém <a href="https://github.com/drummyfish/mirrors">GitHubu</a>.
+
+<iframe width="650" height="400" src="https://www.youtube.com/embed/fpDXMgMcpY4" frameborder="0" allowfullscreen></iframe>
+
+Státní závěrečná zkouška
+------------------------
+
+Na SZZ jsem se začal připravovat velmi brzy, protože jsem neměl už moc
+energie na kratší, intenzivní přípravu. S materiály na přípravu je to
+horší, spousta otázek je vypracovaná na Fitušce, ale ne všechny. Okruhy
+se taky každý rok mírně mění a jsou různé pro každý obor. Z těchto důvodů
+jsem si vypracoval otázky sám a dávám je k dispozici:
+
+<a href="https://www.dropbox.com/s/f9v1v99xnmhnchu/okruhy_new.odt?dl=0"> vypracované okruhy pro rok 2017 </a>
+
+Týden nebo dva před zkouškou jsme dostali seznam komisí, přičemž tu mou tvořili
+doc. Černocký (vedoucí), doc. Smrž, doc. Janoušek, doc. Sedlák a dr. Španěl. Uměl
+bych si tedy představit i lepší komisi, ale byl jsem rád např. za absenci
+síťaře. Pár dní před zkouškou se začal dostavovat velký stres, který jsem špatně
+zvládal, ale nedalo se zkrátka nic dělat, musel jsem se vydržet učit. Poslední
+den jsem spal extrémně špatně a ráno jsem byl rozklepaný jako válečný veterán.
+Jakmile jsem ale dorazil na místo před zkušebnu, stres opadl. Vše šlo pak
+už velmi rychle, neboť jsem šel na řadu jako třetí.
+
+Pan Černocký mě pozval do místnosti, všichni byli v pohodové náladě. Přečetli
+se posudky, což mi ihned zvedlo šance. Následně jsem hned přistoupil k prezentaci.
+I přes technické problémy s ovladačem a přes nepozornost většiny komise jsem
+myslím odprezentoval slušně, obzvlášť pan Španěl vypadal, že se mu práce líbí.
+Dále jsem zodpověděl otázky oponenta a členů komise. Okamžitě se přistoupilo ke
+zkoušení, na stres nebyl vůbec čas.
+
+Na papírku jsem dostal dvě otázky (ano, oproti Bc. dostáváte na magisterské
+SZZ dvě otázky, přičemž si můžete vybrat pořadí zodpovězení, ale nesmíte ani
+jednu zkazit). Jednalo se o nerozhodnutelnost a výpočetní modely se zaměřením
+na statecharts. Po minutě přípravy (rozmýšlení úvodu) jsem začal mluvit o nerozhodnutelnosti.
+Řekl jsem základy a mluvil jsem celkem plynule, až mě pan Smrž přerušil otázkou,
+jak do nerozhodnutelnosti zapadá doplněk jazyka. To mě hodně rozhodilo a motal
+jsem se, zkrátka jsem začal velmi příhodně být nerozhodným, až mi řekl, že mám
+radši pokračovat dál. Řekl jsem tedy něco o halting problému a tím byla první
+otázka uzavřena. Přistoupil jsem tedy dál k výpočetním modelům, shrnul jsem
+úvod a nakreslil statecharts, ale o moc víc jsem dál nevěděl. Pan Janoušek
+mi ale ohromě pomáhal - položil otázku, já jsem ji začal okecávat, a jakmile
+jsem vyslovil nějaké klíčové slovo, zajásal "výborně" nebo něco podobného
+a šlo se dál. Tímto stylem jsme se dobrali ke konci a šel jsem z místnosti.
+Za minutu mě pozvali zpět a pan Černocký mi s úsměvem sdělil, že jsem prospěl
+velmi dobře, A z diplomky a C/B ze zkoušení, celkově B. Tím ze mě veškerý
+stres samozřejmě opadl.
+
+{{ m.study_summary("Ing.","cs") }}
+
+Po vzoru závěrečného článku Bc. studia přidávám i seznam věcí, které jsem se
+oproti Bc. naučil:
+
+- formální popis problémů a jejich řešení, konstrukci matematických důkazů, pokročilejší matematiku a formální základy informatiky
+- pokročilé věci v oblasti databází, sítí, hardwaru, paralelismu
+- OpenGL a obecné principy low-level API pro grafické karty (shadery, Direct3D, grafická pipeline atd.), obecně používané algoritmy (vykreslování stínů, deferred shading atd.)
+- vysokoúrovňová API pro grafiku (graf scény, OpenSceneGraph, herní enginy atd.)
+- něco o zpracování obrazu a počítačovém vidění
+- něco o zvuku, zpracování a rozpoznávání v řeči
+- něco o GUI na Linuxu
+- velmi dobře umělecké 3D modelování a práci s Blenderem a něco málo o CAD systémech
+- formáty a standardy pro multimédia, obraz, 3D data, zvuk atd.
+- základy machine learningu (neuronové sítě, HMM, clustering atd.)
+- hledat a číst vědecké články
+- pár dalších věcí (dějiny techniky, praktická znalost funkcionálního programování, Vim atd.)
+
+No a úplným závěrem bych samozřejmě rád poděkovat všem, kteří mi během studia
+pomáhali, tzn. hlavně rodině, kamarádům, vedoucím a vyučujícím na škole. Ano,
+připadám si jako herec přebírající Oskara.
+Studium mi ze zdravotních důvodů trvalo o dva roky déle, ale
+budiž to důkaz toho, že to jde. Při dostatečné motivaci se
+FIT dá zvládnout i za velmi nepříznivé situace - je zde možnost rozvolnění,
+prodloužení, výjimek, opakování, odvolání atd. Ne že by člověk měl
+prolézat za každou cenu, když vidí, že není na správném místě -
+to je ale na posouzení každého. Já osobě jsem rád, že jsem studium zvládl
+zcela poctivě, nikdy jsem nepodváděl, a občas se zadařilo i získat
+dobrou známku. Taky jsem zvládl všechny zkoušky na první pokus
+(možná až na jeden sporný případ {{m.e(':)')}}). Jste-li současný
+či budoucí student, ať naší fakulty nebo jiné, přeju vám hodně štěstí a pevné
+nervy, ať si v budoucnu můžu taky přečíst vaše zkušenosti {{m.e(':)')}}.
+

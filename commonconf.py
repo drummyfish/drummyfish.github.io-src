@@ -62,7 +62,9 @@ def set_common_variables(module_ref):
   module_ref.AUTHOR_FEED_RSS = None
   module_ref.RELATIVE_URLS = False
   module_ref.START_PAGE = "pages/intro.html"  # added this, index.html redirects here
+
   module_ref.MARKDOWN = {
+      "extensions": {"codehilite","extra","meta","tables"},
       "extension_configs": {
         "markdown.extensions.codehilite": {"css_class": "highlight"},
         "markdown.extensions.extra": {},
@@ -71,6 +73,7 @@ def set_common_variables(module_ref):
     },
     "output_format": "html5",
     }
+
   module_ref.SUMMARY_MAX_LENGTH = 30
   module_ref.I18N_SUBSITES = {
     "en": { "MENUITEMS" : [

@@ -49,6 +49,7 @@ class JinjaMarkdownReader(MarkdownReader):
         """
 
         self._source_path = source_path
+
         self._md = Markdown(extensions=self.settings['MARKDOWN']['extensions'])
 
         with pelican_open(source_path) as text:
