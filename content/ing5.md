@@ -169,7 +169,7 @@ přinutil k poslednímu sprintu před cílem a zvládl jsem nějakým
 způsobem dopsat zprávu a uzavřít kód tak, abych s nimi mohl být
 alespoň částečně spokojený. Ne tak spokojený, jako jsem byl při
 odevzdávání bakalářky, ale dost spokojený s ohledem na svůj
-psychický stav. Zprávu jsem nechal zhotovit stejně jako na bakaláři
+psychický stav. Zprávu jsem nechal zhotovit stejně jako na bakaláři v
 <a href="http://www.milangruber.cz/rubrika/copycentrum/">Copy Centru na Purkyňově</a>.
 
 Po odevzdání započalo čekání na posudky. Během tohoto období mi přišla zpráva
@@ -216,7 +216,7 @@ den jsem spal extrémně špatně a ráno jsem byl rozklepaný jako válečný v
 Jakmile jsem ale dorazil na místo před zkušebnu, stres opadl. Vše šlo pak
 už velmi rychle, neboť jsem šel na řadu jako třetí.
 
-Pan Černocký mě pozval do místnosti, všichni byli v pohodové náladě. Přečetli
+Pan Černocký mě pozval do místnosti, všichni byli v pohodové náladě. Přečetly
 se posudky, což mi ihned zvedlo šance. Následně jsem hned přistoupil k prezentaci.
 I přes technické problémy s ovladačem a přes nepozornost většiny komise jsem
 myslím odprezentoval slušně, obzvlášť pan Španěl vypadal, že se mu práce líbí.
