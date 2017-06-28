@@ -18,6 +18,7 @@
     
 {% if GITHUB_USER %}
   {% for project in github_projects | reverse %}
+
   {% if not project.fork %}
     
   <div class="project">

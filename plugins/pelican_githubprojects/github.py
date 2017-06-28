@@ -37,8 +37,7 @@ from pelican import signals
 
 
 logger = logging.getLogger(__name__)
-GITHUB_API = "https://api.github.com/users/{0}/repos"
-
+GITHUB_API = "https://api.github.com/users/{0}/repos?per_page=200"
 
 class GithubProjects(object):
 
