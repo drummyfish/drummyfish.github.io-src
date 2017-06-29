@@ -54,6 +54,16 @@
     {% endfor %}
   </ul>
     
+  <h1> {% if DEFAULT_LANG == "cs" %} Poslední commity {% else %} Latest commits {% endif %} </h1>
+
+  <ul class="latest-commits">
+    {% for commit in commits %}
+    {% if loop.index < 5 %}
+    <li><a href="{{commit.url}}"> {{ commit.date }} ({{ commit.time}}): {{ commit.message }} </a> </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
   {% include "donate.html" %}
     
   {% include "social.html" %}

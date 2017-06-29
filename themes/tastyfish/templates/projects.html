@@ -28,7 +28,7 @@
     <a href="{{ project.github_url }}"> <h2> {{ project.name }} </h2> </a>
     <span class="project-lang"> {{ project.language }} </span>
     <span class="project-stars"> &#x2606; {{ project.stars }} </span>
-    <span class="project-size"> {% if project.size < 1000 %} {{ project.size }} kB {% else %} {{ (project.size / 1000)|int }} mB {% endif %} </span>
+    <span class="project-size"> {% if project.size %} {% if project.size < 1000 %} {{ project.size }} kB {% else %} {{ (project.size / 1000)|int }} mB {% endif %} {% endif %} </span>
     <p>{{ project.description }} </p>
   </div>
     
