@@ -30,7 +30,7 @@ def set_common_variables(module_ref):
   module_ref.COMMIT_REPO = "drummyfish/drummyfish.github.io"
   
   module_ref.GITHUB_USER = "drummyfish"
-  module_ref.GITHUB_SORT_BY = "stars"
+  module_ref.GITHUB_SORT_BY = ["stars","updated"]
   
   module_ref.PATH = 'content'
   module_ref.TIMEZONE = 'Europe/Prague'
