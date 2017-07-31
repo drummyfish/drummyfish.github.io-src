@@ -24,12 +24,13 @@ def set_common_variables(module_ref):
 
   module_ref.DEFAULT_PAGINATION = 4
   module_ref.PLUGIN_PATHS = ["plugins"]
+  #module_ref.PLUGINS = ["jinja2content","i18n_subsites","pelican_githubprojects","commits"]
   module_ref.PLUGINS = ["jinja2content","i18n_subsites","pelican_githubprojects","commits"]
 
   module_ref.COMMIT_REPO = "drummyfish/drummyfish.github.io"
   
   module_ref.GITHUB_USER = "drummyfish"
-  module_ref.GITHUB_SORT_BY = ["stars","updated"]
+  module_ref.GITHUB_SORT_BY = "stars"
   
   module_ref.PATH = 'content'
   module_ref.TIMEZONE = 'Europe/Prague'

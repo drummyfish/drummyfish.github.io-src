@@ -19,6 +19,12 @@
 {% if GITHUB_USER %}
   {% for project in github_projects | reverse %}
 
+  {{ project.name }}
+  {{ project.description }}
+  {{ project.github_url }}
+  {{ project.language }}
+
+
   {% if not project.fork %}
     
   <div class="project">
