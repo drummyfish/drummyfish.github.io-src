@@ -9,6 +9,8 @@ Jmenuji se Miloslav Číž (Ing.). Vystudoval jsem informatiku (bakalář) a po�
 Zaměřuji se na počítačovou grafiku, ale baví mě více či méně exaktní vědy v celé šíři. Mám
 rád spoustu dalších věcí, jako např. hudbu, sport atd.
 
+Svá textová data růzého druhu shromažďuji a zveřejňuji [zde](https://github.com/drummyfish/my_text_data).
+
 Neboť věřím ve svobodu informace, mám rád seznamy a jsem trochu narcista, uvedu o sobě dále
 spoustu informací.
 

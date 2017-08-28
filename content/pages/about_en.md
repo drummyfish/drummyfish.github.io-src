@@ -10,6 +10,8 @@ My name is Miloslav Číž (Ing.). I studied computer science (bachelor) and com
 I focus on computer graphics but my interests lie in more or less all exact sciences.
 I also like many other things, such as music, sports etc.
 
+I post my text data of various kinds [here](https://github.com/drummyfish/my_text_data).
+
 As I believe in freedom of information, like lists and am a little bit narcissistic, I will
 provide a lengthful info about myself.
 
