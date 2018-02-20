@@ -1,3 +1,5 @@
+DEPRECATED
+
 # tastyfish website
 
 These are my personal websites hosted on GitHub, accesible [here](https://drummyfish.github.io/).
